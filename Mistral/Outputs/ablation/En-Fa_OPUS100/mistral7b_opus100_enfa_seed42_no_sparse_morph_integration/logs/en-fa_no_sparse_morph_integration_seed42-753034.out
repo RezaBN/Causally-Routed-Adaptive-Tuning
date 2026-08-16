@@ -1,0 +1,41 @@
+
+scontrol show job 753034
+JobId=753034 JobName=enfa_s42_no_sparse_morph_integration
+   UserId=koohi(3162858) GroupId=koohi(3162858) MCS_label=N/A
+   Priority=983224 Nice=0 Account=def-koohi QOS=normal
+   JobState=COMPLETING Reason=None Dependency=(null)
+   Requeue=0 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=0:54
+   RunTime=00:00:07 TimeLimit=01:30:00 TimeMin=N/A
+   SubmitTime=2026-08-12T04:01:30 EligibleTime=2026-08-12T04:01:30
+   AccrueTime=2026-08-12T04:01:30
+   StartTime=2026-08-12T04:08:48 EndTime=2026-08-12T04:08:55 Deadline=N/A
+   SuspendTime=None SecsPreSuspend=0 LastSchedEval=2026-08-12T04:08:48 Scheduler=Main
+   Partition=compute AllocNode:Sid=trig-login01:2710352
+   ReqNodeList=(null) ExcNodeList=(null)
+   NodeList=trig0035
+   BatchHost=trig0035
+   NumNodes=1 NumCPUs=24 NumTasks=1 CPUs/Task=24 ReqB:S:C:T=0:0:*:*
+   ReqTRES=cpu=24,mem=187.50G,node=1,billing=1,gres/gpu=1
+   AllocTRES=cpu=24,mem=187.50G,node=1,billing=1,gres/gpu=1
+   Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=*
+   MinCPUsNode=24 MinMemoryNode=187.50G MinTmpDiskNode=0
+   Features=(null) DelayBoot=00:00:00
+   OverSubscribe=OK Contiguous=0 Licenses=(null) LicensesAlloc=(null) Network=(null)
+   Command=/scratch/koohi/crat/code/crat_mistral_trillium_ablation.sh
+   SubmitLine=SBATCH --comment /opt/slurm/bin/sbatch --export=NONE --get-user-env --parsable --time=01:30:00 --job-name=enfa_s42_no_sparse_morph_integration --output=/scratch/koohi/crat/outputs/ablations/mistral7b_opus100_enfa_seed42_no_sparse_morph_integration/logs/en-fa_no_sparse_morph_integration_seed42-%j.out --error=/scratch/koohi/crat/outputs/ablations/mistral7b_opus100_enfa_seed42_no_sparse_morph_integration/logs/en-fa_no_sparse_morph_integration_seed42-%j.err --export=ALL,CRAT_WORKER=1 /scratch/koohi/crat/code/crat_mistral_trillium_ablation.sh en-fa no_sparse_morph_integration opus100 --export=NONE --get-user-env --parsable --time=01:30:00 --job-name=enfa_s42_no_sparse_morph_integration --output=/scratch/koohi/crat/outputs/ablations/mistral7b_opus100_enfa_seed42_no_sparse_morph_integration/logs/en-fa_no_sparse_morph_integration_seed42-%j.out --error=/scratch/koohi/crat/outputs/ablations/mistral7b_opus100_enfa_seed42_no_sparse_morph_integration/logs/en-fa_no_sparse_morph_integration_seed42-%j.err --export=ALL,CRAT_WORKER=1 /scratch/koohi/crat/code/crat_mistral_trillium_ablation.sh en-fa no_sparse_morph_integration opus100
+   WorkDir=/scratch/koohi/crat
+   Comment=/opt/slurm/bin/sbatch --export=NONE --get-user-env --parsable --time=01:30:00 --job-name=enfa_s42_no_sparse_morph_integration --output=/scratch/koohi/crat/outputs/ablations/mistral7b_opus100_enfa_seed42_no_sparse_morph_integration/logs/en-fa_no_sparse_morph_integration_seed42-%j.out --error=/scratch/koohi/crat/outputs/ablations/mistral7b_opus100_enfa_seed42_no_sparse_morph_integration/logs/en-fa_no_sparse_morph_integration_seed42-%j.err --export=ALL,CRAT_WORKER=1 /scratch/koohi/crat/code/crat_mistral_trillium_ablation.sh en-fa no_sparse_morph_integration opus100
+   StdErr=/scratch/koohi/crat/outputs/ablations/mistral7b_opus100_enfa_seed42_no_sparse_morph_integration/logs/en-fa_no_sparse_morph_integration_seed42-753034.err
+   StdIn=/dev/null
+   StdOut=/scratch/koohi/crat/outputs/ablations/mistral7b_opus100_enfa_seed42_no_sparse_morph_integration/logs/en-fa_no_sparse_morph_integration_seed42-753034.out
+   TresPerNode=gres/gpu:h100:1
+   TresPerTask=cpu=24
+   MailUser=koohi@scinet.local MailType=END,FAIL
+
+sacct -j 753034
+JobID           JobName    Account    Elapsed  MaxVMSize     MaxRSS  SystemCPU    UserCPU ExitCode 
+------------ ---------- ---------- ---------- ---------- ---------- ---------- ---------- -------- 
+753034       enfa_s42_+  def-koohi   00:00:07                         00:00:00   00:00:00      0:0 
+753034.batch      batch  def-koohi   00:00:07                         00:00:00   00:00:00      0:0 
+753034.exte+     extern  def-koohi   00:00:07                         00:00:00   00:00:00      0:0 
+

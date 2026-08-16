@@ -1,0 +1,152 @@
+======================================================================
+Job ID:            735066
+Node:              trig0006
+Started:           Sun 09 Aug 2026 05:53:47 PM EDT
+Pair:              en-fr
+Dataset:           opus100
+Methods:           random_sft
+Run mode:          full
+Detection mode:    sipp
+Morph backend:     stanza
+Python:            /scratch/koohi/crat/envs/env_crat/bin/python
+Model:             /scratch/koohi/crat/models/Mistral-7B-v0.1
+Train data:        /scratch/koohi/crat/data/opus100/en-fr/train.jsonl
+Validation data:   /scratch/koohi/crat/data/opus100/en-fr/validation.jsonl
+Test data:         /scratch/koohi/crat/data/opus100/en-fr/test.jsonl
+Probe file:        /scratch/koohi/crat/data/probes/en-fr_bidirectional.jsonl
+Output:            /scratch/koohi/crat/outputs/mistral7b_opus100_enfr_seed42
+Stanza resources:  /scratch/koohi/crat/stanza_resources
+======================================================================
+Python 3.11.5
+Sun Aug  9 17:53:47 2026       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 580.173.02             Driver Version: 580.173.02     CUDA Version: 13.0     |
++-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  NVIDIA H100 80GB HBM3          On  |   00000000:0C:00.0 Off |                    0 |
+| N/A   41C    P0             70W /  700W |       0MiB /  81559MiB |      0%      Default |
+|                                         |                        |             Disabled |
++-----------------------------------------+------------------------+----------------------+
+
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI              PID   Type   Process name                        GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|  No running processes found                                                             |
++-----------------------------------------------------------------------------------------+
+CUDA available: True
+GPU: NVIDIA H100 80GB HBM3
+Model layers: 32
+Query heads: 32
+KV heads: 8
+Tokenizer size: 32000
+train: /scratch/koohi/crat/data/opus100/en-fr/train.jsonl | en-fr | 'You gonna throw me a shower?' -> 'On fera une fête pour le bébé ?'
+validation: /scratch/koohi/crat/data/opus100/en-fr/validation.jsonl | en-fr | 'o Aboriginal Communities Home > Ontario ' -> 'o Collectivités autochtones Accueil > On'
+test: /scratch/koohi/crat/data/opus100/en-fr/test.jsonl | en-fr | 'Guidelines for the management and contro' -> 'Parcs Canada élaborera des lignes direct'
+probe: /scratch/koohi/crat/data/probes/en-fr_bidirectional.jsonl | en-fr | 'the' -> 'le'
+Stanza offline OK: en; sentences=1
+Stanza offline OK: fr; sentences=1
+GPU: NVIDIA H100 80GB HBM3
+VRAM: 79.2 GB
+Examples: train=10000, validation=1000, test=1000
+Loading cached component discovery: /scratch/koohi/crat/outputs/mistral7b_opus100_enfr_seed42/paper_component_discovery.json
+Selected union heads: 99
+Integration layers: [31, 18, 5]
+
+==========================================================================================
+METHOD: random_sft
+==========================================================================================
+{'trainable_params': 190840832, 'total_params': 7432572928, 'trainable_pct': 2.567628112750352}
+Epoch 1: validation loss = 0.992419
+Epoch 2: validation loss = 1.011627
+Epoch 3: validation loss = 1.143782
+Epoch 4: validation loss = 1.365421
+Epoch 5: validation loss = 1.500163
+Epoch 6: validation loss = 1.716405
+Epoch 7: validation loss = 1.933558
+Epoch 8: validation loss = 2.086504
+Epoch 9: validation loss = 2.239623
+Epoch 10: validation loss = 2.306634
+                                           0
+method                            random_sft
+trainable_params                   190840832
+total_params                      7432572928
+trainable_pct                       2.567628
+effective_batch_size                     128
+peak_vram_GB                       24.344292
+train_seconds                    2443.657527
+updates                                  790
+train_tokens                         7854360
+train_tokens_per_second          3214.181984
+validation_loss                     0.992419
+BLEU_en-fr                         28.409071
+chrF_en-fr                         53.230735
+empty_rate_en-fr                         0.0
+punctuation_collapse_rate_en-fr          0.0
+BLEU_fr-en                         33.927975
+chrF_fr-en                         57.060554
+empty_rate_fr-en                         0.0
+punctuation_collapse_rate_fr-en          0.0
+generation_seconds                423.509369
+generated_tokens                       27146
+generation_tokens_per_second       64.097756
+latency_mean_seconds                1.565572
+latency_p50_seconds                 0.743602
+latency_p95_seconds                 2.977721
+benchmark_tokens_per_second        15.559408
+
+Results saved to: /scratch/koohi/crat/outputs/mistral7b_opus100_enfr_seed42/comparison_results.csv
+    method  trainable_params  total_params  trainable_pct  effective_batch_size  peak_vram_GB  train_seconds  updates  train_tokens  train_tokens_per_second  validation_loss  BLEU_en-fr  chrF_en-fr  empty_rate_en-fr  punctuation_collapse_rate_en-fr  BLEU_fr-en  chrF_fr-en  empty_rate_fr-en  punctuation_collapse_rate_fr-en  generation_seconds  generated_tokens  generation_tokens_per_second  latency_mean_seconds  latency_p50_seconds  latency_p95_seconds  benchmark_tokens_per_second
+      base                 0    7241732096       0.000000                   128     13.928977       0.000000        0             0                 0.000000              NaN   25.095961   49.994720               0.0                            0.004   28.953820   54.439837               0.0                              0.0          559.527689            124507                    222.521606              2.727583             2.306938             4.785991                    44.184033
+random_sft         190840832    7432572928       2.567628                   128     24.344292    2443.657527      790       7854360              3214.181984         0.992419   28.409071   53.230735               0.0                            0.000   33.927975   57.060554               0.0                              0.0          423.509369             27146                     64.097756              1.565572             0.743602             2.977721                    15.559408
+======================================================================
+Seed:     42
+Finished: Sun 09 Aug 2026 06:45:52 PM EDT
+Results:  /scratch/koohi/crat/outputs/mistral7b_opus100_enfr_seed42/comparison_results.csv
+======================================================================
+
+scontrol show job 735066
+JobId=735066 JobName=crat_mistral
+   UserId=koohi(3162858) GroupId=koohi(3162858) MCS_label=N/A
+   Priority=1175759 Nice=0 Account=def-koohi QOS=normal
+   JobState=COMPLETING Reason=None Dependency=(null)
+   Requeue=0 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=0:0
+   RunTime=00:52:13 TimeLimit=02:00:00 TimeMin=N/A
+   SubmitTime=2026-08-09T17:34:49 EligibleTime=2026-08-09T17:53:13
+   AccrueTime=2026-08-09T17:53:13
+   StartTime=2026-08-09T17:53:40 EndTime=2026-08-09T18:45:53 Deadline=N/A
+   SuspendTime=None SecsPreSuspend=0 LastSchedEval=2026-08-09T17:53:40 Scheduler=Backfill
+   Partition=compute AllocNode:Sid=trig-login01:1267589
+   ReqNodeList=(null) ExcNodeList=(null)
+   NodeList=trig0006
+   BatchHost=trig0006
+   NumNodes=1 NumCPUs=24 NumTasks=1 CPUs/Task=24 ReqB:S:C:T=0:0:*:*
+   ReqTRES=cpu=24,mem=187.50G,node=1,billing=1,gres/gpu=1
+   AllocTRES=cpu=24,mem=187.50G,node=1,billing=1,gres/gpu=1
+   Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=*
+   MinCPUsNode=24 MinMemoryNode=187.50G MinTmpDiskNode=0
+   Features=(null) DelayBoot=00:00:00
+   OverSubscribe=OK Contiguous=0 Licenses=(null) LicensesAlloc=(null) Network=(null)
+   Command=/scratch/koohi/crat/code/crat_mistral_trillium_pair.sh
+   SubmitLine=SBATCH --comment /opt/slurm/bin/sbatch --export=NONE --get-user-env --parsable --time=02:00:00 --dependency=afterok:735062 --export=ALL,RUN_MODE=full,SEED=42,MORPH_BACKEND=stanza,DETECTION_MODE=sipp,HEADS_PER_DIRECTION=64,PROBE_EXAMPLES=32,MIN_PROBE_EXAMPLES=8,CAUSAL_SCORE_EXAMPLES=16,COMPONENT_BATCH_SIZE=32,EPOCHS=10,MAX_STEPS=-1,EVAL_LIMIT=500,BENCHMARK_EXAMPLES=64 code/crat_mistral_trillium_pair.sh en-fr random_sft opus100 --export=NONE --get-user-env --parsable --time=02:00:00 --dependency=afterok:735062 --export=ALL,RUN_MODE=full,SEED=42,MORPH_BACKEND=stanza,DETECTION_MODE=sipp,HEADS_PER_DIRECTION=64,PROBE_EXAMPLES=32,MIN_PROBE_EXAMPLES=8,CAUSAL_SCORE_EXAMPLES=16,COMPONENT_BATCH_SIZE=32,EPOCHS=10,MAX_STEPS=-1,EVAL_LIMIT=500,BENCHMARK_EXAMPLES=64 code/crat_mistral_trillium_pair.sh en-fr random_sft opus100
+   WorkDir=/scratch/koohi/crat
+   Comment=/opt/slurm/bin/sbatch --export=NONE --get-user-env --parsable --time=02:00:00 --dependency=afterok:735062 --export=ALL,RUN_MODE=full,SEED=42,MORPH_BACKEND=stanza,DETECTION_MODE=sipp,HEADS_PER_DIRECTION=64,PROBE_EXAMPLES=32,MIN_PROBE_EXAMPLES=8,CAUSAL_SCORE_EXAMPLES=16,COMPONENT_BATCH_SIZE=32,EPOCHS=10,MAX_STEPS=-1,EVAL_LIMIT=500,BENCHMARK_EXAMPLES=64 code/crat_mistral_trillium_pair.sh en-fr random_sft opus100
+   StdErr=/scratch/koohi/crat/logs/crat_mistral-735066.err
+   StdIn=/dev/null
+   StdOut=/scratch/koohi/crat/logs/crat_mistral-735066.out
+   TresPerNode=gres/gpu:h100:1
+   TresPerTask=cpu=24
+   MailUser=koohi@scinet.local MailType=END,FAIL
+
+sacct -j 735066
+JobID           JobName    Account    Elapsed  MaxVMSize     MaxRSS  SystemCPU    UserCPU ExitCode 
+------------ ---------- ---------- ---------- ---------- ---------- ---------- ---------- -------- 
+735066       crat_mist+  def-koohi   00:52:13                         00:00:00   00:00:00      0:0 
+735066.batch      batch  def-koohi   00:52:13                         00:00:00   00:00:00      0:0 
+735066.exte+     extern  def-koohi   00:52:13                         00:00:00   00:00:00      0:0 
+735066.0         python  def-koohi   00:51:38                         00:00:00   00:00:00      0:0 
+

@@ -1,0 +1,41 @@
+
+scontrol show job 760225
+JobId=760225 JobName=enzh_s42_no_causal
+   UserId=koohi(3162858) GroupId=koohi(3162858) MCS_label=N/A
+   Priority=429147 Nice=0 Account=def-koohi QOS=normal
+   JobState=COMPLETING Reason=None Dependency=(null)
+   Requeue=0 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=0:54
+   RunTime=00:00:05 TimeLimit=02:30:00 TimeMin=N/A
+   SubmitTime=2026-08-13T10:25:51 EligibleTime=2026-08-13T10:25:51
+   AccrueTime=2026-08-13T10:25:51
+   StartTime=2026-08-13T11:50:22 EndTime=2026-08-13T11:50:27 Deadline=N/A
+   SuspendTime=None SecsPreSuspend=0 LastSchedEval=2026-08-13T11:50:22 Scheduler=Backfill
+   Partition=compute AllocNode:Sid=trig-login01:655204
+   ReqNodeList=(null) ExcNodeList=(null)
+   NodeList=trig0030
+   BatchHost=trig0030
+   NumNodes=1 NumCPUs=24 NumTasks=1 CPUs/Task=24 ReqB:S:C:T=0:0:*:*
+   ReqTRES=cpu=24,mem=187.50G,node=1,billing=1,gres/gpu=1
+   AllocTRES=cpu=24,mem=187.50G,node=1,billing=1,gres/gpu=1
+   Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=*
+   MinCPUsNode=24 MinMemoryNode=187.50G MinTmpDiskNode=0
+   Features=(null) DelayBoot=00:00:00
+   OverSubscribe=OK Contiguous=0 Licenses=(null) LicensesAlloc=(null) Network=(null)
+   Command=/scratch/koohi/crat/code/crat_mistral_trillium_ablation.sh
+   SubmitLine=SBATCH --comment /opt/slurm/bin/sbatch --export=NONE --get-user-env --parsable --time=02:30:00 --job-name=enzh_s42_no_causal --output=/scratch/koohi/crat/outputs/ablations/mistral7b_opus100_enzh_seed42_epochs10_no_causal/logs/en-zh_no_causal_seed42_epochs10-%j.out --error=/scratch/koohi/crat/outputs/ablations/mistral7b_opus100_enzh_seed42_epochs10_no_causal/logs/en-zh_no_causal_seed42_epochs10-%j.err --export=ALL,CRAT_WORKER=1 /scratch/koohi/crat/code/crat_mistral_trillium_ablation.sh en-zh no_causal opus100 --export=NONE --get-user-env --parsable --time=02:30:00 --job-name=enzh_s42_no_causal --output=/scratch/koohi/crat/outputs/ablations/mistral7b_opus100_enzh_seed42_epochs10_no_causal/logs/en-zh_no_causal_seed42_epochs10-%j.out --error=/scratch/koohi/crat/outputs/ablations/mistral7b_opus100_enzh_seed42_epochs10_no_causal/logs/en-zh_no_causal_seed42_epochs10-%j.err --export=ALL,CRAT_WORKER=1 /scratch/koohi/crat/code/crat_mistral_trillium_ablation.sh en-zh no_causal opus100
+   WorkDir=/scratch/koohi/crat
+   Comment=/opt/slurm/bin/sbatch --export=NONE --get-user-env --parsable --time=02:30:00 --job-name=enzh_s42_no_causal --output=/scratch/koohi/crat/outputs/ablations/mistral7b_opus100_enzh_seed42_epochs10_no_causal/logs/en-zh_no_causal_seed42_epochs10-%j.out --error=/scratch/koohi/crat/outputs/ablations/mistral7b_opus100_enzh_seed42_epochs10_no_causal/logs/en-zh_no_causal_seed42_epochs10-%j.err --export=ALL,CRAT_WORKER=1 /scratch/koohi/crat/code/crat_mistral_trillium_ablation.sh en-zh no_causal opus100
+   StdErr=/scratch/koohi/crat/outputs/ablations/mistral7b_opus100_enzh_seed42_epochs10_no_causal/logs/en-zh_no_causal_seed42_epochs10-760225.err
+   StdIn=/dev/null
+   StdOut=/scratch/koohi/crat/outputs/ablations/mistral7b_opus100_enzh_seed42_epochs10_no_causal/logs/en-zh_no_causal_seed42_epochs10-760225.out
+   TresPerNode=gres/gpu:h100:1
+   TresPerTask=cpu=24
+   MailUser=koohi@scinet.local MailType=END,FAIL
+
+sacct -j 760225
+JobID           JobName    Account    Elapsed  MaxVMSize     MaxRSS  SystemCPU    UserCPU ExitCode 
+------------ ---------- ---------- ---------- ---------- ---------- ---------- ---------- -------- 
+760225       enzh_s42_+  def-koohi   00:00:05                         00:00:00   00:00:00      0:0 
+760225.batch      batch  def-koohi   00:00:05                         00:00:00   00:00:00      0:0 
+760225.exte+     extern  def-koohi   00:00:05                         00:00:00   00:00:00      0:0 
+

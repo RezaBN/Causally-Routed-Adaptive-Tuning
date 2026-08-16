@@ -1,0 +1,53 @@
+
+Per-seed results:
+ seed                     variant                               label  BLEU_mean  chrF_mean  validation_loss
+   42                   full_crat                                CRAT  24.189760  43.735071         1.102408
+   42                       no_kl                           CRAT - KL  25.782268  43.354734         1.114184
+   42                   no_causal                       CRAT - causal  24.318646  43.915335         1.102674
+   42                    no_morph                        CRAT - morph  23.621451  43.732262         1.102579
+   42                   no_sparse                       CRAT - sparse  24.330805  43.895821         1.102860
+   42              no_integration                  CRAT - integration  23.063778  43.656247         1.102578
+   42             static_role_sft                     Static-role SFT  25.782884  43.534893         1.110793
+   42 no_sparse_morph_integration CRAT - sparse - morph - integration  23.952644  43.858755         1.102469
+   42             no_sparse_morph               CRAT - sparse - morph  23.572011  43.560143         1.102747
+   42       no_sparse_integration         CRAT - sparse - integration  23.608281  43.587390         1.103244
+   42        no_morph_integration          CRAT - morph - integration  24.215798  43.596590         1.102735
+   64                   full_crat                                CRAT  23.858701  43.813727         1.104637
+   64                       no_kl                           CRAT - KL  24.414447  43.441238         1.115042
+   64                   no_causal                       CRAT - causal  23.620292  43.734375         1.104463
+   64                    no_morph                        CRAT - morph  23.913593  43.864105         1.104281
+   64                   no_sparse                       CRAT - sparse  23.597019  43.762866         1.104740
+   64              no_integration                  CRAT - integration  23.872527  43.816939         1.104196
+   64             static_role_sft                     Static-role SFT  27.238335  43.657400         1.112244
+   64 no_sparse_morph_integration CRAT - sparse - morph - integration  23.891849  43.763592         1.104288
+   64             no_sparse_morph               CRAT - sparse - morph  23.494852  43.634028         1.104433
+   64       no_sparse_integration         CRAT - sparse - integration  23.453660  43.594140         1.104712
+   64        no_morph_integration          CRAT - morph - integration  23.638670  43.691347         1.104630
+  123                   full_crat                                CRAT  25.414988  43.713078         1.100818
+  123                       no_kl                           CRAT - KL  26.042904  43.796889         1.107639
+  123                   no_causal                       CRAT - causal  25.836175  43.786298         1.100953
+  123                    no_morph                        CRAT - morph  26.251651  43.964316         1.100140
+  123                   no_sparse                       CRAT - sparse  26.318516  44.097448         1.101064
+  123              no_integration                  CRAT - integration  24.742591  43.746021         1.101283
+  123             static_role_sft                     Static-role SFT  24.358467  43.387335         1.107251
+  123 no_sparse_morph_integration CRAT - sparse - morph - integration  26.331964  43.985825         1.100902
+  123             no_sparse_morph               CRAT - sparse - morph  25.887058  43.701627         1.100539
+  123       no_sparse_integration         CRAT - sparse - integration  25.922091  43.866098         1.100523
+  123        no_morph_integration          CRAT - morph - integration  26.237579  43.870215         1.100979
+
+Across-seed summary:
+                    variant                               label  n_seeds  BLEU_mean_mean  BLEU_mean_std  chrF_mean_mean  chrF_mean_std
+                  full_crat                                CRAT        3       24.487816       0.819838       43.753959       0.052916
+                      no_kl                           CRAT - KL        3       25.413206       0.874713       43.530954       0.234333
+                  no_causal                       CRAT - causal        3       24.591704       1.132897       43.812002       0.093178
+                   no_morph                        CRAT - morph        3       24.595565       1.441632       43.853561       0.116386
+                  no_sparse                       CRAT - sparse        3       24.748780       1.408071       43.918712       0.168461
+             no_integration                  CRAT - integration        3       23.892966       0.839593       43.739735       0.080530
+            static_role_sft                     Static-role SFT        3       25.793229       1.439962       43.526543       0.135226
+no_sparse_morph_integration CRAT - sparse - morph - integration        3       24.725485       1.391583       43.869390       0.111497
+            no_sparse_morph               CRAT - sparse - morph        3       24.317974       1.359414       43.631932       0.070765
+      no_sparse_integration         CRAT - sparse - integration        3       24.328011       1.382677       43.682543       0.159000
+       no_morph_integration          CRAT - morph - integration        3       24.697349       1.364735       43.719384       0.138950
+
+Saved: /scratch/koohi/crat/outputs/ablations/ablation_opus100_enzh_all_variants_per_seed.csv
+Saved: /scratch/koohi/crat/outputs/ablations/ablation_opus100_enzh_all_variants_summary.csv

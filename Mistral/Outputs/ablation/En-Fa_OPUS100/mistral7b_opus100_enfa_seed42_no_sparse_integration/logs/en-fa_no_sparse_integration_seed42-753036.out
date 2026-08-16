@@ -1,0 +1,195 @@
+Morphology pair check OK: languages=['en', 'fa']; file=/scratch/koohi/crat/outputs/ablations/_shared/opus100/en-fa/en-fa_morph_cache_stanza.pkl
+Reusing SAME-PAIR shared morphology cache: /scratch/koohi/crat/outputs/ablations/_shared/opus100/en-fa/en-fa_morph_cache_stanza.pkl
+Discovery pair check OK: en-fa; discovery_seed=42; file=/scratch/koohi/crat/outputs/ablations/_shared/opus100/en-fa/en-fa_component_discovery.json
+Reusing SAME-PAIR shared fixed SIPP discovery: /scratch/koohi/crat/outputs/ablations/_shared/opus100/en-fa/en-fa_component_discovery.json
+Morphology pair check OK: languages=['en', 'fa']; file=/scratch/koohi/crat/outputs/ablations/_shared/opus100/en-fa/en-fa_morph_cache_stanza.pkl
+Discovery pair check OK: en-fa; discovery_seed=42; file=/scratch/koohi/crat/outputs/ablations/_shared/opus100/en-fa/en-fa_component_discovery.json
+========================================================================
+Job ID:                 753036
+Node:                   trig0035
+Started:                Wed 12 Aug 2026 04:09:12 AM EDT
+Experiment:             CRAT ablation
+Pair:                   en-fa
+Dataset:                opus100
+Training seed:          42
+Discovery seed:         42
+Ablation slug:          no_sparse_integration
+Variant/method name:    no_sparse_integration
+Internal implementation:crat
+Artifact prefix:        en-fa_seed42_no_sparse_integration
+Detection:              sipp
+Morphology:             stanza
+Current morph cache:    /scratch/koohi/crat/outputs/ablations/mistral7b_opus100_enfa_seed42_no_sparse_integration/en-fa_morph_cache_stanza.pkl
+Current discovery:      /scratch/koohi/crat/outputs/ablations/mistral7b_opus100_enfa_seed42_no_sparse_integration/en-fa_component_discovery.json
+Shared pair cache dir:  /scratch/koohi/crat/outputs/ablations/_shared/opus100/en-fa
+Reuse-only discovery:   1
+Heads/direction:        64
+Probes/direction:       32
+Causal examples:        16
+Epochs:                 4
+Maximum updates:        -1
+lambda_KL:              0.10
+lambda_causal:          0.10
+lambda_morph:           0.10
+lambda_sparse:          0
+Integration adapters:   disabled
+Evaluation/direction:   500
+Model:                  /scratch/koohi/crat/models/Mistral-7B-v0.1
+Output:                 /scratch/koohi/crat/outputs/ablations/mistral7b_opus100_enfa_seed42_no_sparse_integration
+Logs:                   /scratch/koohi/crat/outputs/ablations/mistral7b_opus100_enfa_seed42_no_sparse_integration/logs
+========================================================================
+Python 3.11.5
+Wed Aug 12 04:09:12 2026       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 580.173.02             Driver Version: 580.173.02     CUDA Version: 13.0     |
++-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  NVIDIA H100 80GB HBM3          On  |   00000000:4C:00.0 Off |                    0 |
+| N/A   41C    P0             73W /  700W |       0MiB /  81559MiB |      0%      Default |
+|                                         |                        |             Disabled |
++-----------------------------------------+------------------------+----------------------+
+
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI              PID   Type   Process name                        GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|  No running processes found                                                             |
++-----------------------------------------------------------------------------------------+
+CUDA available: True
+GPU: NVIDIA H100 80GB HBM3
+Model layers: 32
+Query heads: 32
+KV heads: 8
+Tokenizer size: 32000
+train: /scratch/koohi/crat/data/opus100/en-fa/train.jsonl | en-fa | 'Make me a little horny.' -> 'منو يه کم شهوتي کردي'
+validation: /scratch/koohi/crat/data/opus100/en-fa/validation.jsonl | en-fa | "Let's just say I'm concerned prude with " -> 'بذارين فقط بگم که يه انسان پرهيزگار نگرا'
+test: /scratch/koohi/crat/data/opus100/en-fa/test.jsonl | en-fa | '♪ You play the game ♪' -> '" تو بازي ميکني "'
+probe: /scratch/koohi/crat/data/probes/en-fa_bidirectional.jsonl | en-fa | 'the' -> 'را'
+Stanza offline OK: en; sentences=1
+Stanza offline OK: fa; sentences=1
+GPU: NVIDIA H100 80GB HBM3
+VRAM: 79.2 GB
+Artifact prefix: en-fa_seed42_no_sparse_integration
+Pair-specific morphology cache: en-fa_morph_cache_stanza.pkl
+Pair-specific discovery cache: en-fa_component_discovery.json
+Examples: train=10000, validation=1000, test=1000
+Morphology cache path: /scratch/koohi/crat/outputs/ablations/mistral7b_opus100_enfa_seed42_no_sparse_integration/en-fa_morph_cache_stanza.pkl
+Loading cached component discovery: /scratch/koohi/crat/outputs/ablations/mistral7b_opus100_enfa_seed42_no_sparse_integration/en-fa_component_discovery.json
+SIPP/component discovery: BYPASSED (fixed cached discovery reused)
+Selected union heads: 116
+Integration layers: [30, 28, 31]
+
+==========================================================================================
+METHOD: crat
+==========================================================================================
+{'trainable_params': 217156397, 'total_params': 7458888493, 'trainable_pct': 2.9113774418775185}
+Epoch 1: validation loss = 1.305965
+Epoch 2: validation loss = 1.271377
+Epoch 3: validation loss = 1.291757
+Epoch 4: validation loss = 1.350923
+                                                      0
+method                                             crat
+variant                           no_sparse_integration
+trainable_params                              217156397
+total_params                                 7458888493
+trainable_pct                                  2.911377
+effective_batch_size                                128
+peak_vram_GB                                  39.990794
+train_seconds                               1687.265047
+updates                                             312
+train_tokens                                    2937879
+train_tokens_per_second                     1741.207764
+validation_loss                                1.271377
+train_gate_mean_source                         0.804634
+train_gate_mean_indicator                      0.437122
+train_gate_mean_position                       0.851811
+train_gate_mean_integration                    0.656345
+train_router_entropy                           0.939952
+BLEU_en-fa                                     2.217222
+chrF_en-fa                                    19.966277
+empty_rate_en-fa                                    0.0
+punctuation_collapse_rate_en-fa                     0.0
+BLEU_fa-en                                     14.11958
+chrF_fa-en                                    32.097509
+empty_rate_fa-en                                    0.0
+punctuation_collapse_rate_fa-en                   0.002
+generation_seconds                           545.825273
+generated_tokens                                  29120
+generation_tokens_per_second                  53.350406
+eval_gate_mean_source                          0.802672
+eval_gate_active_source@0.5                         1.0
+eval_gate_mean_indicator                       0.434923
+eval_gate_active_indicator@0.5                      0.0
+eval_gate_mean_position                        0.849583
+eval_gate_active_position@0.5                       1.0
+eval_gate_mean_integration                     0.653594
+eval_gate_active_integration@0.5                    1.0
+eval_mean_active_roles@0.5                          3.0
+latency_mean_seconds                           1.914846
+latency_p50_seconds                            0.913651
+latency_p95_seconds                            7.766023
+benchmark_tokens_per_second                   13.684195
+
+Results saved to: /scratch/koohi/crat/outputs/ablations/mistral7b_opus100_enfa_seed42_no_sparse_integration/en-fa_seed42_no_sparse_integration_comparison_results.csv
+method               variant  trainable_params  total_params  trainable_pct  effective_batch_size  peak_vram_GB  train_seconds  updates  train_tokens  train_tokens_per_second  validation_loss  train_gate_mean_source  train_gate_mean_indicator  train_gate_mean_position  train_gate_mean_integration  train_router_entropy  BLEU_en-fa  chrF_en-fa  empty_rate_en-fa  punctuation_collapse_rate_en-fa  BLEU_fa-en  chrF_fa-en  empty_rate_fa-en  punctuation_collapse_rate_fa-en  generation_seconds  generated_tokens  generation_tokens_per_second  eval_gate_mean_source  eval_gate_active_source@0.5  eval_gate_mean_indicator  eval_gate_active_indicator@0.5  eval_gate_mean_position  eval_gate_active_position@0.5  eval_gate_mean_integration  eval_gate_active_integration@0.5  eval_mean_active_roles@0.5  latency_mean_seconds  latency_p50_seconds  latency_p95_seconds  benchmark_tokens_per_second
+  crat no_sparse_integration         217156397    7458888493       2.911377                   128     39.990794    1687.265047      312       2937879              1741.207764         1.271377                0.804634                   0.437122                  0.851811                     0.656345              0.939952    2.217222   19.966277               0.0                              0.0    14.11958   32.097509               0.0                            0.002          545.825273             29120                     53.350406               0.802672                          1.0                  0.434923                             0.0                 0.849583                            1.0                    0.653594                               1.0                         3.0              1.914846             0.913651             7.766023                    13.684195
+========================================================================
+Finished: Wed 12 Aug 2026 04:51:20 AM EDT
+Pair:      en-fa
+Seed:      42
+Ablation:  no_sparse_integration
+Variant:   no_sparse_integration
+Internal:  crat
+Results:   /scratch/koohi/crat/outputs/ablations/mistral7b_opus100_enfa_seed42_no_sparse_integration/en-fa_seed42_no_sparse_integration_comparison_results.csv
+Samples:   /scratch/koohi/crat/outputs/ablations/mistral7b_opus100_enfa_seed42_no_sparse_integration/en-fa_seed42_no_sparse_integration_translation_samples.csv
+Method dir:/scratch/koohi/crat/outputs/ablations/mistral7b_opus100_enfa_seed42_no_sparse_integration/no_sparse_integration
+Logs:      /scratch/koohi/crat/outputs/ablations/mistral7b_opus100_enfa_seed42_no_sparse_integration/logs
+Shared morphology: /scratch/koohi/crat/outputs/ablations/_shared/opus100/en-fa/en-fa_morph_cache_stanza.pkl
+Shared discovery:  /scratch/koohi/crat/outputs/ablations/_shared/opus100/en-fa/en-fa_component_discovery.json
+========================================================================
+
+scontrol show job 753036
+JobId=753036 JobName=enfa_s42_no_sparse_integration
+   UserId=koohi(3162858) GroupId=koohi(3162858) MCS_label=N/A
+   Priority=983224 Nice=0 Account=def-koohi QOS=normal
+   JobState=COMPLETING Reason=None Dependency=(null)
+   Requeue=0 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=0:0
+   RunTime=00:42:32 TimeLimit=01:30:00 TimeMin=N/A
+   SubmitTime=2026-08-12T04:01:31 EligibleTime=2026-08-12T04:01:31
+   AccrueTime=2026-08-12T04:01:31
+   StartTime=2026-08-12T04:08:48 EndTime=2026-08-12T04:51:20 Deadline=N/A
+   SuspendTime=None SecsPreSuspend=0 LastSchedEval=2026-08-12T04:08:48 Scheduler=Main
+   Partition=compute AllocNode:Sid=trig-login01:2710352
+   ReqNodeList=(null) ExcNodeList=(null)
+   NodeList=trig0035
+   BatchHost=trig0035
+   NumNodes=1 NumCPUs=24 NumTasks=1 CPUs/Task=24 ReqB:S:C:T=0:0:*:*
+   ReqTRES=cpu=24,mem=187.50G,node=1,billing=1,gres/gpu=1
+   AllocTRES=cpu=24,mem=187.50G,node=1,billing=1,gres/gpu=1
+   Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=*
+   MinCPUsNode=24 MinMemoryNode=187.50G MinTmpDiskNode=0
+   Features=(null) DelayBoot=00:00:00
+   OverSubscribe=OK Contiguous=0 Licenses=(null) LicensesAlloc=(null) Network=(null)
+   Command=/scratch/koohi/crat/code/crat_mistral_trillium_ablation.sh
+   SubmitLine=SBATCH --comment /opt/slurm/bin/sbatch --export=NONE --get-user-env --parsable --time=01:30:00 --job-name=enfa_s42_no_sparse_integration --output=/scratch/koohi/crat/outputs/ablations/mistral7b_opus100_enfa_seed42_no_sparse_integration/logs/en-fa_no_sparse_integration_seed42-%j.out --error=/scratch/koohi/crat/outputs/ablations/mistral7b_opus100_enfa_seed42_no_sparse_integration/logs/en-fa_no_sparse_integration_seed42-%j.err --export=ALL,CRAT_WORKER=1 /scratch/koohi/crat/code/crat_mistral_trillium_ablation.sh en-fa no_sparse_integration opus100 --export=NONE --get-user-env --parsable --time=01:30:00 --job-name=enfa_s42_no_sparse_integration --output=/scratch/koohi/crat/outputs/ablations/mistral7b_opus100_enfa_seed42_no_sparse_integration/logs/en-fa_no_sparse_integration_seed42-%j.out --error=/scratch/koohi/crat/outputs/ablations/mistral7b_opus100_enfa_seed42_no_sparse_integration/logs/en-fa_no_sparse_integration_seed42-%j.err --export=ALL,CRAT_WORKER=1 /scratch/koohi/crat/code/crat_mistral_trillium_ablation.sh en-fa no_sparse_integration opus100
+   WorkDir=/scratch/koohi/crat
+   Comment=/opt/slurm/bin/sbatch --export=NONE --get-user-env --parsable --time=01:30:00 --job-name=enfa_s42_no_sparse_integration --output=/scratch/koohi/crat/outputs/ablations/mistral7b_opus100_enfa_seed42_no_sparse_integration/logs/en-fa_no_sparse_integration_seed42-%j.out --error=/scratch/koohi/crat/outputs/ablations/mistral7b_opus100_enfa_seed42_no_sparse_integration/logs/en-fa_no_sparse_integration_seed42-%j.err --export=ALL,CRAT_WORKER=1 /scratch/koohi/crat/code/crat_mistral_trillium_ablation.sh en-fa no_sparse_integration opus100
+   StdErr=/scratch/koohi/crat/outputs/ablations/mistral7b_opus100_enfa_seed42_no_sparse_integration/logs/en-fa_no_sparse_integration_seed42-753036.err
+   StdIn=/dev/null
+   StdOut=/scratch/koohi/crat/outputs/ablations/mistral7b_opus100_enfa_seed42_no_sparse_integration/logs/en-fa_no_sparse_integration_seed42-753036.out
+   TresPerNode=gres/gpu:h100:1
+   TresPerTask=cpu=24
+   MailUser=koohi@scinet.local MailType=END,FAIL
+
+sacct -j 753036
+JobID           JobName    Account    Elapsed  MaxVMSize     MaxRSS  SystemCPU    UserCPU ExitCode 
+------------ ---------- ---------- ---------- ---------- ---------- ---------- ---------- -------- 
+753036       enfa_s42_+  def-koohi   00:42:32                         00:00:00   00:00:00      0:0 
+753036.batch      batch  def-koohi   00:42:32                         00:00:00   00:00:00      0:0 
+753036.exte+     extern  def-koohi   00:42:32                         00:00:00   00:00:00      0:0 
+753036.0         python  def-koohi   00:41:45                         00:00:00   00:00:00      0:0 
+

@@ -1,0 +1,91 @@
+{
+  "root": "/scratch/koohi/crat",
+  "dataset": "opus100",
+  "pair": "en-fa",
+  "epochs": 10,
+  "epoch_namespace": "epochs10",
+  "strict_epoch_audit": true,
+  "seeds": [
+    42,
+    64,
+    123
+  ],
+  "ablations": [
+    "full",
+    "no_kl",
+    "no_causal",
+    "no_morph",
+    "no_sparse",
+    "no_integration",
+    "static_role",
+    "no_sparse_morph_integration",
+    "no_sparse_morph",
+    "no_sparse_integration",
+    "no_morph_integration"
+  ],
+  "variants": [
+    "full_crat",
+    "no_kl",
+    "no_causal",
+    "no_morph",
+    "no_sparse",
+    "no_integration",
+    "static_role_sft",
+    "no_sparse_morph_integration",
+    "no_sparse_morph",
+    "no_sparse_integration",
+    "no_morph_integration"
+  ],
+  "comet_enabled": false,
+  "comet_model": null,
+  "bootstrap_enabled": false,
+  "bootstrap_samples": null,
+  "bootstrap_seed": null,
+  "bootstrap_confidence": null,
+  "bootstrap_delta_convention": "Full CRAT - Variant",
+  "quality_cost_delta_convention": "Variant - Full CRAT for BLEU/chrF/COMET; positive reduction means lower cost than Full CRAT",
+  "discovery_seed": 42,
+  "morph_backend": "stanza",
+  "shared_artifacts": {
+    "shared_dir": "/scratch/koohi/crat/outputs/ablations/_shared/opus100/en-fa",
+    "morph": {
+      "path": "/scratch/koohi/crat/outputs/ablations/_shared/opus100/en-fa/en-fa_morph_cache_stanza.pkl",
+      "exists": true,
+      "sha256": "484329f49d28474c6c4453642473c74299a3fd4921d2bfa476f1b77106501d37",
+      "languages": [
+        "en",
+        "fa"
+      ],
+      "pair_ok": true,
+      "entries": 11853
+    },
+    "discovery": {
+      "path": "/scratch/koohi/crat/outputs/ablations/_shared/opus100/en-fa/en-fa_component_discovery.json",
+      "exists": true,
+      "sha256": "882bb0a3b8eef487356e9d88ccbd1f155cfe7791d1bde6267c20ec00befa6727",
+      "pair_ok": true,
+      "discovery_seed_ok": true,
+      "source_lang": "en",
+      "target_lang": "fa",
+      "discovery_seed": 42,
+      "signature_hash": "8d27822060d59b1a4a7c0e178e60aea22ab2c53c",
+      "selected_head_count": 116,
+      "integration_layers": [
+        30,
+        28,
+        31
+      ]
+    },
+    "probe_files": [
+      "/scratch/koohi/crat/outputs/ablations/_shared/opus100/en-fa/en-fa_probe_examples_8d27822060d5.json"
+    ]
+  },
+  "cache_audit_file": "/scratch/koohi/crat/outputs/ablations/posthoc/opus100/en-fa/epochs10/en-fa_posthoc_opus100_epochs10_seeds42-64-123_shared_cache_reuse_audit.csv",
+  "cache_audit_all_morph_match": true,
+  "cache_audit_all_discovery_match": true,
+  "interaction_nonadditivity_definition": "Pair: Q(-A,-B)-Q(-A)-Q(-B)+Q(full); Third-order: inclusion-exclusion over sparse, morph, integration.",
+  "sacrebleu_version": "2.6.0+computecanada",
+  "pandas_version": "3.0.0+computecanada",
+  "numpy_version": "1.26.4+computecanada",
+  "unbabel_comet_version": null
+}

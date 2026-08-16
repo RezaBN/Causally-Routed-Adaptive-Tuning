@@ -1,0 +1,169 @@
+Reusing Stanza morphology cache from: /scratch/koohi/crat/outputs/mistral7b_opus100_enfr_seed42
+========================================================================
+Job ID:                 749181
+Node:                   trig0023
+Started:                Tue 11 Aug 2026 09:43:50 AM EDT
+Experiment:             CRAT ablation
+Pair:                   en-fr
+Dataset:                opus100
+Seed:                   64
+Ablation:               no_kl
+Method:                 crat
+Detection:              sipp
+Morphology:             stanza
+Heads/direction:        64
+Probes/direction:       32
+Causal examples:        16
+Epochs:                 4
+Maximum updates:        -1
+lambda_KL:              0
+lambda_causal:          0.10
+lambda_morph:           0.10
+lambda_sparse:          0.002
+Integration adapters:   enabled
+Evaluation/direction:   500
+Model:                  /scratch/koohi/crat/models/Mistral-7B-v0.1
+Output:                 /scratch/koohi/crat/outputs/ablations/mistral7b_opus100_enfr_seed64_no_kl
+========================================================================
+Python 3.11.5
+Tue Aug 11 09:43:51 2026       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 580.173.02             Driver Version: 580.173.02     CUDA Version: 13.0     |
++-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  NVIDIA H100 80GB HBM3          On  |   00000000:06:00.0 Off |                    0 |
+| N/A   41C    P0             70W /  700W |       0MiB /  81559MiB |      0%      Default |
+|                                         |                        |             Disabled |
++-----------------------------------------+------------------------+----------------------+
+
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI              PID   Type   Process name                        GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|  No running processes found                                                             |
++-----------------------------------------------------------------------------------------+
+CUDA available: True
+GPU: NVIDIA H100 80GB HBM3
+Model layers: 32
+Query heads: 32
+KV heads: 8
+Tokenizer size: 32000
+train: /scratch/koohi/crat/data/opus100/en-fr/train.jsonl | en-fr | 'You gonna throw me a shower?' -> 'On fera une fête pour le bébé ?'
+validation: /scratch/koohi/crat/data/opus100/en-fr/validation.jsonl | en-fr | 'o Aboriginal Communities Home > Ontario ' -> 'o Collectivités autochtones Accueil > On'
+test: /scratch/koohi/crat/data/opus100/en-fr/test.jsonl | en-fr | 'Guidelines for the management and contro' -> 'Parcs Canada élaborera des lignes direct'
+probe: /scratch/koohi/crat/data/probes/en-fr_bidirectional.jsonl | en-fr | 'the' -> 'le'
+Stanza offline OK: en; sentences=1
+Stanza offline OK: fr; sentences=1
+GPU: NVIDIA H100 80GB HBM3
+VRAM: 79.2 GB
+Examples: train=10000, validation=1000, test=1000
+Probe examples en-fr: 32
+Probe examples fr-en: 32
+Selected union heads: 101
+Integration layers: [18, 31, 5]
+
+==========================================================================================
+METHOD: crat
+==========================================================================================
+{'trainable_params': 194480941, 'total_params': 7436213037, 'trainable_pct': 2.6153223426000674}
+Epoch 1: validation loss = 0.991333
+Epoch 2: validation loss = 1.021519
+Epoch 3: validation loss = 1.140632
+Epoch 4: validation loss = 1.293452
+                                            0
+method                                   crat
+trainable_params                    194480941
+total_params                       7436213037
+trainable_pct                        2.615322
+effective_batch_size                      128
+peak_vram_GB                        25.834042
+train_seconds                     1515.474888
+updates                                   316
+train_tokens                          3141744
+train_tokens_per_second           2073.108585
+validation_loss                      0.991333
+train_gate_mean_source               0.754675
+train_gate_mean_indicator            0.485077
+train_gate_mean_position              0.90635
+train_gate_mean_integration          0.610446
+train_router_entropy                 0.948008
+BLEU_en-fr                          26.954892
+chrF_en-fr                          52.244036
+empty_rate_en-fr                          0.0
+punctuation_collapse_rate_en-fr           0.0
+BLEU_fr-en                          34.473139
+chrF_fr-en                          57.848833
+empty_rate_fr-en                          0.0
+punctuation_collapse_rate_fr-en           0.0
+generation_seconds                 485.792738
+generated_tokens                        26745
+generation_tokens_per_second        55.054343
+eval_gate_mean_source                0.705331
+eval_gate_active_source@0.5               1.0
+eval_gate_mean_indicator             0.432836
+eval_gate_active_indicator@0.5            0.0
+eval_gate_mean_position              0.884632
+eval_gate_active_position@0.5             1.0
+eval_gate_mean_integration           0.609553
+eval_gate_active_integration@0.5          1.0
+eval_mean_active_roles@0.5                3.0
+latency_mean_seconds                 1.700723
+latency_p50_seconds                   0.85252
+latency_p95_seconds                   3.61314
+benchmark_tokens_per_second         13.725782
+
+Results saved to: /scratch/koohi/crat/outputs/ablations/mistral7b_opus100_enfr_seed64_no_kl/comparison_results.csv
+method  trainable_params  total_params  trainable_pct  effective_batch_size  peak_vram_GB  train_seconds  updates  train_tokens  train_tokens_per_second  validation_loss  train_gate_mean_source  train_gate_mean_indicator  train_gate_mean_position  train_gate_mean_integration  train_router_entropy  BLEU_en-fr  chrF_en-fr  empty_rate_en-fr  punctuation_collapse_rate_en-fr  BLEU_fr-en  chrF_fr-en  empty_rate_fr-en  punctuation_collapse_rate_fr-en  generation_seconds  generated_tokens  generation_tokens_per_second  eval_gate_mean_source  eval_gate_active_source@0.5  eval_gate_mean_indicator  eval_gate_active_indicator@0.5  eval_gate_mean_position  eval_gate_active_position@0.5  eval_gate_mean_integration  eval_gate_active_integration@0.5  eval_mean_active_roles@0.5  latency_mean_seconds  latency_p50_seconds  latency_p95_seconds  benchmark_tokens_per_second
+  crat         194480941    7436213037       2.615322                   128     25.834042    1515.474888      316       3141744              2073.108585         0.991333                0.754675                   0.485077                   0.90635                     0.610446              0.948008   26.954892   52.244036               0.0                              0.0   34.473139   57.848833               0.0                              0.0          485.792738             26745                     55.054343               0.705331                          1.0                  0.432836                             0.0                 0.884632                            1.0                    0.609553                               1.0                         3.0              1.700723              0.85252              3.61314                    13.725782
+========================================================================
+Finished: Tue 11 Aug 2026 10:25:33 AM EDT
+Seed:     64
+Ablation: no_kl
+Results:  /scratch/koohi/crat/outputs/ablations/mistral7b_opus100_enfr_seed64_no_kl/comparison_results.csv
+========================================================================
+
+scontrol show job 749181
+JobId=749181 JobName=crat_ablation
+   UserId=koohi(3162858) GroupId=koohi(3162858) MCS_label=N/A
+   Priority=1055284 Nice=0 Account=def-koohi QOS=normal
+   JobState=COMPLETING Reason=None Dependency=(null)
+   Requeue=0 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=0:0
+   RunTime=00:41:49 TimeLimit=01:00:00 TimeMin=N/A
+   SubmitTime=2026-08-11T09:42:49 EligibleTime=2026-08-11T09:42:49
+   AccrueTime=2026-08-11T09:42:49
+   StartTime=2026-08-11T09:43:44 EndTime=2026-08-11T10:25:33 Deadline=N/A
+   SuspendTime=None SecsPreSuspend=0 LastSchedEval=2026-08-11T09:43:44 Scheduler=Backfill
+   Partition=compute AllocNode:Sid=trig-login01:1883395
+   ReqNodeList=(null) ExcNodeList=(null)
+   NodeList=trig0023
+   BatchHost=trig0023
+   NumNodes=1 NumCPUs=24 NumTasks=1 CPUs/Task=24 ReqB:S:C:T=0:0:*:*
+   ReqTRES=cpu=24,mem=187.50G,node=1,billing=1,gres/gpu=1
+   AllocTRES=cpu=24,mem=187.50G,node=1,billing=1,gres/gpu=1
+   Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=*
+   MinCPUsNode=24 MinMemoryNode=187.50G MinTmpDiskNode=0
+   Features=(null) DelayBoot=00:00:00
+   OverSubscribe=OK Contiguous=0 Licenses=(null) LicensesAlloc=(null) Network=(null)
+   Command=/scratch/koohi/crat/code/crat_mistral_trillium_ablation.sh
+   SubmitLine=SBATCH --comment /opt/slurm/bin/sbatch --export=NONE --get-user-env --parsable --time=01:00:00 --export=ALL,SEED=64,EPOCHS=4,MAX_STEPS=-1 code/crat_mistral_trillium_ablation.sh en-fr no_kl opus100 --export=NONE --get-user-env --parsable --time=01:00:00 --export=ALL,SEED=64,EPOCHS=4,MAX_STEPS=-1 code/crat_mistral_trillium_ablation.sh en-fr no_kl opus100
+   WorkDir=/scratch/koohi/crat
+   Comment=/opt/slurm/bin/sbatch --export=NONE --get-user-env --parsable --time=01:00:00 --export=ALL,SEED=64,EPOCHS=4,MAX_STEPS=-1 code/crat_mistral_trillium_ablation.sh en-fr no_kl opus100
+   StdErr=/scratch/koohi/crat/logs/crat_ablation-749181.err
+   StdIn=/dev/null
+   StdOut=/scratch/koohi/crat/logs/crat_ablation-749181.out
+   TresPerNode=gres/gpu:h100:1
+   TresPerTask=cpu=24
+   MailUser=koohi@scinet.local MailType=END,FAIL
+
+sacct -j 749181
+JobID           JobName    Account    Elapsed  MaxVMSize     MaxRSS  SystemCPU    UserCPU ExitCode 
+------------ ---------- ---------- ---------- ---------- ---------- ---------- ---------- -------- 
+749181       crat_abla+  def-koohi   00:41:50                         00:00:00   00:00:00      0:0 
+749181.batch      batch  def-koohi   00:41:50                         00:00:00   00:00:00      0:0 
+749181.exte+     extern  def-koohi   00:41:50                         00:00:00   00:00:00      0:0 
+749181.0         python  def-koohi   00:41:11                         00:00:00   00:00:00      0:0 
+

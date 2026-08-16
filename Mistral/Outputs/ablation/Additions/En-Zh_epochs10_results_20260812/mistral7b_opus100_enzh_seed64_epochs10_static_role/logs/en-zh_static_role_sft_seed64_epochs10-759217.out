@@ -1,0 +1,187 @@
+Morphology pair check OK: languages=['en', 'zh']; file=/scratch/koohi/crat/outputs/ablations/_shared/opus100/en-zh/en-zh_morph_cache_stanza.pkl
+Reusing SAME-PAIR shared morphology cache: /scratch/koohi/crat/outputs/ablations/_shared/opus100/en-zh/en-zh_morph_cache_stanza.pkl
+Discovery pair check OK: en-zh; discovery_seed=42; file=/scratch/koohi/crat/outputs/ablations/_shared/opus100/en-zh/en-zh_component_discovery.json
+Reusing SAME-PAIR shared fixed SIPP discovery: /scratch/koohi/crat/outputs/ablations/_shared/opus100/en-zh/en-zh_component_discovery.json
+Morphology pair check OK: languages=['en', 'zh']; file=/scratch/koohi/crat/outputs/ablations/_shared/opus100/en-zh/en-zh_morph_cache_stanza.pkl
+Discovery pair check OK: en-zh; discovery_seed=42; file=/scratch/koohi/crat/outputs/ablations/_shared/opus100/en-zh/en-zh_component_discovery.json
+========================================================================
+Job ID:                 759217
+Node:                   trig0040
+Started:                Thu 13 Aug 2026 06:48:35 AM EDT
+Experiment:             CRAT ablation
+Pair:                   en-zh
+Dataset:                opus100
+Training seed:          64
+Discovery seed:         42
+Ablation slug:          static_role
+Variant/method name:    static_role_sft
+Internal implementation:static_role_sft
+Artifact prefix:        en-zh_seed64_epochs10_static_role_sft
+Detection:              sipp
+Morphology:             stanza
+Current morph cache:    /scratch/koohi/crat/outputs/ablations/mistral7b_opus100_enzh_seed64_epochs10_static_role/en-zh_morph_cache_stanza.pkl
+Current discovery:      /scratch/koohi/crat/outputs/ablations/mistral7b_opus100_enzh_seed64_epochs10_static_role/en-zh_component_discovery.json
+Shared pair cache dir:  /scratch/koohi/crat/outputs/ablations/_shared/opus100/en-zh
+Reuse-only discovery:   1
+Heads/direction:        64
+Probes/direction:       32
+Causal examples:        16
+Epochs:                 10
+Maximum updates:        -1
+lambda_KL:              0.10
+lambda_causal:          0.10
+lambda_morph:           0.10
+lambda_sparse:          0.002
+Integration adapters:   enabled
+Evaluation/direction:   500
+Model:                  /scratch/koohi/crat/models/Mistral-7B-v0.1
+Output:                 /scratch/koohi/crat/outputs/ablations/mistral7b_opus100_enzh_seed64_epochs10_static_role
+Logs:                   /scratch/koohi/crat/outputs/ablations/mistral7b_opus100_enzh_seed64_epochs10_static_role/logs
+========================================================================
+Python 3.11.5
+Thu Aug 13 06:48:35 2026       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 580.173.02             Driver Version: 580.173.02     CUDA Version: 13.0     |
++-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  NVIDIA H100 80GB HBM3          On  |   00000000:0C:00.0 Off |                    0 |
+| N/A   41C    P0             73W /  700W |       0MiB /  81559MiB |      0%      Default |
+|                                         |                        |             Disabled |
++-----------------------------------------+------------------------+----------------------+
+
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI              PID   Type   Process name                        GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|  No running processes found                                                             |
++-----------------------------------------------------------------------------------------+
+CUDA available: True
+GPU: NVIDIA H100 80GB HBM3
+Model layers: 32
+Query heads: 32
+KV heads: 8
+Tokenizer size: 32000
+train: /scratch/koohi/crat/data/opus100/en-zh/train.jsonl | en-zh | "- I don't know. I think there's two. Cal" -> '-我不知道，应该是两个，卡力伯'
+validation: /scratch/koohi/crat/data/opus100/en-zh/validation.jsonl | en-zh | 'Regrettably, the question of extending U' -> '遗憾的是，安理会上对延长波黑特派团任务期限问题无法达成共识。'
+test: /scratch/koohi/crat/data/opus100/en-zh/test.jsonl | en-zh | 'UNCDF will remain a recognized leader in' -> '31. 资发基金仍然是权力下放和当地发展的公认领袖，将利用其当地发展的政策试验项'
+probe: /scratch/koohi/crat/data/probes/en-zh_bidirectional.jsonl | en-zh | 'and' -> '而且'
+Stanza offline OK: en; sentences=1
+Stanza offline OK: zh; sentences=1
+GPU: NVIDIA H100 80GB HBM3
+VRAM: 79.2 GB
+Artifact prefix: en-zh_seed64_epochs10_static_role_sft
+Pair-specific morphology cache: en-zh_morph_cache_stanza.pkl
+Pair-specific discovery cache: en-zh_component_discovery.json
+Examples: train=10000, validation=1000, test=1000
+Morphology cache path: /scratch/koohi/crat/outputs/ablations/mistral7b_opus100_enzh_seed64_epochs10_static_role/en-zh_morph_cache_stanza.pkl
+Loading cached component discovery: /scratch/koohi/crat/outputs/ablations/mistral7b_opus100_enzh_seed64_epochs10_static_role/en-zh_component_discovery.json
+SIPP/component discovery: BYPASSED (fixed cached discovery reused)
+Selected union heads: 123
+Integration layers: [31, 28, 7]
+
+==========================================================================================
+METHOD: static_role_sft
+==========================================================================================
+{'trainable_params': 237371392, 'total_params': 7479103488, 'trainable_pct': 3.173794725274966}
+Epoch 1: validation loss = 1.114783
+Epoch 2: validation loss = 1.118221
+Epoch 3: validation loss = 1.232245
+Epoch 4: validation loss = 1.421624
+Epoch 5: validation loss = 1.603903
+Epoch 6: validation loss = 1.723282
+Epoch 7: validation loss = 1.839315
+Epoch 8: validation loss = 2.008507
+Epoch 9: validation loss = 2.099983
+Epoch 10: validation loss = 2.137094
+                                               0
+method                           static_role_sft
+variant                          static_role_sft
+trainable_params                       237371392
+total_params                          7479103488
+trainable_pct                           3.173795
+effective_batch_size                         128
+peak_vram_GB                           25.999085
+train_seconds                        3051.441483
+updates                                      790
+train_tokens                             8399100
+train_tokens_per_second              2752.502398
+validation_loss                         1.114783
+BLEU_en-zh                             21.211098
+chrF_en-zh                             30.171479
+empty_rate_en-zh                             0.0
+punctuation_collapse_rate_en-zh              0.0
+BLEU_zh-en                             31.161176
+chrF_zh-en                             57.015026
+empty_rate_zh-en                             0.0
+punctuation_collapse_rate_zh-en              0.0
+generation_seconds                     544.44804
+generated_tokens                           32187
+generation_tokens_per_second           59.118589
+latency_mean_seconds                    2.631078
+latency_p50_seconds                     1.477945
+latency_p95_seconds                     7.567834
+benchmark_tokens_per_second            13.837011
+
+Results saved to: /scratch/koohi/crat/outputs/ablations/mistral7b_opus100_enzh_seed64_epochs10_static_role/en-zh_seed64_epochs10_static_role_sft_comparison_results.csv
+         method         variant  trainable_params  total_params  trainable_pct  effective_batch_size  peak_vram_GB  train_seconds  updates  train_tokens  train_tokens_per_second  validation_loss  BLEU_en-zh  chrF_en-zh  empty_rate_en-zh  punctuation_collapse_rate_en-zh  BLEU_zh-en  chrF_zh-en  empty_rate_zh-en  punctuation_collapse_rate_zh-en  generation_seconds  generated_tokens  generation_tokens_per_second  latency_mean_seconds  latency_p50_seconds  latency_p95_seconds  benchmark_tokens_per_second
+static_role_sft static_role_sft         237371392    7479103488       3.173795                   128     25.999085    3051.441483      790       8399100              2752.502398         1.114783   21.211098   30.171479               0.0                              0.0   31.161176   57.015026               0.0                              0.0           544.44804             32187                     59.118589              2.631078             1.477945             7.567834                    13.837011
+========================================================================
+Finished: Thu 13 Aug 2026 07:52:18 AM EDT
+Pair:      en-zh
+Seed:      64
+Ablation:  static_role
+Variant:   static_role_sft
+Internal:  static_role_sft
+Results:   /scratch/koohi/crat/outputs/ablations/mistral7b_opus100_enzh_seed64_epochs10_static_role/en-zh_seed64_epochs10_static_role_sft_comparison_results.csv
+Samples:   /scratch/koohi/crat/outputs/ablations/mistral7b_opus100_enzh_seed64_epochs10_static_role/en-zh_seed64_epochs10_static_role_sft_translation_samples.csv
+Method dir:/scratch/koohi/crat/outputs/ablations/mistral7b_opus100_enzh_seed64_epochs10_static_role/static_role_sft
+Logs:      /scratch/koohi/crat/outputs/ablations/mistral7b_opus100_enzh_seed64_epochs10_static_role/logs
+Shared morphology: /scratch/koohi/crat/outputs/ablations/_shared/opus100/en-zh/en-zh_morph_cache_stanza.pkl
+Shared discovery:  /scratch/koohi/crat/outputs/ablations/_shared/opus100/en-zh/en-zh_component_discovery.json
+========================================================================
+
+scontrol show job 759217
+JobId=759217 JobName=enzh_s64_static_role_sft
+   UserId=koohi(3162858) GroupId=koohi(3162858) MCS_label=N/A
+   Priority=656818 Nice=0 Account=def-koohi QOS=normal
+   JobState=COMPLETING Reason=None Dependency=(null)
+   Requeue=0 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=0:0
+   RunTime=01:03:57 TimeLimit=02:30:00 TimeMin=N/A
+   SubmitTime=2026-08-13T06:44:54 EligibleTime=2026-08-13T06:44:54
+   AccrueTime=2026-08-13T06:44:54
+   StartTime=2026-08-13T06:48:21 EndTime=2026-08-13T07:52:18 Deadline=N/A
+   SuspendTime=None SecsPreSuspend=0 LastSchedEval=2026-08-13T06:48:21 Scheduler=Backfill
+   Partition=compute AllocNode:Sid=trig-login01:3386610
+   ReqNodeList=(null) ExcNodeList=(null)
+   NodeList=trig0040
+   BatchHost=trig0040
+   NumNodes=1 NumCPUs=24 NumTasks=1 CPUs/Task=24 ReqB:S:C:T=0:0:*:*
+   ReqTRES=cpu=24,mem=187.50G,node=1,billing=1,gres/gpu=1
+   AllocTRES=cpu=24,mem=187.50G,node=1,billing=1,gres/gpu=1
+   Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=*
+   MinCPUsNode=24 MinMemoryNode=187.50G MinTmpDiskNode=0
+   Features=(null) DelayBoot=00:00:00
+   OverSubscribe=OK Contiguous=0 Licenses=(null) LicensesAlloc=(null) Network=(null)
+   Command=/scratch/koohi/crat/code/crat_mistral_trillium_ablation.sh
+   SubmitLine=SBATCH --comment /opt/slurm/bin/sbatch --export=NONE --get-user-env --parsable --time=02:30:00 --job-name=enzh_s64_static_role_sft --output=/scratch/koohi/crat/outputs/ablations/mistral7b_opus100_enzh_seed64_epochs10_static_role/logs/en-zh_static_role_sft_seed64_epochs10-%j.out --error=/scratch/koohi/crat/outputs/ablations/mistral7b_opus100_enzh_seed64_epochs10_static_role/logs/en-zh_static_role_sft_seed64_epochs10-%j.err --export=ALL,CRAT_WORKER=1 /scratch/koohi/crat/code/crat_mistral_trillium_ablation.sh en-zh static_role opus100 --export=NONE --get-user-env --parsable --time=02:30:00 --job-name=enzh_s64_static_role_sft --output=/scratch/koohi/crat/outputs/ablations/mistral7b_opus100_enzh_seed64_epochs10_static_role/logs/en-zh_static_role_sft_seed64_epochs10-%j.out --error=/scratch/koohi/crat/outputs/ablations/mistral7b_opus100_enzh_seed64_epochs10_static_role/logs/en-zh_static_role_sft_seed64_epochs10-%j.err --export=ALL,CRAT_WORKER=1 /scratch/koohi/crat/code/crat_mistral_trillium_ablation.sh en-zh static_role opus100
+   WorkDir=/scratch/koohi/crat
+   Comment=/opt/slurm/bin/sbatch --export=NONE --get-user-env --parsable --time=02:30:00 --job-name=enzh_s64_static_role_sft --output=/scratch/koohi/crat/outputs/ablations/mistral7b_opus100_enzh_seed64_epochs10_static_role/logs/en-zh_static_role_sft_seed64_epochs10-%j.out --error=/scratch/koohi/crat/outputs/ablations/mistral7b_opus100_enzh_seed64_epochs10_static_role/logs/en-zh_static_role_sft_seed64_epochs10-%j.err --export=ALL,CRAT_WORKER=1 /scratch/koohi/crat/code/crat_mistral_trillium_ablation.sh en-zh static_role opus100
+   StdErr=/scratch/koohi/crat/outputs/ablations/mistral7b_opus100_enzh_seed64_epochs10_static_role/logs/en-zh_static_role_sft_seed64_epochs10-759217.err
+   StdIn=/dev/null
+   StdOut=/scratch/koohi/crat/outputs/ablations/mistral7b_opus100_enzh_seed64_epochs10_static_role/logs/en-zh_static_role_sft_seed64_epochs10-759217.out
+   TresPerNode=gres/gpu:h100:1
+   TresPerTask=cpu=24
+   MailUser=koohi@scinet.local MailType=END,FAIL
+
+sacct -j 759217
+JobID           JobName    Account    Elapsed  MaxVMSize     MaxRSS  SystemCPU    UserCPU ExitCode 
+------------ ---------- ---------- ---------- ---------- ---------- ---------- ---------- -------- 
+759217       enzh_s64_+  def-koohi   01:03:57                         00:00:00   00:00:00      0:0 
+759217.batch      batch  def-koohi   01:03:57                         00:00:00   00:00:00      0:0 
+759217.exte+     extern  def-koohi   01:03:57                         00:00:00   00:00:00      0:0 
+759217.0         python  def-koohi   01:03:25                         00:00:00   00:00:00      0:0 
+
