@@ -20,9 +20,6 @@ Detailed interpretation of the CRAT ablation experiments, including the effects 
 
 Supplementary statistical analyses supporting the reported results, such as:
 
-- significance tests;
-- effect-size estimates;
-- confidence intervals;
 - seed-level variability analyses;
 - pairwise method comparisons; and
 - robustness and sensitivity analyses.
