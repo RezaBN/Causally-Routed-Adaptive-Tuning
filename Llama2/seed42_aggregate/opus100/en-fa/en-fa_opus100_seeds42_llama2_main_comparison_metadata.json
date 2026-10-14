@@ -1,0 +1,29 @@
+{
+  "model": "Llama-2-7B",
+  "model_slug": "llama2_7b",
+  "root": "/scratch/koohi/crat",
+  "comparison_root": "/scratch/koohi/crat/outputs/main_comparison_llama2",
+  "pair": "en-fa",
+  "dataset": "opus100",
+  "run_mode": "full",
+  "seeds": [
+    42
+  ],
+  "methods": [
+    "base",
+    "full_sft",
+    "targeted_sft",
+    "lora",
+    "rslora",
+    "dora",
+    "crat",
+    "crat_no_sparse",
+    "crat_ce",
+    "crat_ce_kl"
+  ],
+  "strict": true,
+  "input_problem_count": 0,
+  "input_problems": [],
+  "pandas_version": "3.0.0+computecanada",
+  "numpy_version": "1.26.4+computecanada"
+}

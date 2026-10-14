@@ -1,0 +1,159 @@
+Morphology pair OK: /scratch/koohi/crat/outputs/_shared/llama2_7b/opus100/en-zh/en-zh_morph_cache_stanza.pkl; languages=['en', 'zh']; entries=11934
+Reusing SAME-PAIR shared morphology cache: /scratch/koohi/crat/outputs/_shared/llama2_7b/opus100/en-zh/en-zh_morph_cache_stanza.pkl
+Discovery pair/seed/model OK: /scratch/koohi/crat/outputs/_shared/llama2_7b/opus100/en-zh/en-zh_component_discovery.json
+Reusing SAME-PAIR shared fixed component discovery: /scratch/koohi/crat/outputs/_shared/llama2_7b/opus100/en-zh/en-zh_component_discovery.json
+========================================================================
+Job ID:                 810035
+Node:                   trig0034
+Started:                Wed 19 Aug 2026 07:06:30 PM EDT
+Experiment:             Main CRAT comparison
+Pair:                   en-zh
+Dataset:                opus100
+Method:                 dora
+Training seed:          42
+Discovery seed:         42
+Detection:              sipp
+Morphology:             stanza
+Heads/direction:        64
+Probes/direction:       32
+Causal examples:        16
+Epochs:                 4
+Maximum updates:        -1
+PEFT rank/alpha:        16 / 32
+PEFT target modules:    all-linear
+Output:                 /scratch/koohi/crat/outputs/main_comparison_llama2/llama2_7b_opus100_enzh_seed42_dora
+Logs:                   /scratch/koohi/crat/outputs/main_comparison_llama2/llama2_7b_opus100_enzh_seed42_dora/logs
+Shared pair cache dir:  /scratch/koohi/crat/outputs/_shared/llama2_7b/opus100/en-zh
+Shared morphology:      /scratch/koohi/crat/outputs/_shared/llama2_7b/opus100/en-zh/en-zh_morph_cache_stanza.pkl
+Shared discovery:       /scratch/koohi/crat/outputs/_shared/llama2_7b/opus100/en-zh/en-zh_component_discovery.json
+========================================================================
+Python 3.11.5
+Wed Aug 19 19:06:30 2026       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 580.173.02             Driver Version: 580.173.02     CUDA Version: 13.0     |
++-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  NVIDIA H100 80GB HBM3          On  |   00000000:4C:00.0 Off |                    0 |
+| N/A   42C    P0             71W /  700W |       0MiB /  81559MiB |      0%      Default |
+|                                         |                        |             Disabled |
++-----------------------------------------+------------------------+----------------------+
+
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI              PID   Type   Process name                        GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|  No running processes found                                                             |
++-----------------------------------------------------------------------------------------+
+PEFT version: 0.20.0
+CUDA available: True
+GPU: NVIDIA H100 80GB HBM3
+Model layers: 32
+Query heads: 32
+KV heads: 32
+Tokenizer size: 32000
+train: /scratch/koohi/crat/data/opus100/en-zh/train.jsonl | en-zh | "- I don't know. I think there's two. Cal" -> '-我不知道，应该是两个，卡力伯'
+validation: /scratch/koohi/crat/data/opus100/en-zh/validation.jsonl | en-zh | 'Regrettably, the question of extending U' -> '遗憾的是，安理会上对延长波黑特派团任务期限问题无法达成共识。'
+test: /scratch/koohi/crat/data/opus100/en-zh/test.jsonl | en-zh | 'UNCDF will remain a recognized leader in' -> '31. 资发基金仍然是权力下放和当地发展的公认领袖，将利用其当地发展的政策试验项'
+Offline mode: True
+SLURM job: 810035 | SCRATCH: /scratch/koohi
+Output directory: /scratch/koohi/crat/outputs/main_comparison_llama2/llama2_7b_opus100_enzh_seed42_dora
+GPU: NVIDIA H100 80GB HBM3
+VRAM: 79.2 GB
+Examples: train=10000, validation=1000, test=1000
+Component discovery not required; SIPP model will not be loaded.
+
+==========================================================================================
+METHOD: dora
+==========================================================================================
+{'trainable_params': 41336832, 'total_params': 6779752448, 'trainable_pct': 0.609710049401497}
+Epoch 1: validation loss = 1.091298
+Epoch 2: validation loss = 1.057284
+Epoch 3: validation loss = 1.045256
+Epoch 4: validation loss = 1.043965
+                                           0
+method                                  dora
+pair                                   en-zh
+seed                                      42
+discovery_seed                           NaN
+trainable_params                    41336832
+total_params                      6779752448
+trainable_pct                        0.60971
+effective_batch_size                     128
+peak_vram_GB                       58.096947
+train_seconds                    3888.342632
+updates                                  312
+train_tokens                         3740491
+train_tokens_per_second           961.975668
+validation_loss                     1.043965
+BLEU_en-zh                         14.527548
+chrF_en-zh                         23.966296
+empty_rate_en-zh                         0.0
+punctuation_collapse_rate_en-zh        0.002
+BLEU_zh-en                          28.73979
+chrF_zh-en                         54.603462
+empty_rate_zh-en                         0.0
+punctuation_collapse_rate_zh-en          0.0
+generation_seconds               1930.113959
+generated_tokens                       36623
+generation_tokens_per_second       18.974527
+latency_mean_seconds                8.237021
+latency_p50_seconds                 5.410038
+latency_p95_seconds                 20.14135
+benchmark_tokens_per_second         4.960455
+
+Results saved to: /scratch/koohi/crat/outputs/main_comparison_llama2/llama2_7b_opus100_enzh_seed42_dora/en-zh_seed42_dora_comparison_results.csv
+method  pair  seed  discovery_seed  trainable_params  total_params  trainable_pct  effective_batch_size  peak_vram_GB  train_seconds  updates  train_tokens  train_tokens_per_second  validation_loss  BLEU_en-zh  chrF_en-zh  empty_rate_en-zh  punctuation_collapse_rate_en-zh  BLEU_zh-en  chrF_zh-en  empty_rate_zh-en  punctuation_collapse_rate_zh-en  generation_seconds  generated_tokens  generation_tokens_per_second  latency_mean_seconds  latency_p50_seconds  latency_p95_seconds  benchmark_tokens_per_second
+  dora en-zh    42             NaN          41336832    6779752448        0.60971                   128     58.096947    3888.342632      312       3740491               961.975668         1.043965   14.527548   23.966296               0.0                            0.002    28.73979   54.603462               0.0                              0.0         1930.113959             36623                     18.974527              8.237021             5.410038             20.14135                     4.960455
+========================================================================
+Finished: Wed 19 Aug 2026 08:54:07 PM EDT
+Pair:     en-zh
+Method:   dora
+Seed:     42
+Results:  /scratch/koohi/crat/outputs/main_comparison_llama2/llama2_7b_opus100_enzh_seed42_dora/en-zh_seed42_dora_comparison_results.csv
+========================================================================
+
+scontrol show job 810035
+JobId=810035 JobName=enzh_s42_dora
+   UserId=koohi(3162858) GroupId=koohi(3162858) MCS_label=N/A
+   Priority=301795 Nice=0 Account=def-koohi QOS=normal
+   JobState=COMPLETING Reason=None Dependency=(null)
+   Requeue=0 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=0:0
+   RunTime=01:47:47 TimeLimit=02:00:00 TimeMin=N/A
+   SubmitTime=2026-08-19T09:59:22 EligibleTime=2026-08-19T09:59:22
+   AccrueTime=2026-08-19T09:59:22
+   StartTime=2026-08-19T19:06:20 EndTime=2026-08-19T20:54:07 Deadline=N/A
+   SuspendTime=None SecsPreSuspend=0 LastSchedEval=2026-08-19T19:06:20 Scheduler=Backfill
+   Partition=compute AllocNode:Sid=trig-login01:1233286
+   ReqNodeList=(null) ExcNodeList=(null)
+   NodeList=trig0034
+   BatchHost=trig0034
+   NumNodes=1 NumCPUs=24 NumTasks=1 CPUs/Task=24 ReqB:S:C:T=0:0:*:*
+   ReqTRES=cpu=24,mem=187.50G,node=1,billing=1,gres/gpu=1
+   AllocTRES=cpu=24,mem=187.50G,node=1,billing=1,gres/gpu=1
+   Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=*
+   MinCPUsNode=24 MinMemoryNode=187.50G MinTmpDiskNode=0
+   Features=(null) DelayBoot=00:00:00
+   OverSubscribe=OK Contiguous=0 Licenses=(null) LicensesAlloc=(null) Network=(null)
+   Command=/scratch/koohi/crat/code/crat_llama2_main.sh
+   SubmitLine=SBATCH --comment /opt/slurm/bin/sbatch --export=NONE --get-user-env --parsable --job-name=enzh_s42_dora --output=/scratch/koohi/crat/outputs/main_comparison_llama2/llama2_7b_opus100_enzh_seed42_dora/logs/en-zh_dora_seed42-%j.out --error=/scratch/koohi/crat/outputs/main_comparison_llama2/llama2_7b_opus100_enzh_seed42_dora/logs/en-zh_dora_seed42-%j.err --time=02:00:00 --export=ALL code/crat_llama2_main.sh en-zh dora opus100 --export=NONE --get-user-env --parsable --job-name=enzh_s42_dora --output=/scratch/koohi/crat/outputs/main_comparison_llama2/llama2_7b_opus100_enzh_seed42_dora/logs/en-zh_dora_seed42-%j.out --error=/scratch/koohi/crat/outputs/main_comparison_llama2/llama2_7b_opus100_enzh_seed42_dora/logs/en-zh_dora_seed42-%j.err --time=02:00:00 --export=ALL code/crat_llama2_main.sh en-zh dora opus100
+   WorkDir=/scratch/koohi/crat
+   Comment=/opt/slurm/bin/sbatch --export=NONE --get-user-env --parsable --job-name=enzh_s42_dora --output=/scratch/koohi/crat/outputs/main_comparison_llama2/llama2_7b_opus100_enzh_seed42_dora/logs/en-zh_dora_seed42-%j.out --error=/scratch/koohi/crat/outputs/main_comparison_llama2/llama2_7b_opus100_enzh_seed42_dora/logs/en-zh_dora_seed42-%j.err --time=02:00:00 --export=ALL code/crat_llama2_main.sh en-zh dora opus100
+   StdErr=/scratch/koohi/crat/outputs/main_comparison_llama2/llama2_7b_opus100_enzh_seed42_dora/logs/en-zh_dora_seed42-810035.err
+   StdIn=/dev/null
+   StdOut=/scratch/koohi/crat/outputs/main_comparison_llama2/llama2_7b_opus100_enzh_seed42_dora/logs/en-zh_dora_seed42-810035.out
+   TresPerNode=gres/gpu:1
+   TresPerTask=cpu=24
+   MailUser=koohi@scinet.local MailType=END,FAIL
+
+sacct -j 810035
+JobID           JobName    Account    Elapsed  MaxVMSize     MaxRSS  SystemCPU    UserCPU ExitCode 
+------------ ---------- ---------- ---------- ---------- ---------- ---------- ---------- -------- 
+810035       enzh_s42_+  def-koohi   01:47:47                         00:00:00   00:00:00      0:0 
+810035.batch      batch  def-koohi   01:47:47                         00:00:00   00:00:00      0:0 
+810035.exte+     extern  def-koohi   01:47:47                         00:00:00   00:00:00      0:0 
+810035.0         python  def-koohi   01:47:12                         00:00:00   00:00:00      0:0 
+

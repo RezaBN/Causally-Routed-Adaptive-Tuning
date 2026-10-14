@@ -1,0 +1,178 @@
+========================================================================
+Job ID:                 809366
+Node:                   trig0019
+Started:                Wed 19 Aug 2026 06:10:51 AM EDT
+Experiment:             Main CRAT comparison
+Pair:                   en-zh
+Dataset:                opus100
+Method:                 crat
+Training seed:          42
+Discovery seed:         42
+Detection:              sipp
+Morphology:             stanza
+Heads/direction:        64
+Probes/direction:       32
+Causal examples:        16
+Epochs:                 4
+Maximum updates:        -1
+PEFT rank/alpha:        16 / 32
+PEFT target modules:    all-linear
+Output:                 /scratch/koohi/crat/outputs/main_comparison_llama2/llama2_7b_opus100_enzh_seed42_crat
+Logs:                   /scratch/koohi/crat/outputs/main_comparison_llama2/llama2_7b_opus100_enzh_seed42_crat/logs
+Shared pair cache dir:  /scratch/koohi/crat/outputs/_shared/llama2_7b/opus100/en-zh
+Shared morphology:      /scratch/koohi/crat/outputs/_shared/llama2_7b/opus100/en-zh/en-zh_morph_cache_stanza.pkl
+Shared discovery:       /scratch/koohi/crat/outputs/_shared/llama2_7b/opus100/en-zh/en-zh_component_discovery.json
+========================================================================
+Python 3.11.5
+Wed Aug 19 06:10:52 2026       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 580.173.02             Driver Version: 580.173.02     CUDA Version: 13.0     |
++-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  NVIDIA H100 80GB HBM3          On  |   00000000:4C:00.0 Off |                    0 |
+| N/A   42C    P0             70W /  700W |       0MiB /  81559MiB |      0%      Default |
+|                                         |                        |             Disabled |
++-----------------------------------------+------------------------+----------------------+
+
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI              PID   Type   Process name                        GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|  No running processes found                                                             |
++-----------------------------------------------------------------------------------------+
+CUDA available: True
+GPU: NVIDIA H100 80GB HBM3
+Model layers: 32
+Query heads: 32
+KV heads: 32
+Tokenizer size: 32000
+train: /scratch/koohi/crat/data/opus100/en-zh/train.jsonl | en-zh | "- I don't know. I think there's two. Cal" -> '-我不知道，应该是两个，卡力伯'
+validation: /scratch/koohi/crat/data/opus100/en-zh/validation.jsonl | en-zh | 'Regrettably, the question of extending U' -> '遗憾的是，安理会上对延长波黑特派团任务期限问题无法达成共识。'
+test: /scratch/koohi/crat/data/opus100/en-zh/test.jsonl | en-zh | 'UNCDF will remain a recognized leader in' -> '31. 资发基金仍然是权力下放和当地发展的公认领袖，将利用其当地发展的政策试验项'
+Stanza offline OK: en; sentences=1
+Stanza offline OK: zh; sentences=1
+Offline mode: True
+SLURM job: 809366 | SCRATCH: /scratch/koohi
+Output directory: /scratch/koohi/crat/outputs/main_comparison_llama2/llama2_7b_opus100_enzh_seed42_crat
+GPU: NVIDIA H100 80GB HBM3
+VRAM: 79.2 GB
+Examples: train=10000, validation=1000, test=1000
+No valid fixed discovery found; computing component discovery for en-zh with discovery_seed=42.
+Probe examples en-zh: 32
+Probe examples zh-en: 32
+Selected union heads: 103
+Integration layers: [30, 12, 29]
+
+==========================================================================================
+METHOD: crat
+==========================================================================================
+{'trainable_params': 220695341, 'total_params': 6959110957, 'trainable_pct': 3.1713151631532464}
+Epoch 1: validation loss = 1.065482
+Epoch 2: validation loss = 1.044060
+Epoch 3: validation loss = 1.037033
+Epoch 4: validation loss = 1.037453
+                                            0
+method                                   crat
+pair                                    en-zh
+seed                                       42
+discovery_seed                             42
+trainable_params                    220695341
+total_params                       6959110957
+trainable_pct                        3.171315
+effective_batch_size                      128
+peak_vram_GB                        37.587945
+train_seconds                     1784.469471
+updates                                   312
+train_tokens                          3740491
+train_tokens_per_second           2096.136169
+validation_loss                      1.037033
+train_gate_mean_source               0.629197
+train_gate_mean_indicator            0.586362
+train_gate_mean_position             0.703124
+train_gate_mean_integration          0.803609
+train_router_entropy                 1.009287
+BLEU_en-zh                          16.318508
+chrF_en-zh                          24.088201
+empty_rate_en-zh                          0.0
+punctuation_collapse_rate_en-zh           0.0
+BLEU_zh-en                          27.437628
+chrF_zh-en                          53.721192
+empty_rate_zh-en                          0.0
+punctuation_collapse_rate_zh-en           0.0
+generation_seconds                 566.471814
+generated_tokens                        36578
+generation_tokens_per_second        64.571615
+eval_gate_mean_source                0.683192
+eval_gate_active_source@0.5               1.0
+eval_gate_mean_indicator             0.635144
+eval_gate_active_indicator@0.5            1.0
+eval_gate_mean_position              0.751106
+eval_gate_active_position@0.5             1.0
+eval_gate_mean_integration           0.796164
+eval_gate_active_integration@0.5          1.0
+eval_mean_active_roles@0.5                4.0
+latency_mean_seconds                 2.813944
+latency_p50_seconds                  1.412242
+latency_p95_seconds                   6.38077
+benchmark_tokens_per_second         14.847932
+
+Results saved to: /scratch/koohi/crat/outputs/main_comparison_llama2/llama2_7b_opus100_enzh_seed42_crat/en-zh_seed42_crat_comparison_results.csv
+method  pair  seed  discovery_seed  trainable_params  total_params  trainable_pct  effective_batch_size  peak_vram_GB  train_seconds  updates  train_tokens  train_tokens_per_second  validation_loss  train_gate_mean_source  train_gate_mean_indicator  train_gate_mean_position  train_gate_mean_integration  train_router_entropy  BLEU_en-zh  chrF_en-zh  empty_rate_en-zh  punctuation_collapse_rate_en-zh  BLEU_zh-en  chrF_zh-en  empty_rate_zh-en  punctuation_collapse_rate_zh-en  generation_seconds  generated_tokens  generation_tokens_per_second  eval_gate_mean_source  eval_gate_active_source@0.5  eval_gate_mean_indicator  eval_gate_active_indicator@0.5  eval_gate_mean_position  eval_gate_active_position@0.5  eval_gate_mean_integration  eval_gate_active_integration@0.5  eval_mean_active_roles@0.5  latency_mean_seconds  latency_p50_seconds  latency_p95_seconds  benchmark_tokens_per_second
+  crat en-zh    42              42         220695341    6959110957       3.171315                   128     37.587945    1784.469471      312       3740491              2096.136169         1.037033                0.629197                   0.586362                  0.703124                     0.803609              1.009287   16.318508   24.088201               0.0                              0.0   27.437628   53.721192               0.0                              0.0          566.471814             36578                     64.571615               0.683192                          1.0                  0.635144                             1.0                 0.751106                            1.0                    0.796164                               1.0                         4.0              2.813944             1.412242              6.38077                    14.847932
+Morphology pair OK: /scratch/koohi/crat/outputs/main_comparison_llama2/llama2_7b_opus100_enzh_seed42_crat/en-zh_morph_cache_stanza.pkl; languages=['en', 'zh']; entries=11934
+Published pair-specific shared morphology cache: /scratch/koohi/crat/outputs/_shared/llama2_7b/opus100/en-zh/en-zh_morph_cache_stanza.pkl
+Discovery pair/seed/model OK: /scratch/koohi/crat/outputs/main_comparison_llama2/llama2_7b_opus100_enzh_seed42_crat/en-zh_component_discovery.json
+Published pair-specific shared component discovery: /scratch/koohi/crat/outputs/_shared/llama2_7b/opus100/en-zh/en-zh_component_discovery.json
+========================================================================
+Finished: Wed 19 Aug 2026 06:59:10 AM EDT
+Pair:     en-zh
+Method:   crat
+Seed:     42
+Results:  /scratch/koohi/crat/outputs/main_comparison_llama2/llama2_7b_opus100_enzh_seed42_crat/en-zh_seed42_crat_comparison_results.csv
+========================================================================
+
+scontrol show job 809366
+JobId=809366 JobName=enzh_s42_crat
+   UserId=koohi(3162858) GroupId=koohi(3162858) MCS_label=N/A
+   Priority=345707 Nice=0 Account=def-koohi QOS=normal
+   JobState=COMPLETING Reason=None Dependency=(null)
+   Requeue=0 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=0:0
+   RunTime=00:48:27 TimeLimit=07:00:00 TimeMin=N/A
+   SubmitTime=2026-08-19T05:31:11 EligibleTime=2026-08-19T05:31:11
+   AccrueTime=2026-08-19T05:31:11
+   StartTime=2026-08-19T06:10:43 EndTime=2026-08-19T06:59:10 Deadline=N/A
+   SuspendTime=None SecsPreSuspend=0 LastSchedEval=2026-08-19T06:10:43 Scheduler=Backfill
+   Partition=compute AllocNode:Sid=trig-login01:3895950
+   ReqNodeList=(null) ExcNodeList=(null)
+   NodeList=trig0019
+   BatchHost=trig0019
+   NumNodes=1 NumCPUs=24 NumTasks=1 CPUs/Task=24 ReqB:S:C:T=0:0:*:*
+   ReqTRES=cpu=24,mem=187.50G,node=1,billing=1,gres/gpu=1
+   AllocTRES=cpu=24,mem=187.50G,node=1,billing=1,gres/gpu=1
+   Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=*
+   MinCPUsNode=24 MinMemoryNode=187.50G MinTmpDiskNode=0
+   Features=(null) DelayBoot=00:00:00
+   OverSubscribe=OK Contiguous=0 Licenses=(null) LicensesAlloc=(null) Network=(null)
+   Command=/scratch/koohi/crat/code/crat_llama2_main.sh
+   SubmitLine=SBATCH --comment /opt/slurm/bin/sbatch --export=NONE --get-user-env --parsable --job-name=enzh_s42_crat --output=/scratch/koohi/crat/outputs/main_comparison_llama2/llama2_7b_opus100_enzh_seed42_crat/logs/en-zh_crat_seed42-%j.out --error=/scratch/koohi/crat/outputs/main_comparison_llama2/llama2_7b_opus100_enzh_seed42_crat/logs/en-zh_crat_seed42-%j.err --time=07:00:00 --export=ALL code/crat_llama2_main.sh en-zh crat opus100 --export=NONE --get-user-env --parsable --job-name=enzh_s42_crat --output=/scratch/koohi/crat/outputs/main_comparison_llama2/llama2_7b_opus100_enzh_seed42_crat/logs/en-zh_crat_seed42-%j.out --error=/scratch/koohi/crat/outputs/main_comparison_llama2/llama2_7b_opus100_enzh_seed42_crat/logs/en-zh_crat_seed42-%j.err --time=07:00:00 --export=ALL code/crat_llama2_main.sh en-zh crat opus100
+   WorkDir=/scratch/koohi/crat
+   Comment=/opt/slurm/bin/sbatch --export=NONE --get-user-env --parsable --job-name=enzh_s42_crat --output=/scratch/koohi/crat/outputs/main_comparison_llama2/llama2_7b_opus100_enzh_seed42_crat/logs/en-zh_crat_seed42-%j.out --error=/scratch/koohi/crat/outputs/main_comparison_llama2/llama2_7b_opus100_enzh_seed42_crat/logs/en-zh_crat_seed42-%j.err --time=07:00:00 --export=ALL code/crat_llama2_main.sh en-zh crat opus100
+   StdErr=/scratch/koohi/crat/outputs/main_comparison_llama2/llama2_7b_opus100_enzh_seed42_crat/logs/en-zh_crat_seed42-809366.err
+   StdIn=/dev/null
+   StdOut=/scratch/koohi/crat/outputs/main_comparison_llama2/llama2_7b_opus100_enzh_seed42_crat/logs/en-zh_crat_seed42-809366.out
+   TresPerNode=gres/gpu:1
+   TresPerTask=cpu=24
+   MailUser=koohi@scinet.local MailType=END,FAIL
+
+sacct -j 809366
+JobID           JobName    Account    Elapsed  MaxVMSize     MaxRSS  SystemCPU    UserCPU ExitCode 
+------------ ---------- ---------- ---------- ---------- ---------- ---------- ---------- -------- 
+809366       enzh_s42_+  def-koohi   00:48:27                         00:00:00   00:00:00      0:0 
+809366.batch      batch  def-koohi   00:48:27                         00:00:00   00:00:00      0:0 
+809366.exte+     extern  def-koohi   00:48:27                         00:00:00   00:00:00      0:0 
+809366.0         python  def-koohi   00:48:03                         00:00:00   00:00:00      0:0 
+

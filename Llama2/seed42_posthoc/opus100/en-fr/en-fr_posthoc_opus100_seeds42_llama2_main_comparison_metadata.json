@@ -1,0 +1,102 @@
+{
+  "model": "Llama-2-7B",
+  "model_slug": "llama2_7b",
+  "root": "/scratch/koohi/crat",
+  "run_mode": "full",
+  "dataset": "opus100",
+  "pair": "en-fr",
+  "seeds": [
+    42
+  ],
+  "methods": [
+    "base",
+    "full_sft",
+    "targeted_sft",
+    "lora",
+    "rslora",
+    "dora",
+    "crat",
+    "crat_no_sparse",
+    "crat_ce",
+    "crat_ce_kl"
+  ],
+  "primary_reference": "crat",
+  "quality_delta_convention": "Method - CRAT",
+  "cost_reduction_convention": "100*(CRAT-Method)/CRAT",
+  "bootstrap_delta_convention": "method_A - method_B",
+  "planned_objective_contrasts": [
+    {
+      "slug": "kl_increment",
+      "label": "CRAT (CE+KL) - CRAT (CE)",
+      "method_A": "crat_ce_kl",
+      "method_B": "crat_ce"
+    },
+    {
+      "slug": "structured_objectives_increment",
+      "label": "CRAT - CRAT (CE+KL)",
+      "method_A": "crat",
+      "method_B": "crat_ce_kl"
+    },
+    {
+      "slug": "sparsity_increment",
+      "label": "CRAT - CRAT (no sparsity)",
+      "method_A": "crat",
+      "method_B": "crat_no_sparse"
+    },
+    {
+      "slug": "causal_morph_increment",
+      "label": "CRAT (no sparsity) - CRAT (CE+KL)",
+      "method_A": "crat_no_sparse",
+      "method_B": "crat_ce_kl"
+    }
+  ],
+  "comet_enabled": true,
+  "comet_model": "Unbabel/wmt22-comet-da",
+  "bootstrap_enabled": false,
+  "bootstrap_samples": null,
+  "bootstrap_seed": null,
+  "confidence": null,
+  "discovery_seed": 42,
+  "morph_backend": "stanza",
+  "shared_artifacts": {
+    "shared_dir": "/scratch/koohi/crat/outputs/_shared/llama2_7b/opus100/en-fr",
+    "morph": {
+      "path": "/scratch/koohi/crat/outputs/_shared/llama2_7b/opus100/en-fr/en-fr_morph_cache_stanza.pkl",
+      "exists": true,
+      "sha256": "1c091dc31b802fcc212c4a59c097e66bc5bcfdf4c33cb8a2a1c719a422910f63",
+      "languages": [
+        "en",
+        "fr"
+      ],
+      "pair_ok": true,
+      "entries": 11953
+    },
+    "discovery": {
+      "path": "/scratch/koohi/crat/outputs/_shared/llama2_7b/opus100/en-fr/en-fr_component_discovery.json",
+      "exists": true,
+      "sha256": "9a2ee3e66d23f078abcaa63bcc84163fea3cdf836456c8c8cd98900755639062",
+      "pair_ok": true,
+      "discovery_seed_ok": true,
+      "source_lang": "en",
+      "target_lang": "fr",
+      "discovery_seed": 42,
+      "signature_hash": "82c703fde7d15c9cf68434c1f2240b7d7098fcdd",
+      "selected_head_count": 96,
+      "integration_layers": [
+        30,
+        29,
+        18
+      ]
+    }
+  },
+  "strict_cache_audit": true,
+  "strict_cache_audit_passed": true,
+  "input_problem_count": 0,
+  "config_audit_file": "/scratch/koohi/crat/outputs/main_comparison_llama2/posthoc/opus100/en-fr/en-fr_posthoc_opus100_seeds42_llama2_main_comparison_config_audit.csv",
+  "cache_audit_file": "/scratch/koohi/crat/outputs/main_comparison_llama2/posthoc/opus100/en-fr/en-fr_posthoc_opus100_seeds42_llama2_main_comparison_shared_cache_reuse_audit.csv",
+  "sacrebleu_version": "2.6.0+computecanada",
+  "pandas_version": "3.0.0+computecanada",
+  "numpy_version": "1.26.4+computecanada",
+  "unbabel_comet_version": "2.2.6",
+  "seed_uncertainty_note": "Hierarchical bootstrap resamples 1 training seed(s). Between-seed uncertainty is necessarily estimated imprecisely with fewer than five seeds."
+}

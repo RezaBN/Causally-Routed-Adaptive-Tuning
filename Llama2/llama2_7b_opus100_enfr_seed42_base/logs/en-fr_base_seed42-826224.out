@@ -1,0 +1,154 @@
+Morphology pair OK: /scratch/koohi/crat/outputs/_shared/llama2_7b/opus100/en-fr/en-fr_morph_cache_stanza.pkl; languages=['en', 'fr']; entries=11953
+Reusing SAME-PAIR shared morphology cache: /scratch/koohi/crat/outputs/_shared/llama2_7b/opus100/en-fr/en-fr_morph_cache_stanza.pkl
+Discovery pair/seed/model OK: /scratch/koohi/crat/outputs/_shared/llama2_7b/opus100/en-fr/en-fr_component_discovery.json
+Reusing SAME-PAIR shared fixed component discovery: /scratch/koohi/crat/outputs/_shared/llama2_7b/opus100/en-fr/en-fr_component_discovery.json
+========================================================================
+Job ID:                 826224
+Node:                   trig0007
+Started:                Sun 23 Aug 2026 05:38:29 PM EDT
+Experiment:             Main CRAT comparison
+Pair:                   en-fr
+Dataset:                opus100
+Method:                 base
+Training seed:          42
+Discovery seed:         42
+Detection:              sipp
+Morphology:             stanza
+Heads/direction:        64
+Probes/direction:       32
+Causal examples:        16
+Epochs:                 4
+Maximum updates:        -1
+PEFT rank/alpha:        16 / 32
+PEFT target modules:    all-linear
+Output:                 /scratch/koohi/crat/outputs/main_comparison_llama2/llama2_7b_opus100_enfr_seed42_base
+Logs:                   /scratch/koohi/crat/outputs/main_comparison_llama2/llama2_7b_opus100_enfr_seed42_base/logs
+Shared pair cache dir:  /scratch/koohi/crat/outputs/_shared/llama2_7b/opus100/en-fr
+Shared morphology:      /scratch/koohi/crat/outputs/_shared/llama2_7b/opus100/en-fr/en-fr_morph_cache_stanza.pkl
+Shared discovery:       /scratch/koohi/crat/outputs/_shared/llama2_7b/opus100/en-fr/en-fr_component_discovery.json
+========================================================================
+Python 3.11.5
+Sun Aug 23 17:38:29 2026       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 580.173.02             Driver Version: 580.173.02     CUDA Version: 13.0     |
++-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  NVIDIA H100 80GB HBM3          On  |   00000000:46:00.0 Off |                    0 |
+| N/A   42C    P0             69W /  700W |       0MiB /  81559MiB |      0%      Default |
+|                                         |                        |             Disabled |
++-----------------------------------------+------------------------+----------------------+
+
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI              PID   Type   Process name                        GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|  No running processes found                                                             |
++-----------------------------------------------------------------------------------------+
+CUDA available: True
+GPU: NVIDIA H100 80GB HBM3
+Model layers: 32
+Query heads: 32
+KV heads: 32
+Tokenizer size: 32000
+train: /scratch/koohi/crat/data/opus100/en-fr/train.jsonl | en-fr | 'You gonna throw me a shower?' -> 'On fera une fête pour le bébé ?'
+validation: /scratch/koohi/crat/data/opus100/en-fr/validation.jsonl | en-fr | 'o Aboriginal Communities Home > Ontario ' -> 'o Collectivités autochtones Accueil > On'
+test: /scratch/koohi/crat/data/opus100/en-fr/test.jsonl | en-fr | 'Guidelines for the management and contro' -> 'Parcs Canada élaborera des lignes direct'
+Offline mode: True
+SLURM job: 826224 | SCRATCH: /scratch/koohi
+Output directory: /scratch/koohi/crat/outputs/main_comparison_llama2/llama2_7b_opus100_enfr_seed42_base
+GPU: NVIDIA H100 80GB HBM3
+VRAM: 79.2 GB
+Examples: train=10000, validation=1000, test=1000
+Component discovery not required; SIPP model will not be loaded.
+
+==========================================================================================
+METHOD: base
+==========================================================================================
+{'trainable_params': 0, 'total_params': 6738415616, 'trainable_pct': 0.0}
+                                          0
+method                                 base
+pair                                  en-fr
+seed                                     42
+discovery_seed                          NaN
+trainable_params                          0
+total_params                     6738415616
+trainable_pct                           0.0
+effective_batch_size                    128
+peak_vram_GB                      13.961469
+train_seconds                           0.0
+updates                                   0
+train_tokens                              0
+train_tokens_per_second                 0.0
+validation_loss                         NaN
+BLEU_en-fr                        23.986709
+chrF_en-fr                        50.676009
+empty_rate_en-fr                        0.0
+punctuation_collapse_rate_en-fr         0.0
+BLEU_fr-en                        28.999239
+chrF_fr-en                         55.31262
+empty_rate_fr-en                        0.0
+punctuation_collapse_rate_fr-en         0.0
+generation_seconds                592.79267
+generated_tokens                     123909
+generation_tokens_per_second     209.025864
+latency_mean_seconds               2.342137
+latency_p50_seconds                1.856142
+latency_p95_seconds                3.739296
+benchmark_tokens_per_second       31.588401
+
+Results saved to: /scratch/koohi/crat/outputs/main_comparison_llama2/llama2_7b_opus100_enfr_seed42_base/en-fr_seed42_base_comparison_results.csv
+method  pair  seed  discovery_seed  trainable_params  total_params  trainable_pct  effective_batch_size  peak_vram_GB  train_seconds  updates  train_tokens  train_tokens_per_second  validation_loss  BLEU_en-fr  chrF_en-fr  empty_rate_en-fr  punctuation_collapse_rate_en-fr  BLEU_fr-en  chrF_fr-en  empty_rate_fr-en  punctuation_collapse_rate_fr-en  generation_seconds  generated_tokens  generation_tokens_per_second  latency_mean_seconds  latency_p50_seconds  latency_p95_seconds  benchmark_tokens_per_second
+  base en-fr    42             NaN                 0    6738415616            0.0                   128     13.961469            0.0        0             0                      0.0              NaN   23.986709   50.676009               0.0                              0.0   28.999239    55.31262               0.0                              0.0           592.79267            123909                    209.025864              2.342137             1.856142             3.739296                    31.588401
+========================================================================
+Finished: Sun 23 Aug 2026 05:51:44 PM EDT
+Pair:     en-fr
+Method:   base
+Seed:     42
+Results:  /scratch/koohi/crat/outputs/main_comparison_llama2/llama2_7b_opus100_enfr_seed42_base/en-fr_seed42_base_comparison_results.csv
+========================================================================
+
+scontrol show job 826224
+JobId=826224 JobName=enfr_s42_base
+   UserId=koohi(3162858) GroupId=koohi(3162858) MCS_label=N/A
+   Priority=511796 Nice=0 Account=def-koohi QOS=normal
+   JobState=COMPLETING Reason=None Dependency=(null)
+   Requeue=0 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=0:0
+   RunTime=00:13:24 TimeLimit=02:00:00 TimeMin=N/A
+   SubmitTime=2026-08-23T17:37:59 EligibleTime=2026-08-23T17:37:59
+   AccrueTime=2026-08-23T17:37:59
+   StartTime=2026-08-23T17:38:20 EndTime=2026-08-23T17:51:44 Deadline=N/A
+   SuspendTime=None SecsPreSuspend=0 LastSchedEval=2026-08-23T17:38:20 Scheduler=Backfill
+   Partition=compute AllocNode:Sid=trig-login01:2299043
+   ReqNodeList=(null) ExcNodeList=(null)
+   NodeList=trig0007
+   BatchHost=trig0007
+   NumNodes=1 NumCPUs=24 NumTasks=1 CPUs/Task=24 ReqB:S:C:T=0:0:*:*
+   ReqTRES=cpu=24,mem=187.50G,node=1,billing=1,gres/gpu=1
+   AllocTRES=cpu=24,mem=187.50G,node=1,billing=1,gres/gpu=1
+   Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=*
+   MinCPUsNode=24 MinMemoryNode=187.50G MinTmpDiskNode=0
+   Features=(null) DelayBoot=00:00:00
+   OverSubscribe=OK Contiguous=0 Licenses=(null) LicensesAlloc=(null) Network=(null)
+   Command=/scratch/koohi/crat/code/crat_llama2_main.sh
+   SubmitLine=SBATCH --comment /opt/slurm/bin/sbatch --export=NONE --get-user-env --parsable --job-name=enfr_s42_base --output=/scratch/koohi/crat/outputs/main_comparison_llama2/llama2_7b_opus100_enfr_seed42_base/logs/en-fr_base_seed42-%j.out --error=/scratch/koohi/crat/outputs/main_comparison_llama2/llama2_7b_opus100_enfr_seed42_base/logs/en-fr_base_seed42-%j.err --time=02:00:00 --export=ALL code/crat_llama2_main.sh en-fr base opus100 --export=NONE --get-user-env --parsable --job-name=enfr_s42_base --output=/scratch/koohi/crat/outputs/main_comparison_llama2/llama2_7b_opus100_enfr_seed42_base/logs/en-fr_base_seed42-%j.out --error=/scratch/koohi/crat/outputs/main_comparison_llama2/llama2_7b_opus100_enfr_seed42_base/logs/en-fr_base_seed42-%j.err --time=02:00:00 --export=ALL code/crat_llama2_main.sh en-fr base opus100
+   WorkDir=/scratch/koohi/crat
+   Comment=/opt/slurm/bin/sbatch --export=NONE --get-user-env --parsable --job-name=enfr_s42_base --output=/scratch/koohi/crat/outputs/main_comparison_llama2/llama2_7b_opus100_enfr_seed42_base/logs/en-fr_base_seed42-%j.out --error=/scratch/koohi/crat/outputs/main_comparison_llama2/llama2_7b_opus100_enfr_seed42_base/logs/en-fr_base_seed42-%j.err --time=02:00:00 --export=ALL code/crat_llama2_main.sh en-fr base opus100
+   StdErr=/scratch/koohi/crat/outputs/main_comparison_llama2/llama2_7b_opus100_enfr_seed42_base/logs/en-fr_base_seed42-826224.err
+   StdIn=/dev/null
+   StdOut=/scratch/koohi/crat/outputs/main_comparison_llama2/llama2_7b_opus100_enfr_seed42_base/logs/en-fr_base_seed42-826224.out
+   TresPerNode=gres/gpu:1
+   TresPerTask=cpu=24
+   MailUser=koohi@scinet.local MailType=END,FAIL
+
+sacct -j 826224
+JobID           JobName    Account    Elapsed  MaxVMSize     MaxRSS  SystemCPU    UserCPU ExitCode 
+------------ ---------- ---------- ---------- ---------- ---------- ---------- ---------- -------- 
+826224       enfr_s42_+  def-koohi   00:13:24                        00:36.143  13:07.782      0:0 
+826224.batch      batch  def-koohi   00:13:24          0    649796K  00:02.275  00:07.323      0:0 
+826224.exte+     extern  def-koohi   00:13:24                         00:00:00   00:00:00      0:0 
+826224.0         python  def-koohi   00:13:01          0  27174904K  00:33.868  13:00.458      0:0 
+

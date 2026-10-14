@@ -1,0 +1,9 @@
+{
+  "model": "Unbabel/wmt22-comet-da",
+  "resolved_model": "Unbabel/wmt22-comet-da",
+  "sample_fingerprint": "d54ecc2f6bfb1098947639efa213572ff9219bb0",
+  "n_samples": 9990,
+  "batch_size": 64,
+  "gpus": 1,
+  "unbabel_comet_version": "2.2.6"
+}

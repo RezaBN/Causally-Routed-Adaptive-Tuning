@@ -1,0 +1,10 @@
+{
+  "language_to_id": {
+    "en": 0,
+    "fa": 1
+  },
+  "direction_to_id": {
+    "en-fa": 0,
+    "fa-en": 1
+  }
+}

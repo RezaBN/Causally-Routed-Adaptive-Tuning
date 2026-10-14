@@ -1,0 +1,13 @@
+{
+  "method": "dora",
+  "model_name": "/scratch/koohi/crat/models/Llama-2-7b-hf",
+  "num_attention_heads": 32,
+  "num_key_value_heads": 32,
+  "peft_method": "dora",
+  "peft_rank": 16,
+  "peft_alpha": 32,
+  "peft_dropout": 0.05,
+  "peft_target_modules": "all-linear",
+  "use_rslora": false,
+  "use_dora": true
+}
