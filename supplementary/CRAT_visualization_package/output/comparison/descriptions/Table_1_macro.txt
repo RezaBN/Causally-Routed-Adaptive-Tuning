@@ -1,0 +1,3 @@
+Table 1. Unweighted macro averages over the six model-pair settings and descriptive ranks.
+
+Higher is better for quality and first-place count; lower is better for mean rank. Rank averages cover 18 metric-setting cells. Macro scores are arithmetic averages of reported means, not pooled corpus scores. Bold marks the best value.

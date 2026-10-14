@@ -1,0 +1,7 @@
+source_file,model,pair,method,column,reported_value,recomputed_baseline_minus_CRAT,discrepancy
+EN-FA_Mistral_OPUS100_Results_main-comparison.csv,Mistral,EN-FA,Base,delta_chrF_vs_CRAT,-0.123640947,-5.23898282,5.115341873
+EN-FA_Mistral_OPUS100_Results_main-comparison.csv,Mistral,EN-FA,Full SFT,delta_chrF_vs_CRAT,-0.066121602,-3.4815716099999996,3.4154500079999996
+EN-FA_Mistral_OPUS100_Results_main-comparison.csv,Mistral,EN-FA,Targeted SFT,delta_chrF_vs_CRAT,0.077451539,-0.08307852000000082,0.16053005900000084
+EN-FA_Mistral_OPUS100_Results_main-comparison.csv,Mistral,EN-FA,LoRA,delta_chrF_vs_CRAT,-0.072595358,-0.9443947000000001,0.8717993420000001
+EN-FA_Mistral_OPUS100_Results_main-comparison.csv,Mistral,EN-FA,rsLoRA,delta_chrF_vs_CRAT,-0.048874763,-0.18384759000000273,0.13497282700000274
+EN-FA_Mistral_OPUS100_Results_main-comparison.csv,Mistral,EN-FA,DoRA,delta_chrF_vs_CRAT,-0.068088001,-0.8503045799999995,0.7822165789999995

@@ -1,0 +1,7 @@
+Method,Supplied delta,Recomputed delta
+Base,-0.123641,-5.238983
+Full SFT,-0.066122,-3.481572
+Targeted SFT,+0.077452,-0.083079
+LoRA,-0.072595,-0.944395
+rsLoRA,-0.048875,-0.183848
+DoRA,-0.068088,-0.850305

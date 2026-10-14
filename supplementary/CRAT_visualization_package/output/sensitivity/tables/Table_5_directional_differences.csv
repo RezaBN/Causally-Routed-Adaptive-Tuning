@@ -1,0 +1,8 @@
+Pair,Contrast,BLEU forward,BLEU reverse,COMET forward,COMET reverse
+EN-FA,KL 0.5 vs 0.1,-0.418,+1.248,-0.02600,+0.00089
+EN-FA,Temperature 1 vs 2,+0.124,+0.935,-0.00458,+0.00205
+EN-FA,Heads 96 vs 64,+0.167,+1.087,+0.00515,+0.00472
+EN-ZH,Heads 32 vs 64,+2.446,+0.022,NR,NR
+EN-FA,Top k 1 vs 2,-0.507,+0.631,-0.01884,+0.00065
+EN-FA,Top k 4 vs 2,+0.365,-0.165,+0.02444,-0.00067
+EN-ZH,Top k 1 vs 2,+3.131,+0.586,-0.00504,+0.00187

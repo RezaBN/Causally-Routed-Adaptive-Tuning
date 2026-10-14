@@ -1,0 +1,35 @@
+% Requires \usepackage{booktabs}; caption is in the separate .txt file.
+\begingroup
+\fontsize{7}{8.4}\selectfont
+\setlength{\tabcolsep}{3pt}
+\begin{tabular}{lccc}
+\toprule
+\textbf{Method} & \textbf{BLEU} & \textbf{chrF} & \textbf{COMET} \\
+\midrule
+\multicolumn{4}{l}{\textbf{EN-FR}} \\
+Base & 27.072 $\pm$ 0.052 & 52.233 $\pm$ 0.019 & 0.78313 $\pm$ 0.00001 \\
+Full SFT & 24.056 $\pm$ 0.080 & 49.124 $\pm$ 0.180 & 0.74770 $\pm$ 0.00233 \\
+Targeted SFT & 30.592 $\pm$ 0.301 & 54.793 $\pm$ 0.204 & 0.80443 $\pm$ 0.00055 \\
+LoRA & 31.209 $\pm$ 0.380 & 55.557 $\pm$ 0.334 & \textbf{0.80683 $\pm$ 0.00151} \\
+rsLoRA & 31.006 $\pm$ 0.050 & 55.200 $\pm$ 0.086 & 0.80576 $\pm$ 0.00123 \\
+DoRA & 31.335 $\pm$ 0.316 & \textbf{55.768 $\pm$ 0.349} & 0.80671 $\pm$ 0.00154 \\
+CRAT & \textbf{31.358 $\pm$ 0.096} & 55.763 $\pm$ 0.108 & 0.80679 $\pm$ 0.00098 \\
+\multicolumn{4}{l}{\textbf{EN-FA}} \\
+Base & 5.243 $\pm$ 0.003 & 21.937 $\pm$ 0.007 & 0.58414 $\pm$ 0.00032 \\
+Full SFT & 6.401 $\pm$ 0.061 & 23.695 $\pm$ 0.220 & 0.63375 $\pm$ 0.00288 \\
+Targeted SFT & 8.435 $\pm$ 0.205 & 27.093 $\pm$ 0.310 & 0.65785 $\pm$ 0.00557 \\
+LoRA & 8.361 $\pm$ 0.054 & 26.232 $\pm$ 0.070 & 0.66784 $\pm$ 0.00056 \\
+rsLoRA & 8.665 $\pm$ 0.078 & 26.992 $\pm$ 0.107 & \textbf{0.67363 $\pm$ 0.00188} \\
+DoRA & 8.256 $\pm$ 0.059 & 26.326 $\pm$ 0.086 & 0.66698 $\pm$ 0.00046 \\
+CRAT & \textbf{8.685 $\pm$ 0.127} & \textbf{27.176 $\pm$ 0.143} & 0.67259 $\pm$ 0.00541 \\
+\multicolumn{4}{l}{\textbf{EN-ZH}} \\
+Base & 15.340 $\pm$ 0.017 & 34.959 $\pm$ 0.053 & 0.75687 $\pm$ 0.00023 \\
+Full SFT & 22.910 $\pm$ 0.548 & 41.365 $\pm$ 0.111 & 0.77311 $\pm$ 0.00392 \\
+Targeted SFT & 24.446 $\pm$ 0.711 & 43.093 $\pm$ 0.220 & 0.80506 $\pm$ 0.00101 \\
+LoRA & 26.191 $\pm$ 0.051 & 43.256 $\pm$ 0.134 & 0.80419 $\pm$ 0.00121 \\
+rsLoRA & \textbf{27.001 $\pm$ 0.313} & 43.681 $\pm$ 0.191 & 0.80437 $\pm$ 0.00061 \\
+DoRA & 25.214 $\pm$ 0.335 & 43.137 $\pm$ 0.148 & 0.80382 $\pm$ 0.00065 \\
+CRAT & 26.984 $\pm$ 0.247 & \textbf{43.746 $\pm$ 0.014} & \textbf{0.80757 $\pm$ 0.00203} \\
+\bottomrule
+\end{tabular}
+\endgroup

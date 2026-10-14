@@ -1,0 +1,5 @@
+Table A3. Complete EN-ZH quality means.
+
+Shading marks the corresponding code-default value when that row is present. Higher scores are better. All entries are primary reported means; COMET uses the equally weighted directional average. Comparisons are within the named sweep. Complete precision and direction-specific scores are preserved in the companion CSVs.
+
+NR means not reported: COMET is available only for the four top-k settings. Standard deviations and confidence intervals are absent from these EN-ZH exports. Missing values are not imputed.

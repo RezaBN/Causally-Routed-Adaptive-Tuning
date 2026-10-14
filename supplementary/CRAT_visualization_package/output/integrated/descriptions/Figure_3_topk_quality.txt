@@ -1,0 +1,1 @@
+Figure 3. Translation quality across evaluation top-k settings. The dashed line marks k = 2. EN-FR error bars show ±1 reported SD; equivalent estimates are unavailable for EN-FA and EN-ZH. Panel scales differ. Error bars do not provide paired confidence intervals for the differences between settings. Complete measurements: Supplementary Analysis C, Table 4.

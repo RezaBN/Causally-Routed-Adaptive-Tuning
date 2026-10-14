@@ -1,0 +1,21 @@
+% Requires \usepackage{booktabs}; caption is in the separate .txt file.
+\begingroup
+\fontsize{7}{8.4}\selectfont
+\setlength{\tabcolsep}{3pt}
+\begin{tabular}{lcccc}
+\toprule
+\textbf{Top k} & \textbf{Selected roles} & \textbf{\shortstack{Retained gate\\mass (\%)}} & \textbf{\shortstack{Soft count\\above 0.5}} & \textbf{\shortstack{Logged gate\\statistic}} \\
+\midrule
+\multicolumn{5}{l}{\textbf{EN-FR}} \\
+1 & Position & 32.16 & 3.0 & 0.94548 \\
+2 & Position and source & 61.82 & 3.0 & 0.94548 \\
+3 & Position, source, integration & 84.92 & 3.0 & 0.94548 \\
+4 & All four roles & 100.00 & 3.0 & 0.94548 \\
+\multicolumn{5}{l}{\textbf{EN-FA}} \\
+1 & Position & 31.26 & 3.0 & 0.96282 \\
+2 & Position and source & 60.62 & 3.0 & 0.96282 \\
+3 & Position, source, integration & 84.52 & 3.0 & 0.96282 \\
+4 & All four roles & 100.00 & 3.0 & 0.96282 \\
+\bottomrule
+\end{tabular}
+\endgroup

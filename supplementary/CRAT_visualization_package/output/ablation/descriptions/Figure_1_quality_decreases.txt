@@ -1,0 +1,1 @@
+Figure 1. Absolute quality decreases relative to the displayed CRAT_full means. Each metric uses its own color scale; darker cells indicate a larger decrease. All 54 differences are recomputed from the primary means. The reference discrepancy in Appendix A affects every full-versus-ablation comparison. Color intensity does not indicate statistical significance.

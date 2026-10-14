@@ -1,0 +1,9 @@
+sensitivity_parameter,n_settings,delta_BLEU_vs_default_min,delta_BLEU_vs_default_max,delta_BLEU_vs_default_range,delta_BLEU_vs_default_best_setting,delta_BLEU_vs_default_worst_setting,delta_chrF_vs_default_min,delta_chrF_vs_default_max,delta_chrF_vs_default_range,delta_chrF_vs_default_best_setting,delta_chrF_vs_default_worst_setting
+lambda_kl,3,0,0.195176834,0.195176834,lambda_kl = 0.05,lambda_kl = 0.1,0,0.255247944,0.255247944,lambda_kl = 0.05,lambda_kl = 0.1
+lambda_causal,3,-0.061677462,0,0.061677462,lambda_causal = 0.1,lambda_causal = 0.05,-0.080467618,0,0.080467618,lambda_causal = 0.1,lambda_causal = 0.05
+lambda_morph,3,0,0.235919218,0.235919218,lambda_morph = 0.2,lambda_morph = 0.1,-0.011599109,0.274815252,0.286414362,lambda_morph = 0.2,lambda_morph = 0.05
+lambda_sparse,3,0.063211574,0.146958799,0.083747225,lambda_sparse = 0.01,lambda_sparse = 0.001,0.02688749,0.136077911,0.109190421,lambda_sparse = 0.01,lambda_sparse = 0.001
+kl_temperature,3,0,0.186151888,0.186151888,kl_temperature = 4,kl_temperature = 2,-0.009306281,0.139364399,0.14867068,kl_temperature = 4,kl_temperature = 8
+integration_rank,3,0,0.074027856,0.074027856,integration_rank = 32,integration_rank = 16,-0.036691136,0.044996803,0.081687938,integration_rank = 32,integration_rank = 8
+heads_per_direction,3,0,0.269998272,0.269998272,heads_per_direction = 32,heads_per_direction = 64,0,0.393193541,0.393193541,heads_per_direction = 32,heads_per_direction = 64
+top_k,4,-0.048704977,0.39397184,0.442676817,top_k = 1,top_k = 3,-0.027645059,0.510155569,0.537800628,top_k = 1,top_k = 3

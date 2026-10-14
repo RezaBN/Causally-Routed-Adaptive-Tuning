@@ -1,0 +1,5 @@
+Table 2. Llama 2 7B translation quality on OPUS100. Values are mean ± reported SD over six seeds.
+
+Higher is better. Bold marks the highest unrounded mean within each pair and metric; shaded rows identify CRAT. Rounded scores can appear tied even when the unrounded ranking differs. SD is not a confidence interval.
+
+† Llama 2 EN-FR CRAT used 158 updates and 1,582,308 tokens; the adapted baselines used 316 updates and 3,164,616 tokens. This setting is not matched for training workload.

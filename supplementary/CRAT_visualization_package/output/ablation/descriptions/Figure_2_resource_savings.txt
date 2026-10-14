@@ -1,0 +1,1 @@
+Figure 2. Peak-memory and training-time reductions relative to the displayed CRAT_full resource values. Positive values indicate savings, and negative values indicate increased cost. Percentages use the primary measurements, with matched reported token counts within each pair. Timing uncertainty is not available.

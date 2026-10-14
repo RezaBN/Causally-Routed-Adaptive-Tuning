@@ -1,0 +1,1 @@
+Figure 1. CRAT minus the strongest non-CRAT mean in each metric and setting. Comparator selection is metric specific. Values are absolute score differences computed before rounding; no significance test is implied.

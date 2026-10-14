@@ -1,0 +1,110 @@
+<!doctype html><meta charset="utf-8"><style>
+table{border-collapse:collapse;font-family:"DejaVu Serif",serif;font-size:7pt;}
+th,td{padding:5px 7px;border:1px solid #d9d9d9;text-align:center;}td:first-child{text-align:left;}
+th{background:#E7EDF2;}
+.band{background:#F0F1F2;text-align:left;font-weight:bold;}
+.ref{background:#EDF5F1;}
+</style><table><thead><tr>
+<th>Heads per<br>direction</th>
+<th>Trainable<br>(M)</th>
+<th>BLEU</th>
+<th>chrF</th>
+<th>COMET</th>
+<th>Peak<br>(GiB)</th>
+<th>Train<br>(min)</th>
+<th>Generation<br>tokens/s</th>
+</tr></thead><tbody>
+<tr><td class="band" colspan="8">EN-FR</td></tr>
+<tr>
+<td>32</td>
+<td>102.206</td>
+<td>31.736</td>
+<td>56.082</td>
+<td>0.80889</td>
+<td>36.941</td>
+<td>19.44</td>
+<td>85.31</td>
+</tr>
+<tr class="ref">
+<td>64</td>
+<td>198.675</td>
+<td>31.466</td>
+<td>55.688</td>
+<td>0.80627</td>
+<td>39.800</td>
+<td>21.92</td>
+<td>78.70</td>
+</tr>
+<tr>
+<td>96</td>
+<td>286.756</td>
+<td>31.674</td>
+<td>55.784</td>
+<td>0.80687</td>
+<td>42.094</td>
+<td>22.39</td>
+<td>76.31</td>
+</tr>
+<tr><td class="band" colspan="8">EN-FA</td></tr>
+<tr>
+<td>32</td>
+<td>120.032</td>
+<td>8.699</td>
+<td>25.930</td>
+<td>0.64696</td>
+<td>37.249</td>
+<td>17.13</td>
+<td>101.36</td>
+</tr>
+<tr class="ref">
+<td>64</td>
+<td>215.452</td>
+<td>8.231</td>
+<td>25.936</td>
+<td>0.65205</td>
+<td>40.116</td>
+<td>18.43</td>
+<td>98.57</td>
+</tr>
+<tr>
+<td>96</td>
+<td>305.630</td>
+<td>8.858</td>
+<td>26.728</td>
+<td>0.65698</td>
+<td>42.460</td>
+<td>21.08</td>
+<td>80.57</td>
+</tr>
+<tr><td class="band" colspan="8">EN-ZH</td></tr>
+<tr>
+<td>32</td>
+<td>127.372</td>
+<td>25.759</td>
+<td>43.842</td>
+<td>NR</td>
+<td>37.579</td>
+<td>18.67</td>
+<td>103.93</td>
+</tr>
+<tr class="ref">
+<td>64</td>
+<td>237.473</td>
+<td>24.525</td>
+<td>44.441</td>
+<td>NR</td>
+<td>41.073</td>
+<td>20.60</td>
+<td>95.92</td>
+</tr>
+<tr>
+<td>96</td>
+<td>343.379</td>
+<td>24.200</td>
+<td>44.493</td>
+<td>NR</td>
+<td>43.678</td>
+<td>22.79</td>
+<td>92.30</td>
+</tr>
+</tbody></table>

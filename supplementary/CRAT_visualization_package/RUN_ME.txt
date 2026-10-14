@@ -1,0 +1,27 @@
+CRAT figures and tables
+
+1. Extract the entire ZIP.
+2. Open a terminal in the extracted folder.
+3. Run:
+
+   python -m pip install -r requirements.txt
+   python crat_visualize.py
+
+Results appear in output/. Captions are separate text files.
+Default requested font: Times New Roman; sizes: 6-8 pt; PNG: 600 dpi.
+PDF and SVG exports are vector graphics.
+
+Require Times New Roman without substitution:
+   python crat_visualize.py --strict-font
+
+Change appearance:
+   python crat_visualize.py --font-size 8 --figure-width 7.2
+
+Generate only the no-KL figure:
+   python crat_visualize.py --only "integrated/Figure_4*" --figsize 7.2 2.8
+
+List all 15 figures and 29 tables:
+   python crat_visualize.py --list
+
+See README.md for exact colors, individual font sizes, per-figure dimensions,
+font files, source-data conventions, output folders and further examples.

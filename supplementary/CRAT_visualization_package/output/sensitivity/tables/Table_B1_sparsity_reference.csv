@@ -1,0 +1,4 @@
+Pair,Code-default row,Implied BLEU reference,Implied chrF reference
+EN-FR,0.002 absent,31.466519,55.550185
+EN-FA,0.002 absent,8.557815,26.396843
+EN-ZH,0.002 absent,24.364474,43.994002

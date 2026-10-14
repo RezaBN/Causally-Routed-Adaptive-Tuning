@@ -1,0 +1,1 @@
+Figure 3. Observed BLEU versus trainable parameter count. The horizontal axis is logarithmic and vertical bars show ±1 reported SD. Zero-trainable-parameter base models are omitted. The dagger identifies the unequal training budget on Llama 2 EN-FR.

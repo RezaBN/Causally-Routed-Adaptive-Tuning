@@ -1,0 +1,110 @@
+[
+  {
+    "name": "EN-FA_LlaMA2_OPUS100_Results_main-comparison.csv",
+    "sha256": "4e2673a543b40b523ebf74da918ac9b8949c4667c5a2b5284ee3623a72768dc7"
+  },
+  {
+    "name": "EN-FA_Mistral_OPUS100_Results_main-comparison.csv",
+    "sha256": "e96a490509d73ca8ce5b711d99d8cff45103aa8c6f6f87521fad53da2e398701"
+  },
+  {
+    "name": "EN-FR_LlaMA2_OPUS100_Results_main-comparison.csv",
+    "sha256": "fc6c809bc831e8be95ee5d9ef04dbc3eae4fa131b51ba2465560bffd34e548a2"
+  },
+  {
+    "name": "EN-FR_Mistral_OPUS100_Results_main-comparison.csv",
+    "sha256": "14a2d880a1480c1352ca17776ad8385aa6683bdf521646997abfb1aad9c1977a"
+  },
+  {
+    "name": "EN-ZH_LlaMA2_OPUS100_Results_main-comparison.csv",
+    "sha256": "04b8b7a56bb20a345bb3e71a1b66026235c97d7f8778e96d5a1cf598eeef9a02"
+  },
+  {
+    "name": "EN-ZH_Mistral_OPUS100_Results_main-comparison.csv",
+    "sha256": "66cadaa9885bc41f036403a56034b8bf504b3c3eae64c8ddeb3cd863bcc3bbf8"
+  },
+  {
+    "name": "en-fa_ablation_posthoc_opus100_efficiency.csv",
+    "sha256": "30a303b8a85432740a5ae67fbdc3d109794cbf6ac6b03b6b46b03ac3eb259497"
+  },
+  {
+    "name": "en-fa_ablation_posthoc_opus100_routing.csv",
+    "sha256": "6bc38ee2166e7a6ce1de50c2911f3046b5c1c8654eb6c91e4ad5ddb8a1f8bbdb"
+  },
+  {
+    "name": "en-fa_sensitivity_posthoc_opus100_comet.csv",
+    "sha256": "91a256d66bcfa86d60606e451cfbb579982347c1039925e320b069ca6ef9fae2"
+  },
+  {
+    "name": "en-fa_sensitivity_posthoc_opus100_efficiency.csv",
+    "sha256": "f0a220325d4730ffc025cfdb5b6d0f010c718f4549a2f97308e4ab66030db767"
+  },
+  {
+    "name": "en-fa_sensitivity_posthoc_opus100_parameter_robustness.csv",
+    "sha256": "a97063fbd34ad4b80c5269ac60ddb635353ba9c0f3d0669cdd99443cb5bb5869"
+  },
+  {
+    "name": "en-fa_sensitivity_posthoc_opus100_routing_summary.csv",
+    "sha256": "59c51c0edf2dd026a6ec37c430b580958bc66567d8a26047712c29e28672fca9"
+  },
+  {
+    "name": "en-fa_sensitivity_posthoc_opus100_summary.csv",
+    "sha256": "1e6d1cfaa5c4766fae94994a49f47cd65706d749f383208f1db56046aedb8181"
+  },
+  {
+    "name": "en-fr_ablation_posthoc_opus100_efficiency.csv",
+    "sha256": "821d01f36d3399a022b93f664b64a305a4fa3bf974fd7c74698bd6a9aa2f9d4b"
+  },
+  {
+    "name": "en-fr_ablation_posthoc_opus100_routing.csv",
+    "sha256": "0c57a13bb6985fedb0ac4ad61d50725c91c5583792be5ba4909f4303412108c0"
+  },
+  {
+    "name": "en-fr_sensitivity_posthoc_opus100_comet.csv",
+    "sha256": "8fda51fbd5069d42fb21193de6af271cd963044065429b8394a32a6c2571d51b"
+  },
+  {
+    "name": "en-fr_sensitivity_posthoc_opus100_efficiency.csv",
+    "sha256": "51366cdb4977aca69f5479eb9056316d1066becbfa910d9e9012154f24d4c281"
+  },
+  {
+    "name": "en-fr_sensitivity_posthoc_opus100_parameter_robustness.csv",
+    "sha256": "cc8933d0a1650ca842240f678fbb6d8254a134a5d5b8955807c66c451b2f1e13"
+  },
+  {
+    "name": "en-fr_sensitivity_posthoc_opus100_routing_summary.csv",
+    "sha256": "63b273f43a8311f7c49c0d2b5b233ad06782f143c9194632772457f19b7e8a39"
+  },
+  {
+    "name": "en-fr_sensitivity_posthoc_opus100_summary.csv",
+    "sha256": "892048609578e348924c9dc70a312d0e076b9fe127a3d5623f01dd7202fc90a8"
+  },
+  {
+    "name": "en-zh_ablation_posthoc_opus100_efficiency.csv",
+    "sha256": "eb7978e3cef506bc9cabdda35bd515802dfc5b7b9709408bee0546c98f832431"
+  },
+  {
+    "name": "en-zh_ablation_posthoc_opus100_routing.csv",
+    "sha256": "0ef96b866fab33a01bb216cdbd1bb4fcc9933695da79823e2d26098784019d29"
+  },
+  {
+    "name": "en-zh_sensitivity_posthoc_opus100_comet.csv",
+    "sha256": "64d0aa49a4a82023e19cba5e2b14936efb0d705a57ceb61fa0e706d1e32b9e0c"
+  },
+  {
+    "name": "en-zh_sensitivity_posthoc_opus100_efficiency.csv",
+    "sha256": "26e4c78709a863e00a347940fc67dc4b82499d73d8a36b516f29e6970aa49ed0"
+  },
+  {
+    "name": "en-zh_sensitivity_posthoc_opus100_parameter_robustness.csv",
+    "sha256": "f6b3f1a2dc019d52cb5ca77aaa8f5111cf483552634d71759c483c20858c8eed"
+  },
+  {
+    "name": "en-zh_sensitivity_posthoc_opus100_routing_summary.csv",
+    "sha256": "bb35e703804286f45b434bc2d03584ff7fe01a68973ef508f9307ed981004a6c"
+  },
+  {
+    "name": "en-zh_sensitivity_posthoc_opus100_summary.csv",
+    "sha256": "9b196db0cfcf985943d8ec0eaa95d2e89aee7ffb61a4faea6000a61c5021c9dd"
+  }
+]

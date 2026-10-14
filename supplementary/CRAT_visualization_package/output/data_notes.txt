@@ -1,0 +1,9 @@
+Comparison additive-delta discrepancies: 6. Plots use primary means.
+Main quality values are reported means over six seeds; SD is not a paired confidence interval.
+Ablation quality-delta discrepancies: 54.
+Ablation backbone and seed metadata are not independently identified; displayed full references require reconciliation.
+Sensitivity settings: 85.
+Missing COMET and variability values are unreported, not zero. Directional-average COMET is used, not pooled COMET.
+Resource percentages use the stated within-study reference. No significance tests or missing SDs are invented.
+Figures and visual tables contain data labels, panel labels, axes and legends only. Captions and interpretive notes are separate.
+The bundled descriptive text was prepared for these experiments. Recheck experimental metadata and text if substituting a new study.

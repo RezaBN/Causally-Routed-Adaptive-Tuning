@@ -1,0 +1,3 @@
+Table B1. References implied by the exported sparsity differences from default.
+
+Values are reconstructed from the reported extrema and default-delta columns, not measured rows supplied for 0.002. Their use is restricted to diagnosing the missing reference.

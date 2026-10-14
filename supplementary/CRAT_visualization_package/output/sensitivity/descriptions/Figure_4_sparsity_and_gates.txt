@@ -1,0 +1,1 @@
+Figure 4. Evaluation mean soft gates across sparsity coefficients. The horizontal axis is logarithmic; EN-FR lacks the 0.2 setting. The dashed line marks the diagnostic threshold of 0.5. These gates precede top-k masking and are not categorical role probabilities.

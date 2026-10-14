@@ -1,0 +1,1 @@
+Figure 1. CRAT minus the strongest non-CRAT mean in each model-pair-metric comparison. Parentheses identify the metric-specific comparator. Positive differences favor CRAT. Each metric uses its own color scale, and no significance test is implied. Llama 2 EN-FR uses the unequal training budget noted in Table 2. Complete scores: Supplementary Analysis A, Tables 2 and 3.

@@ -1,0 +1,25 @@
+pair,sensitivity_parameter,n_settings,delta_BLEU_vs_default_min,delta_BLEU_vs_default_max,delta_BLEU_vs_default_range,delta_BLEU_vs_default_best_setting,delta_BLEU_vs_default_worst_setting,delta_chrF_vs_default_min,delta_chrF_vs_default_max,delta_chrF_vs_default_range,delta_chrF_vs_default_best_setting,delta_chrF_vs_default_worst_setting
+EN-FR,lambda_kl,3,0.0,0.195176834,0.195176834,lambda_kl = 0.05,lambda_kl = 0.1,0.0,0.255247944,0.255247944,lambda_kl = 0.05,lambda_kl = 0.1
+EN-FR,lambda_causal,3,-0.061677462,0.0,0.061677462,lambda_causal = 0.1,lambda_causal = 0.05,-0.080467618,0.0,0.080467618,lambda_causal = 0.1,lambda_causal = 0.05
+EN-FR,lambda_morph,3,0.0,0.235919218,0.235919218,lambda_morph = 0.2,lambda_morph = 0.1,-0.011599109,0.274815252,0.286414362,lambda_morph = 0.2,lambda_morph = 0.05
+EN-FR,lambda_sparse,3,0.063211574,0.146958799,0.083747225,lambda_sparse = 0.01,lambda_sparse = 0.001,0.02688749,0.136077911,0.109190421,lambda_sparse = 0.01,lambda_sparse = 0.001
+EN-FR,kl_temperature,3,0.0,0.186151888,0.186151888,kl_temperature = 4,kl_temperature = 2,-0.009306281,0.139364399,0.14867068,kl_temperature = 4,kl_temperature = 8
+EN-FR,integration_rank,3,0.0,0.074027856,0.074027856,integration_rank = 32,integration_rank = 16,-0.036691136,0.044996803,0.081687938,integration_rank = 32,integration_rank = 8
+EN-FR,heads_per_direction,3,0.0,0.269998272,0.269998272,heads_per_direction = 32,heads_per_direction = 64,0.0,0.393193541,0.393193541,heads_per_direction = 32,heads_per_direction = 64
+EN-FR,top_k,4,-0.048704977,0.39397184,0.442676817,top_k = 1,top_k = 3,-0.027645059,0.510155569,0.537800628,top_k = 1,top_k = 3
+EN-FA,lambda_kl,4,-0.258444075,0.414973291,0.673417366,lambda_kl = 0.5,lambda_kl = 0.05,-0.34036143,0.16547628,0.50583771,lambda_kl = 0.5,lambda_kl = 0.05
+EN-FA,lambda_causal,4,-0.063366225,0.170057566,0.233423791,lambda_causal = 0.5,lambda_causal = 0.05,-0.067640049,0.531614883,0.599254932,lambda_causal = 0.5,lambda_causal = 0.05
+EN-FA,lambda_morph,4,-0.105736167,1.43e-05,0.105750461,lambda_morph = 0.2,lambda_morph = 0.05,-0.07501471,0.113073193,0.188087903,lambda_morph = 0.05,lambda_morph = 0.2
+EN-FA,lambda_sparse,4,-0.178361876,0.043134303,0.221496179,lambda_sparse = 0.001,lambda_sparse = 0.005,-0.419350779,-0.338267891,0.081082888,lambda_sparse = 0.005,lambda_sparse = 0.01
+EN-FA,kl_temperature,4,0.0,0.529912704,0.529912704,kl_temperature = 1,kl_temperature = 2,0.0,0.566696063,0.566696063,kl_temperature = 1,kl_temperature = 2
+EN-FA,integration_rank,3,0.0,0.087204692,0.087204692,integration_rank = 32,integration_rank = 16,-0.000120754,0.001369291,0.001490045,integration_rank = 32,integration_rank = 8
+EN-FA,heads_per_direction,3,0.0,0.627003956,0.627003956,heads_per_direction = 96,heads_per_direction = 64,-0.006208086,0.79177205,0.797980136,heads_per_direction = 96,heads_per_direction = 32
+EN-FA,top_k,4,0.0,0.099634636,0.099634636,top_k = 4,top_k = 2,0.0,0.144533411,0.144533411,top_k = 1,top_k = 2
+EN-ZH,lambda_kl,4,0.0,1.506064963,1.506064963,lambda_kl = 0.2,lambda_kl = 0.1,-0.497733238,0.169424955,0.667158193,lambda_kl = 0.05,lambda_kl = 0.5
+EN-ZH,lambda_causal,4,-0.181622401,0.0,0.181622401,lambda_causal = 0.1,lambda_causal = 0.2,-0.008634698,0.047375166,0.056009864,lambda_causal = 0.5,lambda_causal = 0.05
+EN-ZH,lambda_morph,4,0.0,0.127179866,0.127179866,lambda_morph = 0.05,lambda_morph = 0.1,-0.007080161,0.144478745,0.151558906,lambda_morph = 0.2,lambda_morph = 0.05
+EN-ZH,lambda_sparse,4,0.069770559,0.229598344,0.159827785,lambda_sparse = 0.005,lambda_sparse = 0.2,-0.020953654,0.248471192,0.269424846,lambda_sparse = 0.01,lambda_sparse = 0.2
+EN-ZH,kl_temperature,4,-0.079546518,0.0,0.079546518,kl_temperature = 2,kl_temperature = 4,-0.098520973,0.090349386,0.188870359,kl_temperature = 8,kl_temperature = 1
+EN-ZH,integration_rank,3,-0.01272565,0.059756576,0.072482226,integration_rank = 32,integration_rank = 8,-0.016108177,0.023960202,0.04006838,integration_rank = 32,integration_rank = 8
+EN-ZH,heads_per_direction,3,-0.324906546,1.233564383,1.558470929,heads_per_direction = 32,heads_per_direction = 96,-0.598637247,0.052884597,0.651521844,heads_per_direction = 96,heads_per_direction = 32
+EN-ZH,top_k,4,-0.2898186,1.858446934,2.148265535,top_k = 1,top_k = 3,-0.144304273,0.0,0.144304273,top_k = 2,top_k = 1

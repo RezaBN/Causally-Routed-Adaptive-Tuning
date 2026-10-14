@@ -1,0 +1,3 @@
+Table 3. Generation duration, output volume, throughput, and single-example latency.
+
+Batch tokens/s comes from the complete evaluation generation workload. Mean, p50, p95, and Single tokens/s come from the separate single-example latency benchmark in the supplied implementation. p50 and p95 denote the reported 50th and 95th percentiles; the CSVs do not specify whether these are pooled percentiles or aggregates of per-run percentiles. Lower duration and latency, and higher throughput, are preferable.

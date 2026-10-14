@@ -1,0 +1,1 @@
+Figure 3. Quality profiles across evaluation top-k settings. The dashed vertical line marks top k equal to 2. EN-FR bars show ±1 reported SD; absence of bars for EN-FA and EN-ZH reflects unavailable variability. Panel scales differ, and error bars are not paired confidence intervals for differences.

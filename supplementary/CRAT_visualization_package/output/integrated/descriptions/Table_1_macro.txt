@@ -1,0 +1,3 @@
+Table 1. Macro-average quality and descriptive ranks across six model-pair settings.
+
+Macro means weight the six settings equally within each metric. Rank averages cover 18 metric-setting comparisons; lower mean rank is better. The metrics are correlated. Bold identifies the best aggregate values. Individual means and SDs appear in Supplementary Analysis A, Tables 2 and 3.

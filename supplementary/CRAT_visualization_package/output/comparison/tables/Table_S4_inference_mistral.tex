@@ -1,0 +1,35 @@
+% Requires \usepackage{booktabs}; caption is in the separate .txt file.
+\begingroup
+\fontsize{7}{8.4}\selectfont
+\setlength{\tabcolsep}{3pt}
+\begin{tabular}{lccccccc}
+\toprule
+\textbf{Method} & \textbf{\shortstack{Gen.\\(s)}} & \textbf{\shortstack{Generated\\tokens}} & \textbf{\shortstack{Batch\\tokens/s}} & \textbf{\shortstack{Mean\\(s)}} & \textbf{\shortstack{p50\\(s)}} & \textbf{\shortstack{p95\\(s)}} & \textbf{\shortstack{Single\\tokens/s}} \\
+\midrule
+\multicolumn{8}{l}{\textbf{EN-FR}} \\
+Base & 272.1 & 124,521.5 & 457.8 & 1.660 & 1.673 & 2.073 & 72.6 \\
+Full SFT & 219.2 & 27,356.5 & 125.0 & 0.447 & 0.273 & 1.271 & 54.4 \\
+Targeted SFT & 205.9 & 26,951 & 130.9 & 0.638 & 0.350 & 1.824 & 37.8 \\
+LoRA & 300.2 & 27,200.5 & 91.2 & 0.936 & 0.494 & 2.608 & 26.0 \\
+rsLoRA & 311.1 & 27,219 & 87.5 & 0.999 & 0.509 & 2.547 & 24.1 \\
+DoRA & 1,484.3 & 27,280 & 18.4 & 4.430 & 2.608 & 14.379 & 5.4 \\
+CRAT & 295.9 & 27,298.5 & 92.9 & 0.954 & 0.506 & 2.447 & 26.1 \\
+\multicolumn{8}{l}{\textbf{EN-FA}} \\
+Base & 677.7 & 126,087 & 186.0 & 3.230 & 2.630 & 9.682 & 38.9 \\
+Full SFT & 468.5 & 27,246 & 58.2 & 1.475 & 0.678 & 6.379 & 18.6 \\
+Targeted SFT & 534.0 & 28,243 & 52.9 & 1.679 & 0.777 & 4.934 & 15.0 \\
+LoRA & 615.1 & 28,013 & 45.5 & 2.078 & 0.995 & 10.541 & 12.8 \\
+rsLoRA & 607.0 & 28,022 & 46.2 & 2.021 & 0.944 & 8.576 & 12.7 \\
+DoRA & 1,715.8 & 27,757 & 16.2 & 5.659 & 3.138 & 19.949 & 4.5 \\
+CRAT & 563.6 & 29,226 & 51.9 & 1.854 & 0.855 & 7.604 & 13.8 \\
+\multicolumn{8}{l}{\textbf{EN-ZH}} \\
+Base & 265.3 & 124,090 & 467.8 & 1.732 & 1.734 & 2.080 & 69.8 \\
+Full SFT & 257.5 & 32,807 & 127.4 & 0.732 & 0.433 & 1.576 & 51.1 \\
+Targeted SFT & 236.9 & 31,505 & 133.0 & 0.963 & 0.611 & 2.553 & 37.4 \\
+LoRA & 286.1 & 31,705 & 110.8 & 1.149 & 0.797 & 3.237 & 31.1 \\
+rsLoRA & 292.4 & 32,112 & 109.8 & 1.192 & 0.743 & 3.303 & 30.6 \\
+DoRA & 1,662.6 & 31,676 & 19.1 & 6.481 & 4.728 & 19.564 & 5.4 \\
+CRAT & 309.0 & 31,804 & 102.9 & 1.292 & 0.810 & 3.195 & 27.5 \\
+\bottomrule
+\end{tabular}
+\endgroup

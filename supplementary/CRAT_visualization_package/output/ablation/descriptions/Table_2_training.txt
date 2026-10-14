@@ -1,0 +1,5 @@
+Table 2. Trainable parameters and training resource measurements.
+
+M denotes millions. Trainable percentage uses the registered total parameter count of each variant. Positive time savings indicate a shorter duration relative to the displayed CRAT_full resource row; negative values indicate a longer duration. These percentages have been recomputed from primary measurements.
+
+The source field peak_vram_GB is labeled here in GiB because the supplied implementation divides allocated bytes by 2 to the power 30. It is a method-run peak, not an isolated inference-memory measurement. The training timer excludes earlier discovery and preparation and includes validation in the supplied main scripts. The ablation runner must confirm that it uses the same measurement boundaries.

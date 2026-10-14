@@ -1,0 +1,16 @@
+% Requires \usepackage{booktabs}; caption is in the separate .txt file.
+\begingroup
+\fontsize{7}{8.4}\selectfont
+\setlength{\tabcolsep}{3pt}
+\begin{tabular}{lcccc}
+\toprule
+\textbf{Pair} & \textbf{Variant} & \textbf{Metric} & \textbf{Supplied delta} & \textbf{Recomputed delta} \\
+\midrule
+EN-FR & no\_integration & BLEU & +0.010695 & -0.148159 \\
+EN-FA & static\_role & COMET & +0.005974 & -0.011825 \\
+EN-ZH & no\_kl & BLEU & +0.018535 & -2.711399 \\
+EN-ZH & no\_causal & COMET & +0.000822 & -0.004392 \\
+EN-ZH & no\_sparse & BLEU & +0.014237 & -2.715697 \\
+\bottomrule
+\end{tabular}
+\endgroup

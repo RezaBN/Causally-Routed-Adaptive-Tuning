@@ -1,0 +1,142 @@
+<!doctype html><meta charset="utf-8"><style>
+table{border-collapse:collapse;font-family:"DejaVu Serif",serif;font-size:7pt;}
+th,td{padding:5px 7px;border:1px solid #d9d9d9;text-align:center;}td:first-child{text-align:left;}
+th{background:#E7EDF2;}
+.band{background:#F0F1F2;text-align:left;font-weight:bold;}
+.ref{background:#EDF5F1;}
+</style><table><thead><tr>
+<th>Method</th>
+<th>BLEU</th>
+<th>chrF</th>
+<th>COMET</th>
+</tr></thead><tbody>
+<tr><td class="band" colspan="4">EN-FR</td></tr>
+<tr>
+<td>Base</td>
+<td>27.072 ± 0.052</td>
+<td>52.233 ± 0.019</td>
+<td>0.78313 ± 0.00001</td>
+</tr>
+<tr>
+<td>Full SFT</td>
+<td>24.056 ± 0.080</td>
+<td>49.124 ± 0.180</td>
+<td>0.74770 ± 0.00233</td>
+</tr>
+<tr>
+<td>Targeted SFT</td>
+<td>30.592 ± 0.301</td>
+<td>54.793 ± 0.204</td>
+<td>0.80443 ± 0.00055</td>
+</tr>
+<tr>
+<td>LoRA</td>
+<td>31.209 ± 0.380</td>
+<td>55.557 ± 0.334</td>
+<td><b>0.80683 ± 0.00151</b></td>
+</tr>
+<tr>
+<td>rsLoRA</td>
+<td>31.006 ± 0.050</td>
+<td>55.200 ± 0.086</td>
+<td>0.80576 ± 0.00123</td>
+</tr>
+<tr>
+<td>DoRA</td>
+<td>31.335 ± 0.316</td>
+<td><b>55.768 ± 0.349</b></td>
+<td>0.80671 ± 0.00154</td>
+</tr>
+<tr class="ref">
+<td>CRAT</td>
+<td><b>31.358 ± 0.096</b></td>
+<td>55.763 ± 0.108</td>
+<td>0.80679 ± 0.00098</td>
+</tr>
+<tr><td class="band" colspan="4">EN-FA</td></tr>
+<tr>
+<td>Base</td>
+<td>5.243 ± 0.003</td>
+<td>21.937 ± 0.007</td>
+<td>0.58414 ± 0.00032</td>
+</tr>
+<tr>
+<td>Full SFT</td>
+<td>6.401 ± 0.061</td>
+<td>23.695 ± 0.220</td>
+<td>0.63375 ± 0.00288</td>
+</tr>
+<tr>
+<td>Targeted SFT</td>
+<td>8.435 ± 0.205</td>
+<td>27.093 ± 0.310</td>
+<td>0.65785 ± 0.00557</td>
+</tr>
+<tr>
+<td>LoRA</td>
+<td>8.361 ± 0.054</td>
+<td>26.232 ± 0.070</td>
+<td>0.66784 ± 0.00056</td>
+</tr>
+<tr>
+<td>rsLoRA</td>
+<td>8.665 ± 0.078</td>
+<td>26.992 ± 0.107</td>
+<td><b>0.67363 ± 0.00188</b></td>
+</tr>
+<tr>
+<td>DoRA</td>
+<td>8.256 ± 0.059</td>
+<td>26.326 ± 0.086</td>
+<td>0.66698 ± 0.00046</td>
+</tr>
+<tr class="ref">
+<td>CRAT</td>
+<td><b>8.685 ± 0.127</b></td>
+<td><b>27.176 ± 0.143</b></td>
+<td>0.67259 ± 0.00541</td>
+</tr>
+<tr><td class="band" colspan="4">EN-ZH</td></tr>
+<tr>
+<td>Base</td>
+<td>15.340 ± 0.017</td>
+<td>34.959 ± 0.053</td>
+<td>0.75687 ± 0.00023</td>
+</tr>
+<tr>
+<td>Full SFT</td>
+<td>22.910 ± 0.548</td>
+<td>41.365 ± 0.111</td>
+<td>0.77311 ± 0.00392</td>
+</tr>
+<tr>
+<td>Targeted SFT</td>
+<td>24.446 ± 0.711</td>
+<td>43.093 ± 0.220</td>
+<td>0.80506 ± 0.00101</td>
+</tr>
+<tr>
+<td>LoRA</td>
+<td>26.191 ± 0.051</td>
+<td>43.256 ± 0.134</td>
+<td>0.80419 ± 0.00121</td>
+</tr>
+<tr>
+<td>rsLoRA</td>
+<td><b>27.001 ± 0.313</b></td>
+<td>43.681 ± 0.191</td>
+<td>0.80437 ± 0.00061</td>
+</tr>
+<tr>
+<td>DoRA</td>
+<td>25.214 ± 0.335</td>
+<td>43.137 ± 0.148</td>
+<td>0.80382 ± 0.00065</td>
+</tr>
+<tr class="ref">
+<td>CRAT</td>
+<td>26.984 ± 0.247</td>
+<td><b>43.746 ± 0.014</b></td>
+<td><b>0.80757 ± 0.00203</b></td>
+</tr>
+</tbody></table>

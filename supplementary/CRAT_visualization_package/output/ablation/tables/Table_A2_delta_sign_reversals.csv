@@ -1,0 +1,6 @@
+Pair,Variant,Metric,Supplied delta,Recomputed delta
+EN-FR,no_integration,BLEU,+0.010695,-0.148159
+EN-FA,static_role,COMET,+0.005974,-0.011825
+EN-ZH,no_kl,BLEU,+0.018535,-2.711399
+EN-ZH,no_causal,COMET,+0.000822,-0.004392
+EN-ZH,no_sparse,BLEU,+0.014237,-2.715697

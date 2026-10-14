@@ -1,0 +1,256 @@
+comparison/Figure_1_CRAT_margins
+================================
+Figure 1. CRAT minus the strongest non-CRAT mean in each metric and setting. Comparator selection is metric specific. Values are absolute score differences computed before rounding; no significance test is implied.
+
+comparison/Figure_2_COMET_mean_SD
+=================================
+Figure 2. COMET performance of all adapted methods. Points are six-seed means and bars show ±1 reported SD. The horizontal scale differs across panels. Error bars do not represent uncertainty in a paired method difference.
+
+comparison/Figure_3_quality_parameters
+======================================
+Figure 3. Observed BLEU versus trainable parameter count. The horizontal axis is logarithmic and vertical bars show ±1 reported SD. Zero-trainable-parameter base models are omitted. The dagger identifies the unequal training budget on Llama 2 EN-FR.
+
+comparison/Figure_4_resource_ratios
+===================================
+Figure 4. CRAT-to-baseline ratios of reported means. Lower values favor CRAT for all four costs. Colors encode direction, not statistical significance. Training time in the dagger-marked setting reflects half as many CRAT updates and tokens.
+
+ablation/Figure_1_quality_decreases
+===================================
+Figure 1. Absolute quality decreases relative to the displayed CRAT_full means. Each metric uses its own color scale; darker cells indicate a larger decrease. All 54 differences are recomputed from the primary means. The reference discrepancy in Appendix A affects every full-versus-ablation comparison. Color intensity does not indicate statistical significance.
+
+ablation/Figure_2_resource_savings
+==================================
+Figure 2. Peak-memory and training-time reductions relative to the displayed CRAT_full resource values. Positive values indicate savings, and negative values indicate increased cost. Percentages use the primary measurements, with matched reported token counts within each pair. Timing uncertainty is not available.
+
+ablation/Figure_3_causal_routing
+================================
+Figure 3. Mean soft gates for CRAT_full and no_causal during training and evaluation. The dashed evaluation line marks the diagnostic threshold of 0.5. These are independent sigmoid gates recorded before evaluation top-k masking. No categorical normalization, gate variance, or executed-role frequency is implied.
+
+sensitivity/Figure_1_matched_grid_sensitivity
+=============================================
+Figure 1. Ranges of reported BLEU and chrF means on parameter grids shared by all three pairs. Shared values are 0.05/0.1/0.2 for KL, causal, and morphology coefficients; 0.001/0.005/0.01 for sparsity; 2/4/8 for temperature; 8/16/32 for rank; 32/64/96 for head budget; and 1/2/3/4 for top k. Each metric has its own color scale. Ranges describe sensitivity of means, not statistical uncertainty.
+
+sensitivity/Figure_2_head_budget_tradeoffs
+==========================================
+Figure 2. BLEU and chrF versus trainable parameter count under head-budget variation. Labels identify heads per direction. EN-FR bars show ±1 reported SD; no variability estimates are available for EN-FA or EN-ZH. Axis ranges vary by panel. Lines connect ordered tested budgets and do not imply that intermediate settings were evaluated.
+
+sensitivity/Figure_3_topk_quality
+=================================
+Figure 3. Quality profiles across evaluation top-k settings. The dashed vertical line marks top k equal to 2. EN-FR bars show ±1 reported SD; absence of bars for EN-FA and EN-ZH reflects unavailable variability. Panel scales differ, and error bars are not paired confidence intervals for differences.
+
+sensitivity/Figure_4_sparsity_and_gates
+=======================================
+Figure 4. Evaluation mean soft gates across sparsity coefficients. The horizontal axis is logarithmic; EN-FR lacks the 0.2 setting. The dashed line marks the diagnostic threshold of 0.5. These gates precede top-k masking and are not categorical role probabilities.
+
+integrated/Figure_1_baseline_margins
+====================================
+Figure 1. CRAT minus the strongest non-CRAT mean in each model-pair-metric comparison. Parentheses identify the metric-specific comparator. Positive differences favor CRAT. Each metric uses its own color scale, and no significance test is implied. Llama 2 EN-FR uses the unequal training budget noted in Table 2. Complete scores: Supplementary Analysis A, Tables 2 and 3.
+
+integrated/Figure_2_ablation_resource_changes
+=============================================
+Figure 2. Reductions in peak memory and training time relative to the displayed full-model resource row. Positive values indicate savings; negative values indicate increased cost. Reported training workloads match within each pair. Each panel has its own color scale. Timing variability is unavailable, and static roles represent a compound configuration change. Complete resources: Supplementary Analysis B, Table 2.
+
+integrated/Figure_3_topk_quality
+================================
+Figure 3. Translation quality across evaluation top-k settings. The dashed line marks k = 2. EN-FR error bars show ±1 reported SD; equivalent estimates are unavailable for EN-FA and EN-ZH. Panel scales differ. Error bars do not provide paired confidence intervals for the differences between settings. Complete measurements: Supplementary Analysis C, Table 4.
+
+integrated/Figure_4_CRAT_without_KL
+===================================
+Figure 4. Resource savings and contextual quality comparisons for CRAT without KL. (a) Peak-memory and measured training-time reductions relative to full CRAT within each ablation workload. (b-d) CRAT without KL minus the Mistral Targeted SFT or LoRA mean; positive values favor CRAT without KL. Rows identify language pairs across all panels. Metric scales differ; COMET axis values are scaled by 1,000. Quality comparisons are descriptive: auxiliary backbone and seed provenance is unresolved, and the ablation uses 2.5 times the main-comparison updates. No paired uncertainty or significance is established (Supplementary Analyses A and B).
+
+comparison/Table_1_macro
+========================
+Table 1. Unweighted macro averages over the six model-pair settings and descriptive ranks.
+
+Higher is better for quality and first-place count; lower is better for mean rank. Rank averages cover 18 metric-setting cells. Macro scores are arithmetic averages of reported means, not pooled corpus scores. Bold marks the best value.
+
+comparison/Table_2_quality_llama2
+=================================
+Table 2. Llama 2 7B translation quality on OPUS100. Values are mean ± reported SD over six seeds.
+
+Higher is better. Bold marks the highest unrounded mean within each pair and metric; shaded rows identify CRAT. Rounded scores can appear tied even when the unrounded ranking differs. SD is not a confidence interval.
+
+† Llama 2 EN-FR CRAT used 158 updates and 1,582,308 tokens; the adapted baselines used 316 updates and 3,164,616 tokens. This setting is not matched for training workload.
+
+comparison/Table_3_quality_mistral
+==================================
+Table 3. Mistral 7B translation quality on OPUS100. Values are mean ± reported SD over six seeds.
+
+Higher is better. Bold marks the highest unrounded mean within each pair and metric; shaded rows identify CRAT. Rounded scores can appear tied even when the unrounded ranking differs. SD is not a confidence interval.
+
+comparison/Table_S1_training_llama2
+===================================
+Table S1. Llama 2 7B trainable parameters, peak memory, and reported training cost.
+
+M denotes millions of parameters. Trainable percentage uses each method's registered total parameter count. Resource entries are reported means; available resource SDs are retained in the companion CSV. Base training entries are zero because no adaptation is performed.
+
+* The source field is named peak_vram_GB; the supplied implementation uses 1,073,741,824 bytes per GiB. It records the peak over the method run, not an isolated inference-memory measurement. Numerical values are unchanged.
+
+† EN-FR CRAT has half the updates and training tokens of every adapted baseline. Other Llama 2 pairs have 312 updates. The effective batch size field is 128 for all rows.
+
+comparison/Table_S2_training_mistral
+====================================
+Table S2. Mistral 7B trainable parameters, peak memory, and reported training cost.
+
+M denotes millions of parameters. Trainable percentage uses each method's registered total parameter count. Resource entries are reported means; available resource SDs are retained in the companion CSV. Base training entries are zero because no adaptation is performed.
+
+* The source field is named peak_vram_GB; the supplied implementation uses 1,073,741,824 bytes per GiB. It records the peak over the method run, not an isolated inference-memory measurement. Numerical values are unchanged.
+
+All adapted EN-FR and EN-ZH rows have 316 updates; EN-FA rows have 312. The effective batch size field is 128 for all rows. The Mistral EN-FR export additionally reports resource SDs.
+
+comparison/Table_S3_inference_llama2
+====================================
+Table S3. Llama 2 7B generation duration, output volume, throughput, and latency.
+
+Gen. is total timed generation duration over the evaluation workload. Batch tokens/s is generation_tokens_per_second. Mean, p50, p95, and Single tokens/s come from the separate single-example latency benchmark. They are not alternative summaries of the batched workload. All entries are the reported means; p50 and p95 are means of run-level percentile statistics when aggregated across seeds.
+
+The supplied generate_batch timer starts after tokenization, source features, and CRAT router computation. These timings exclude that setup work. Different output token counts also affect raw duration; tokenizer differences limit cross-backbone interpretation of tokens/s.
+
+comparison/Table_S4_inference_mistral
+=====================================
+Table S4. Mistral 7B generation duration, output volume, throughput, and latency.
+
+Gen. is total timed generation duration over the evaluation workload. Batch tokens/s is generation_tokens_per_second. Mean, p50, p95, and Single tokens/s come from the separate single-example latency benchmark. They are not alternative summaries of the batched workload. All entries are the reported means; p50 and p95 are means of run-level percentile statistics when aggregated across seeds.
+
+The supplied generate_batch timer starts after tokenization, source features, and CRAT router computation. These timings exclude that setup work. Different output token counts also affect raw duration; tokenizer differences limit cross-backbone interpretation of tokens/s.
+
+comparison/Table_S5_delta_reconciliation
+========================================
+Table S5. Reconciliation of the Mistral EN-FA delta_chrF_vs_CRAT column.
+
+Both delta columns in this reconciliation use baseline chrF minus CRAT chrF. A negative value therefore favors CRAT. The primary chrF means were retained. For example, 27.09303414 minus 27.17611266 equals -0.08307852 for Targeted SFT; the supplied +0.077451539 has the wrong sign. All six non-CRAT chrF differences in this file fail this reconciliation. Other supplied additive quality deltas reconcile within 0.000001.
+
+ablation/Table_1_quality
+========================
+Table 1. Translation quality for all ablations. Values are reported mean ± SD.
+
+Higher is better. Bold values identify the highest displayed mean within each pair and metric. SD is the reported standard deviation, not a confidence interval. The full-model reference discrepancy in Appendix A applies to all comparisons with CRAT_full; the ablation seed count and model identifier are not encoded in these CSVs.
+
+ablation/Table_2_training
+=========================
+Table 2. Trainable parameters and training resource measurements.
+
+M denotes millions. Trainable percentage uses the registered total parameter count of each variant. Positive time savings indicate a shorter duration relative to the displayed CRAT_full resource row; negative values indicate a longer duration. These percentages have been recomputed from primary measurements.
+
+The source field peak_vram_GB is labeled here in GiB because the supplied implementation divides allocated bytes by 2 to the power 30. It is a method-run peak, not an isolated inference-memory measurement. The training timer excludes earlier discovery and preparation and includes validation in the supplied main scripts. The ablation runner must confirm that it uses the same measurement boundaries.
+
+ablation/Table_3_inference
+==========================
+Table 3. Generation duration, output volume, throughput, and single-example latency.
+
+Batch tokens/s comes from the complete evaluation generation workload. Mean, p50, p95, and Single tokens/s come from the separate single-example latency benchmark in the supplied implementation. p50 and p95 denote the reported 50th and 95th percentiles; the CSVs do not specify whether these are pooled percentiles or aggregates of per-run percentiles. Lower duration and latency, and higher throughput, are preferable.
+
+ablation/Table_4_evaluation_routing
+===================================
+Table 4. Evaluation mean soft gates and diagnostic threshold counts.
+
+S, I, P, and G identify source, indicator, position, and integration. Active fractions are the reported proportions of soft gates strictly greater than 0.5, in that order. The last column is their sum. It does not measure actual top-k execution. Static_role has missing routing diagnostics for all pairs and is omitted from this table; missing values have not been imputed.
+
+ablation/Table_A1_quality_references
+====================================
+Table A1. Displayed and implied CRAT_full quality references.
+
+Implied reference is the mean across the six reconstructed reference values. It is presented only to diagnose the mismatch. No replacement of the displayed primary means has been made.
+
+ablation/Table_A2_delta_sign_reversals
+======================================
+Table A2. Quality comparisons whose sign changes after recomputation.
+
+Here both deltas use ablated mean minus full-model mean, matching the source delta-column convention. Positive values favor the ablation. Figure 1 instead shows score decreases, using the opposite sign.
+
+ablation/Table_B1_training_routing
+==================================
+Table B1. Training mean soft gates and the logged gate statistic.
+
+The final column preserves the numeric values of train_router_entropy, with a neutral label because the implementation does not compute categorical or full Bernoulli entropy. Static_role diagnostics are missing in every pair. Training means aggregate recorded training snapshots rather than only the selected final checkpoint.
+
+sensitivity/Table_1_parameter_grids
+===================================
+Table 1. Tested parameter grids and defaults in the supplied main implementations.
+
+EN-FA and EN-ZH use the same grids. The code-default sparsity coefficient, 0.002, is absent from the exports. Code defaults identify comparison values; they do not establish that all other configuration fields were identical across sweeps.
+
+sensitivity/Table_2_quality_ranges
+==================================
+Table 2. Maximum minus minimum mean quality over each complete reported grid.
+
+A smaller range means less variation in the reported means on that grid. Grid widths and counts differ across pairs for several parameters. Figure 1 therefore repeats the comparison using only parameter values shared by all three pairs.
+
+sensitivity/Table_3_head_budgets
+================================
+Table 3. Quality and resource cost under different head-selection budgets.
+
+M denotes millions of trainable parameters. Shading identifies the within-sweep reference of 64 heads. NR means not reported. Resource entries are reported means; EN-FR quality variability is retained in Appendix A and Figure 2. Peak measurements in this table include the training-containing workflow.
+
+sensitivity/Table_4_topk_quality_cost
+=====================================
+Table 4. Quality and inference measurements across evaluation top-k settings.
+
+Shading identifies top k equal to 2. Generation throughput uses batched evaluation, whereas latency comes from the separate single-example benchmark in the supplied implementation. p95 is the reported 95th percentile, potentially aggregated over runs; no pooled latency distribution is supplied. The top-k rows contain no training measurements.
+
+sensitivity/Table_5_directional_differences
+===========================================
+Table 5. Selected directional differences relative to the corresponding within-sweep reference.
+
+Forward means English to the paired language; reverse means the paired language to English. Positive differences indicate higher scores. These are differences of reported means, without significance testing. All directional scores and differences are retained in the companion CSVs.
+
+sensitivity/Table_6_topk_routing
+================================
+Table 6. Selected roles and retained soft-gate mass for EN-FR and EN-FA.
+
+Selected-role rates are exactly 0 or 1 at the exported precision, and their sum equals top k. Retained mass refers to soft-gate magnitudes, not categorical probabilities or fractions of model FLOPs. The last column preserves topk_router_entropy without asserting categorical entropy. Equivalent top-k selection and mass fields are absent for EN-ZH.
+
+sensitivity/Table_A1_quality_en_fr
+==================================
+Table A1. Complete EN-FR quality means and reported standard deviations.
+
+Shading marks the corresponding code-default value when that row is present. Higher scores are better. All entries are primary reported means; COMET uses the equally weighted directional average. Comparisons are within the named sweep. Complete precision and direction-specific scores are preserved in the companion CSVs.
+
+The ± quantities are reported standard deviations. The SD/SEM arithmetic implies two aggregated observations, whose identities are not specified; no six-seed assumption is made. The figures use ±1 SD, not the supplied nominal 95% confidence intervals.
+
+sensitivity/Table_A2_quality_en_fa
+==================================
+Table A2. Complete EN-FA quality means.
+
+Shading marks the corresponding code-default value when that row is present. Higher scores are better. All entries are primary reported means; COMET uses the equally weighted directional average. Comparisons are within the named sweep. Complete precision and direction-specific scores are preserved in the companion CSVs.
+
+Variability is not reported. Non-top-k COMET rows cover 999 segments; top-k COMET rows cover 1,000. The displayed COMET column consistently uses COMET_mean_mean rather than the slightly different pooled COMET_mean.
+
+sensitivity/Table_A3_quality_en_zh
+==================================
+Table A3. Complete EN-ZH quality means.
+
+Shading marks the corresponding code-default value when that row is present. Higher scores are better. All entries are primary reported means; COMET uses the equally weighted directional average. Comparisons are within the named sweep. Complete precision and direction-specific scores are preserved in the companion CSVs.
+
+NR means not reported: COMET is available only for the four top-k settings. Standard deviations and confidence intervals are absent from these EN-ZH exports. Missing values are not imputed.
+
+sensitivity/Table_B1_sparsity_reference
+=======================================
+Table B1. References implied by the exported sparsity differences from default.
+
+Values are reconstructed from the reported extrema and default-delta columns, not measured rows supplied for 0.002. Their use is restricted to diagnosing the missing reference.
+
+integrated/Table_1_macro
+========================
+Table 1. Macro-average quality and descriptive ranks across six model-pair settings.
+
+Macro means weight the six settings equally within each metric. Rank averages cover 18 metric-setting comparisons; lower mean rank is better. The metrics are correlated. Bold identifies the best aggregate values. Individual means and SDs appear in Supplementary Analysis A, Tables 2 and 3.
+
+integrated/Table_2_CRAT_resources
+=================================
+Table 2. CRAT parameter counts and measured costs in the main comparison.
+
+M denotes millions of parameters. Peak memory covers the method run and uses 2³⁰ bytes per GiB. Generation throughput is measured in batches; latency comes from a separate single-example benchmark. Entries are reported means, including means of run-level p95 values where aggregated. † CRAT uses half the baseline updates and training tokens in Llama 2 EN-FR.
+
+integrated/Table_3_common_grid_ranges
+=====================================
+Table 3. Quality ranges on parameter grids shared by all three language pairs.
+
+Each range is the maximum minus minimum of reported means. Common values are 0.05/0.1/0.2 for KL, causal-prior, and morphology coefficients; 0.001/0.005/0.01 for sparsity; 2/4/8 for temperature; 8/16/32 for rank; 32/64/96 for head budget; and 1/2/3/4 for top k. A smaller range indicates less variation over that grid, not stronger statistical evidence of robustness.
+
+integrated/Table_4_head_budgets
+===============================
+Table 4. Quality and resource costs across head-selection budgets in the sensitivity experiments.
+
+Entries are reported means; shading identifies the within-sweep reference of 64 heads. NR denotes unreported COMET values. These references are specific to the head-budget sweep and are not interchangeable with main-comparison or coefficient-sweep defaults. Uncertainty estimates are unavailable for EN-FA and EN-ZH.
+

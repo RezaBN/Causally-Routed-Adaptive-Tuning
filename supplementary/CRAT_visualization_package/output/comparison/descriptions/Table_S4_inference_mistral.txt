@@ -1,0 +1,5 @@
+Table S4. Mistral 7B generation duration, output volume, throughput, and latency.
+
+Gen. is total timed generation duration over the evaluation workload. Batch tokens/s is generation_tokens_per_second. Mean, p50, p95, and Single tokens/s come from the separate single-example latency benchmark. They are not alternative summaries of the batched workload. All entries are the reported means; p50 and p95 are means of run-level percentile statistics when aggregated across seeds.
+
+The supplied generate_batch timer starts after tokenization, source features, and CRAT router computation. These timings exclude that setup work. Different output token counts also affect raw duration; tokenizer differences limit cross-backbone interpretation of tokens/s.

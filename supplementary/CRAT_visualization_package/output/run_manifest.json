@@ -1,0 +1,835 @@
+{
+  "created_utc": "2026-09-28T07:23:24.468312+00:00",
+  "python": "3.12.14",
+  "versions": {
+    "numpy": "2.3.5",
+    "pandas": "2.2.3",
+    "matplotlib": "3.10.8"
+  },
+  "style": {
+    "font_family": "Times New Roman",
+    "font_size": 7.0,
+    "tick_font_size": 6.0,
+    "legend_font_size": 6.5,
+    "annotation_font_size": 6.5,
+    "panel_font_size": 8.0,
+    "table_font_size": 7.0,
+    "figure_width": 7.0,
+    "figure_height": null,
+    "figure_sizes": {},
+    "table_width": 7.0,
+    "table_sizes": {},
+    "dpi": 600,
+    "formats": [
+      "pdf",
+      "svg",
+      "png"
+    ],
+    "palette": "colorblind",
+    "colors": {},
+    "font_files": [],
+    "strict_font": false,
+    "svg_text": false,
+    "table_rows_per_page": 40,
+    "line_width": 0.8,
+    "marker_size": 3.5,
+    "resolved_font_family": "DejaVu Serif",
+    "requested_font_family": "Times New Roman"
+  },
+  "resolved_colors": {
+    "methods": {
+      "Base": "#999999",
+      "Full SFT": "#8C564B",
+      "Targeted SFT": "#666666",
+      "LoRA": "#0072B2",
+      "rsLoRA": "#CC79A7",
+      "DoRA": "#D69F00",
+      "CRAT": "#009E73"
+    },
+    "pairs": {
+      "EN-FR": "#0072B2",
+      "EN-FA": "#CC79A7",
+      "EN-ZH": "#D55E00"
+    },
+    "roles": {
+      "source": "#0072B2",
+      "indicator": "#CC79A7",
+      "position": "#D55E00",
+      "integration": "#009E73"
+    },
+    "negative": "#A95436",
+    "neutral": "#FAFAF7",
+    "positive": "#217B68",
+    "sequential_low": "#F2F6F8",
+    "sequential_high": "#174765",
+    "memory": "#367C64",
+    "training_time": "#8471A8",
+    "targeted": "#226888",
+    "lora": "#A55337",
+    "grid": "#E2E6E9",
+    "text": "#171717",
+    "reference": "#7A858C",
+    "table_header": "#E7EDF2",
+    "table_band": "#F0F1F2",
+    "table_highlight": "#EDF5F1",
+    "table_border": "#D9D9D9"
+  },
+  "source_files": [
+    {
+      "name": "EN-FR_LlaMA2_OPUS100_Results_main-comparison.csv",
+      "sha256": "fc6c809bc831e8be95ee5d9ef04dbc3eae4fa131b51ba2465560bffd34e548a2"
+    },
+    {
+      "name": "EN-FR_Mistral_OPUS100_Results_main-comparison.csv",
+      "sha256": "14a2d880a1480c1352ca17776ad8385aa6683bdf521646997abfb1aad9c1977a"
+    },
+    {
+      "name": "EN-FA_LlaMA2_OPUS100_Results_main-comparison.csv",
+      "sha256": "4e2673a543b40b523ebf74da918ac9b8949c4667c5a2b5284ee3623a72768dc7"
+    },
+    {
+      "name": "EN-FA_Mistral_OPUS100_Results_main-comparison.csv",
+      "sha256": "e96a490509d73ca8ce5b711d99d8cff45103aa8c6f6f87521fad53da2e398701"
+    },
+    {
+      "name": "EN-ZH_LlaMA2_OPUS100_Results_main-comparison.csv",
+      "sha256": "04b8b7a56bb20a345bb3e71a1b66026235c97d7f8778e96d5a1cf598eeef9a02"
+    },
+    {
+      "name": "EN-ZH_Mistral_OPUS100_Results_main-comparison.csv",
+      "sha256": "66cadaa9885bc41f036403a56034b8bf504b3c3eae64c8ddeb3cd863bcc3bbf8"
+    },
+    {
+      "name": "en-fr_ablation_posthoc_opus100_efficiency.csv",
+      "sha256": "821d01f36d3399a022b93f664b64a305a4fa3bf974fd7c74698bd6a9aa2f9d4b"
+    },
+    {
+      "name": "en-fr_ablation_posthoc_opus100_routing.csv",
+      "sha256": "0c57a13bb6985fedb0ac4ad61d50725c91c5583792be5ba4909f4303412108c0"
+    },
+    {
+      "name": "en-fa_ablation_posthoc_opus100_efficiency.csv",
+      "sha256": "30a303b8a85432740a5ae67fbdc3d109794cbf6ac6b03b6b46b03ac3eb259497"
+    },
+    {
+      "name": "en-fa_ablation_posthoc_opus100_routing.csv",
+      "sha256": "6bc38ee2166e7a6ce1de50c2911f3046b5c1c8654eb6c91e4ad5ddb8a1f8bbdb"
+    },
+    {
+      "name": "en-zh_ablation_posthoc_opus100_efficiency.csv",
+      "sha256": "eb7978e3cef506bc9cabdda35bd515802dfc5b7b9709408bee0546c98f832431"
+    },
+    {
+      "name": "en-zh_ablation_posthoc_opus100_routing.csv",
+      "sha256": "0ef96b866fab33a01bb216cdbd1bb4fcc9933695da79823e2d26098784019d29"
+    },
+    {
+      "name": "en-fr_sensitivity_posthoc_opus100_summary.csv",
+      "sha256": "892048609578e348924c9dc70a312d0e076b9fe127a3d5623f01dd7202fc90a8"
+    },
+    {
+      "name": "en-fr_sensitivity_posthoc_opus100_efficiency.csv",
+      "sha256": "51366cdb4977aca69f5479eb9056316d1066becbfa910d9e9012154f24d4c281"
+    },
+    {
+      "name": "en-fr_sensitivity_posthoc_opus100_routing_summary.csv",
+      "sha256": "63b273f43a8311f7c49c0d2b5b233ad06782f143c9194632772457f19b7e8a39"
+    },
+    {
+      "name": "en-fr_sensitivity_posthoc_opus100_parameter_robustness.csv",
+      "sha256": "cc8933d0a1650ca842240f678fbb6d8254a134a5d5b8955807c66c451b2f1e13"
+    },
+    {
+      "name": "en-fr_sensitivity_posthoc_opus100_comet.csv",
+      "sha256": "8fda51fbd5069d42fb21193de6af271cd963044065429b8394a32a6c2571d51b"
+    },
+    {
+      "name": "en-fa_sensitivity_posthoc_opus100_summary.csv",
+      "sha256": "1e6d1cfaa5c4766fae94994a49f47cd65706d749f383208f1db56046aedb8181"
+    },
+    {
+      "name": "en-fa_sensitivity_posthoc_opus100_efficiency.csv",
+      "sha256": "f0a220325d4730ffc025cfdb5b6d0f010c718f4549a2f97308e4ab66030db767"
+    },
+    {
+      "name": "en-fa_sensitivity_posthoc_opus100_routing_summary.csv",
+      "sha256": "59c51c0edf2dd026a6ec37c430b580958bc66567d8a26047712c29e28672fca9"
+    },
+    {
+      "name": "en-fa_sensitivity_posthoc_opus100_parameter_robustness.csv",
+      "sha256": "a97063fbd34ad4b80c5269ac60ddb635353ba9c0f3d0669cdd99443cb5bb5869"
+    },
+    {
+      "name": "en-fa_sensitivity_posthoc_opus100_comet.csv",
+      "sha256": "91a256d66bcfa86d60606e451cfbb579982347c1039925e320b069ca6ef9fae2"
+    },
+    {
+      "name": "en-zh_sensitivity_posthoc_opus100_summary.csv",
+      "sha256": "9b196db0cfcf985943d8ec0eaa95d2e89aee7ffb61a4faea6000a61c5021c9dd"
+    },
+    {
+      "name": "en-zh_sensitivity_posthoc_opus100_efficiency.csv",
+      "sha256": "26e4c78709a863e00a347940fc67dc4b82499d73d8a36b516f29e6970aa49ed0"
+    },
+    {
+      "name": "en-zh_sensitivity_posthoc_opus100_routing_summary.csv",
+      "sha256": "bb35e703804286f45b434bc2d03584ff7fe01a68973ef508f9307ed981004a6c"
+    },
+    {
+      "name": "en-zh_sensitivity_posthoc_opus100_parameter_robustness.csv",
+      "sha256": "f6b3f1a2dc019d52cb5ca77aaa8f5111cf483552634d71759c483c20858c8eed"
+    },
+    {
+      "name": "en-zh_sensitivity_posthoc_opus100_comet.csv",
+      "sha256": "64d0aa49a4a82023e19cba5e2b14936efb0d705a57ceb61fa0e706d1e32b9e0c"
+    }
+  ],
+  "outputs": [
+    {
+      "id": "comparison/Figure_1_CRAT_margins",
+      "kind": "figure",
+      "files": [
+        "comparison/figures/Figure_1_CRAT_margins.pdf",
+        "comparison/figures/Figure_1_CRAT_margins.svg",
+        "comparison/figures/Figure_1_CRAT_margins.png"
+      ],
+      "description": "comparison/descriptions/Figure_1_CRAT_margins.txt",
+      "size_inches": [
+        7.0,
+        3.45
+      ]
+    },
+    {
+      "id": "comparison/Figure_2_COMET_mean_SD",
+      "kind": "figure",
+      "files": [
+        "comparison/figures/Figure_2_COMET_mean_SD.pdf",
+        "comparison/figures/Figure_2_COMET_mean_SD.svg",
+        "comparison/figures/Figure_2_COMET_mean_SD.png"
+      ],
+      "description": "comparison/descriptions/Figure_2_COMET_mean_SD.txt",
+      "size_inches": [
+        7.0,
+        4.25
+      ]
+    },
+    {
+      "id": "comparison/Figure_3_quality_parameters",
+      "kind": "figure",
+      "files": [
+        "comparison/figures/Figure_3_quality_parameters.pdf",
+        "comparison/figures/Figure_3_quality_parameters.svg",
+        "comparison/figures/Figure_3_quality_parameters.png"
+      ],
+      "description": "comparison/descriptions/Figure_3_quality_parameters.txt",
+      "size_inches": [
+        7.0,
+        4.3
+      ]
+    },
+    {
+      "id": "comparison/Figure_4_resource_ratios",
+      "kind": "figure",
+      "files": [
+        "comparison/figures/Figure_4_resource_ratios.pdf",
+        "comparison/figures/Figure_4_resource_ratios.svg",
+        "comparison/figures/Figure_4_resource_ratios.png"
+      ],
+      "description": "comparison/descriptions/Figure_4_resource_ratios.txt",
+      "size_inches": [
+        7.0,
+        4.8
+      ]
+    },
+    {
+      "id": "ablation/Figure_1_quality_decreases",
+      "kind": "figure",
+      "files": [
+        "ablation/figures/Figure_1_quality_decreases.pdf",
+        "ablation/figures/Figure_1_quality_decreases.svg",
+        "ablation/figures/Figure_1_quality_decreases.png"
+      ],
+      "description": "ablation/descriptions/Figure_1_quality_decreases.txt",
+      "size_inches": [
+        7.0,
+        3.5
+      ]
+    },
+    {
+      "id": "ablation/Figure_2_resource_savings",
+      "kind": "figure",
+      "files": [
+        "ablation/figures/Figure_2_resource_savings.pdf",
+        "ablation/figures/Figure_2_resource_savings.svg",
+        "ablation/figures/Figure_2_resource_savings.png"
+      ],
+      "description": "ablation/descriptions/Figure_2_resource_savings.txt",
+      "size_inches": [
+        7.0,
+        4.0
+      ]
+    },
+    {
+      "id": "ablation/Figure_3_causal_routing",
+      "kind": "figure",
+      "files": [
+        "ablation/figures/Figure_3_causal_routing.pdf",
+        "ablation/figures/Figure_3_causal_routing.svg",
+        "ablation/figures/Figure_3_causal_routing.png"
+      ],
+      "description": "ablation/descriptions/Figure_3_causal_routing.txt",
+      "size_inches": [
+        7.0,
+        3.8
+      ]
+    },
+    {
+      "id": "sensitivity/Figure_1_matched_grid_sensitivity",
+      "kind": "figure",
+      "files": [
+        "sensitivity/figures/Figure_1_matched_grid_sensitivity.pdf",
+        "sensitivity/figures/Figure_1_matched_grid_sensitivity.svg",
+        "sensitivity/figures/Figure_1_matched_grid_sensitivity.png"
+      ],
+      "description": "sensitivity/descriptions/Figure_1_matched_grid_sensitivity.txt",
+      "size_inches": [
+        7.0,
+        3.9
+      ]
+    },
+    {
+      "id": "sensitivity/Figure_2_head_budget_tradeoffs",
+      "kind": "figure",
+      "files": [
+        "sensitivity/figures/Figure_2_head_budget_tradeoffs.pdf",
+        "sensitivity/figures/Figure_2_head_budget_tradeoffs.svg",
+        "sensitivity/figures/Figure_2_head_budget_tradeoffs.png"
+      ],
+      "description": "sensitivity/descriptions/Figure_2_head_budget_tradeoffs.txt",
+      "size_inches": [
+        7.0,
+        3.7
+      ]
+    },
+    {
+      "id": "sensitivity/Figure_3_topk_quality",
+      "kind": "figure",
+      "files": [
+        "sensitivity/figures/Figure_3_topk_quality.pdf",
+        "sensitivity/figures/Figure_3_topk_quality.svg",
+        "sensitivity/figures/Figure_3_topk_quality.png"
+      ],
+      "description": "sensitivity/descriptions/Figure_3_topk_quality.txt",
+      "size_inches": [
+        7.0,
+        4.6
+      ]
+    },
+    {
+      "id": "sensitivity/Figure_4_sparsity_and_gates",
+      "kind": "figure",
+      "files": [
+        "sensitivity/figures/Figure_4_sparsity_and_gates.pdf",
+        "sensitivity/figures/Figure_4_sparsity_and_gates.svg",
+        "sensitivity/figures/Figure_4_sparsity_and_gates.png"
+      ],
+      "description": "sensitivity/descriptions/Figure_4_sparsity_and_gates.txt",
+      "size_inches": [
+        7.0,
+        2.65
+      ]
+    },
+    {
+      "id": "integrated/Figure_1_baseline_margins",
+      "kind": "figure",
+      "files": [
+        "integrated/figures/Figure_1_baseline_margins.pdf",
+        "integrated/figures/Figure_1_baseline_margins.svg",
+        "integrated/figures/Figure_1_baseline_margins.png"
+      ],
+      "description": "integrated/descriptions/Figure_1_baseline_margins.txt",
+      "size_inches": [
+        7.0,
+        3.45
+      ]
+    },
+    {
+      "id": "integrated/Figure_2_ablation_resource_changes",
+      "kind": "figure",
+      "files": [
+        "integrated/figures/Figure_2_ablation_resource_changes.pdf",
+        "integrated/figures/Figure_2_ablation_resource_changes.svg",
+        "integrated/figures/Figure_2_ablation_resource_changes.png"
+      ],
+      "description": "integrated/descriptions/Figure_2_ablation_resource_changes.txt",
+      "size_inches": [
+        7.0,
+        3.2
+      ]
+    },
+    {
+      "id": "integrated/Figure_3_topk_quality",
+      "kind": "figure",
+      "files": [
+        "integrated/figures/Figure_3_topk_quality.pdf",
+        "integrated/figures/Figure_3_topk_quality.svg",
+        "integrated/figures/Figure_3_topk_quality.png"
+      ],
+      "description": "integrated/descriptions/Figure_3_topk_quality.txt",
+      "size_inches": [
+        7.0,
+        4.6
+      ]
+    },
+    {
+      "id": "integrated/Figure_4_CRAT_without_KL",
+      "kind": "figure",
+      "files": [
+        "integrated/figures/Figure_4_CRAT_without_KL.pdf",
+        "integrated/figures/Figure_4_CRAT_without_KL.svg",
+        "integrated/figures/Figure_4_CRAT_without_KL.png"
+      ],
+      "description": "integrated/descriptions/Figure_4_CRAT_without_KL.txt",
+      "size_inches": [
+        7.0,
+        2.45
+      ]
+    },
+    {
+      "id": "comparison/Table_1_macro",
+      "kind": "table",
+      "files": [
+        "comparison/tables/Table_1_macro.csv",
+        "comparison/tables/Table_1_macro.tex",
+        "comparison/tables/Table_1_macro.html",
+        "comparison/tables/Table_1_macro.pdf",
+        "comparison/tables/Table_1_macro.svg",
+        "comparison/tables/Table_1_macro.png"
+      ],
+      "description": "comparison/descriptions/Table_1_macro.txt",
+      "body_rows": 7,
+      "visual_pages": 1
+    },
+    {
+      "id": "comparison/Table_2_quality_llama2",
+      "kind": "table",
+      "files": [
+        "comparison/tables/Table_2_quality_llama2.csv",
+        "comparison/tables/Table_2_quality_llama2.tex",
+        "comparison/tables/Table_2_quality_llama2.html",
+        "comparison/tables/Table_2_quality_llama2.pdf",
+        "comparison/tables/Table_2_quality_llama2.svg",
+        "comparison/tables/Table_2_quality_llama2.png"
+      ],
+      "description": "comparison/descriptions/Table_2_quality_llama2.txt",
+      "body_rows": 24,
+      "visual_pages": 1
+    },
+    {
+      "id": "comparison/Table_3_quality_mistral",
+      "kind": "table",
+      "files": [
+        "comparison/tables/Table_3_quality_mistral.csv",
+        "comparison/tables/Table_3_quality_mistral.tex",
+        "comparison/tables/Table_3_quality_mistral.html",
+        "comparison/tables/Table_3_quality_mistral.pdf",
+        "comparison/tables/Table_3_quality_mistral.svg",
+        "comparison/tables/Table_3_quality_mistral.png"
+      ],
+      "description": "comparison/descriptions/Table_3_quality_mistral.txt",
+      "body_rows": 24,
+      "visual_pages": 1
+    },
+    {
+      "id": "comparison/Table_S1_training_llama2",
+      "kind": "table",
+      "files": [
+        "comparison/tables/Table_S1_training_llama2.csv",
+        "comparison/tables/Table_S1_training_llama2.tex",
+        "comparison/tables/Table_S1_training_llama2.html",
+        "comparison/tables/Table_S1_training_llama2.pdf",
+        "comparison/tables/Table_S1_training_llama2.svg",
+        "comparison/tables/Table_S1_training_llama2.png"
+      ],
+      "description": "comparison/descriptions/Table_S1_training_llama2.txt",
+      "body_rows": 24,
+      "visual_pages": 1
+    },
+    {
+      "id": "comparison/Table_S2_training_mistral",
+      "kind": "table",
+      "files": [
+        "comparison/tables/Table_S2_training_mistral.csv",
+        "comparison/tables/Table_S2_training_mistral.tex",
+        "comparison/tables/Table_S2_training_mistral.html",
+        "comparison/tables/Table_S2_training_mistral.pdf",
+        "comparison/tables/Table_S2_training_mistral.svg",
+        "comparison/tables/Table_S2_training_mistral.png"
+      ],
+      "description": "comparison/descriptions/Table_S2_training_mistral.txt",
+      "body_rows": 24,
+      "visual_pages": 1
+    },
+    {
+      "id": "comparison/Table_S3_inference_llama2",
+      "kind": "table",
+      "files": [
+        "comparison/tables/Table_S3_inference_llama2.csv",
+        "comparison/tables/Table_S3_inference_llama2.tex",
+        "comparison/tables/Table_S3_inference_llama2.html",
+        "comparison/tables/Table_S3_inference_llama2.pdf",
+        "comparison/tables/Table_S3_inference_llama2.svg",
+        "comparison/tables/Table_S3_inference_llama2.png"
+      ],
+      "description": "comparison/descriptions/Table_S3_inference_llama2.txt",
+      "body_rows": 24,
+      "visual_pages": 1
+    },
+    {
+      "id": "comparison/Table_S4_inference_mistral",
+      "kind": "table",
+      "files": [
+        "comparison/tables/Table_S4_inference_mistral.csv",
+        "comparison/tables/Table_S4_inference_mistral.tex",
+        "comparison/tables/Table_S4_inference_mistral.html",
+        "comparison/tables/Table_S4_inference_mistral.pdf",
+        "comparison/tables/Table_S4_inference_mistral.svg",
+        "comparison/tables/Table_S4_inference_mistral.png"
+      ],
+      "description": "comparison/descriptions/Table_S4_inference_mistral.txt",
+      "body_rows": 24,
+      "visual_pages": 1
+    },
+    {
+      "id": "comparison/Table_S5_delta_reconciliation",
+      "kind": "table",
+      "files": [
+        "comparison/tables/Table_S5_delta_reconciliation.csv",
+        "comparison/tables/Table_S5_delta_reconciliation.tex",
+        "comparison/tables/Table_S5_delta_reconciliation.html",
+        "comparison/tables/Table_S5_delta_reconciliation.pdf",
+        "comparison/tables/Table_S5_delta_reconciliation.svg",
+        "comparison/tables/Table_S5_delta_reconciliation.png"
+      ],
+      "description": "comparison/descriptions/Table_S5_delta_reconciliation.txt",
+      "body_rows": 6,
+      "visual_pages": 1
+    },
+    {
+      "id": "ablation/Table_1_quality",
+      "kind": "table",
+      "files": [
+        "ablation/tables/Table_1_quality.csv",
+        "ablation/tables/Table_1_quality.tex",
+        "ablation/tables/Table_1_quality.html",
+        "ablation/tables/Table_1_quality.pdf",
+        "ablation/tables/Table_1_quality.svg",
+        "ablation/tables/Table_1_quality.png"
+      ],
+      "description": "ablation/descriptions/Table_1_quality.txt",
+      "body_rows": 24,
+      "visual_pages": 1
+    },
+    {
+      "id": "ablation/Table_2_training",
+      "kind": "table",
+      "files": [
+        "ablation/tables/Table_2_training.csv",
+        "ablation/tables/Table_2_training.tex",
+        "ablation/tables/Table_2_training.html",
+        "ablation/tables/Table_2_training.pdf",
+        "ablation/tables/Table_2_training.svg",
+        "ablation/tables/Table_2_training.png"
+      ],
+      "description": "ablation/descriptions/Table_2_training.txt",
+      "body_rows": 24,
+      "visual_pages": 1
+    },
+    {
+      "id": "ablation/Table_3_inference",
+      "kind": "table",
+      "files": [
+        "ablation/tables/Table_3_inference.csv",
+        "ablation/tables/Table_3_inference.tex",
+        "ablation/tables/Table_3_inference.html",
+        "ablation/tables/Table_3_inference.pdf",
+        "ablation/tables/Table_3_inference.svg",
+        "ablation/tables/Table_3_inference.png"
+      ],
+      "description": "ablation/descriptions/Table_3_inference.txt",
+      "body_rows": 24,
+      "visual_pages": 1
+    },
+    {
+      "id": "ablation/Table_4_evaluation_routing",
+      "kind": "table",
+      "files": [
+        "ablation/tables/Table_4_evaluation_routing.csv",
+        "ablation/tables/Table_4_evaluation_routing.tex",
+        "ablation/tables/Table_4_evaluation_routing.html",
+        "ablation/tables/Table_4_evaluation_routing.pdf",
+        "ablation/tables/Table_4_evaluation_routing.svg",
+        "ablation/tables/Table_4_evaluation_routing.png"
+      ],
+      "description": "ablation/descriptions/Table_4_evaluation_routing.txt",
+      "body_rows": 21,
+      "visual_pages": 1
+    },
+    {
+      "id": "ablation/Table_A1_quality_references",
+      "kind": "table",
+      "files": [
+        "ablation/tables/Table_A1_quality_references.csv",
+        "ablation/tables/Table_A1_quality_references.tex",
+        "ablation/tables/Table_A1_quality_references.html",
+        "ablation/tables/Table_A1_quality_references.pdf",
+        "ablation/tables/Table_A1_quality_references.svg",
+        "ablation/tables/Table_A1_quality_references.png"
+      ],
+      "description": "ablation/descriptions/Table_A1_quality_references.txt",
+      "body_rows": 9,
+      "visual_pages": 1
+    },
+    {
+      "id": "ablation/Table_A2_delta_sign_reversals",
+      "kind": "table",
+      "files": [
+        "ablation/tables/Table_A2_delta_sign_reversals.csv",
+        "ablation/tables/Table_A2_delta_sign_reversals.tex",
+        "ablation/tables/Table_A2_delta_sign_reversals.html",
+        "ablation/tables/Table_A2_delta_sign_reversals.pdf",
+        "ablation/tables/Table_A2_delta_sign_reversals.svg",
+        "ablation/tables/Table_A2_delta_sign_reversals.png"
+      ],
+      "description": "ablation/descriptions/Table_A2_delta_sign_reversals.txt",
+      "body_rows": 5,
+      "visual_pages": 1
+    },
+    {
+      "id": "ablation/Table_B1_training_routing",
+      "kind": "table",
+      "files": [
+        "ablation/tables/Table_B1_training_routing.csv",
+        "ablation/tables/Table_B1_training_routing.tex",
+        "ablation/tables/Table_B1_training_routing.html",
+        "ablation/tables/Table_B1_training_routing.pdf",
+        "ablation/tables/Table_B1_training_routing.svg",
+        "ablation/tables/Table_B1_training_routing.png"
+      ],
+      "description": "ablation/descriptions/Table_B1_training_routing.txt",
+      "body_rows": 21,
+      "visual_pages": 1
+    },
+    {
+      "id": "sensitivity/Table_1_parameter_grids",
+      "kind": "table",
+      "files": [
+        "sensitivity/tables/Table_1_parameter_grids.csv",
+        "sensitivity/tables/Table_1_parameter_grids.tex",
+        "sensitivity/tables/Table_1_parameter_grids.html",
+        "sensitivity/tables/Table_1_parameter_grids.pdf",
+        "sensitivity/tables/Table_1_parameter_grids.svg",
+        "sensitivity/tables/Table_1_parameter_grids.png"
+      ],
+      "description": "sensitivity/descriptions/Table_1_parameter_grids.txt",
+      "body_rows": 8,
+      "visual_pages": 1
+    },
+    {
+      "id": "sensitivity/Table_2_quality_ranges",
+      "kind": "table",
+      "files": [
+        "sensitivity/tables/Table_2_quality_ranges.csv",
+        "sensitivity/tables/Table_2_quality_ranges.tex",
+        "sensitivity/tables/Table_2_quality_ranges.html",
+        "sensitivity/tables/Table_2_quality_ranges.pdf",
+        "sensitivity/tables/Table_2_quality_ranges.svg",
+        "sensitivity/tables/Table_2_quality_ranges.png"
+      ],
+      "description": "sensitivity/descriptions/Table_2_quality_ranges.txt",
+      "body_rows": 8,
+      "visual_pages": 1
+    },
+    {
+      "id": "sensitivity/Table_3_head_budgets",
+      "kind": "table",
+      "files": [
+        "sensitivity/tables/Table_3_head_budgets.csv",
+        "sensitivity/tables/Table_3_head_budgets.tex",
+        "sensitivity/tables/Table_3_head_budgets.html",
+        "sensitivity/tables/Table_3_head_budgets.pdf",
+        "sensitivity/tables/Table_3_head_budgets.svg",
+        "sensitivity/tables/Table_3_head_budgets.png"
+      ],
+      "description": "sensitivity/descriptions/Table_3_head_budgets.txt",
+      "body_rows": 12,
+      "visual_pages": 1
+    },
+    {
+      "id": "sensitivity/Table_4_topk_quality_cost",
+      "kind": "table",
+      "files": [
+        "sensitivity/tables/Table_4_topk_quality_cost.csv",
+        "sensitivity/tables/Table_4_topk_quality_cost.tex",
+        "sensitivity/tables/Table_4_topk_quality_cost.html",
+        "sensitivity/tables/Table_4_topk_quality_cost.pdf",
+        "sensitivity/tables/Table_4_topk_quality_cost.svg",
+        "sensitivity/tables/Table_4_topk_quality_cost.png"
+      ],
+      "description": "sensitivity/descriptions/Table_4_topk_quality_cost.txt",
+      "body_rows": 15,
+      "visual_pages": 1
+    },
+    {
+      "id": "sensitivity/Table_5_directional_differences",
+      "kind": "table",
+      "files": [
+        "sensitivity/tables/Table_5_directional_differences.csv",
+        "sensitivity/tables/Table_5_directional_differences.tex",
+        "sensitivity/tables/Table_5_directional_differences.html",
+        "sensitivity/tables/Table_5_directional_differences.pdf",
+        "sensitivity/tables/Table_5_directional_differences.svg",
+        "sensitivity/tables/Table_5_directional_differences.png"
+      ],
+      "description": "sensitivity/descriptions/Table_5_directional_differences.txt",
+      "body_rows": 7,
+      "visual_pages": 1
+    },
+    {
+      "id": "sensitivity/Table_6_topk_routing",
+      "kind": "table",
+      "files": [
+        "sensitivity/tables/Table_6_topk_routing.csv",
+        "sensitivity/tables/Table_6_topk_routing.tex",
+        "sensitivity/tables/Table_6_topk_routing.html",
+        "sensitivity/tables/Table_6_topk_routing.pdf",
+        "sensitivity/tables/Table_6_topk_routing.svg",
+        "sensitivity/tables/Table_6_topk_routing.png"
+      ],
+      "description": "sensitivity/descriptions/Table_6_topk_routing.txt",
+      "body_rows": 10,
+      "visual_pages": 1
+    },
+    {
+      "id": "sensitivity/Table_A1_quality_en_fr",
+      "kind": "table",
+      "files": [
+        "sensitivity/tables/Table_A1_quality_en_fr.csv",
+        "sensitivity/tables/Table_A1_quality_en_fr.tex",
+        "sensitivity/tables/Table_A1_quality_en_fr.html",
+        "sensitivity/tables/Table_A1_quality_en_fr.pdf",
+        "sensitivity/tables/Table_A1_quality_en_fr.svg",
+        "sensitivity/tables/Table_A1_quality_en_fr.png"
+      ],
+      "description": "sensitivity/descriptions/Table_A1_quality_en_fr.txt",
+      "body_rows": 33,
+      "visual_pages": 1
+    },
+    {
+      "id": "sensitivity/Table_A2_quality_en_fa",
+      "kind": "table",
+      "files": [
+        "sensitivity/tables/Table_A2_quality_en_fa.csv",
+        "sensitivity/tables/Table_A2_quality_en_fa.tex",
+        "sensitivity/tables/Table_A2_quality_en_fa.html",
+        "sensitivity/tables/Table_A2_quality_en_fa.pdf",
+        "sensitivity/tables/Table_A2_quality_en_fa.svg",
+        "sensitivity/tables/Table_A2_quality_en_fa.png"
+      ],
+      "description": "sensitivity/descriptions/Table_A2_quality_en_fa.txt",
+      "body_rows": 38,
+      "visual_pages": 1
+    },
+    {
+      "id": "sensitivity/Table_A3_quality_en_zh",
+      "kind": "table",
+      "files": [
+        "sensitivity/tables/Table_A3_quality_en_zh.csv",
+        "sensitivity/tables/Table_A3_quality_en_zh.tex",
+        "sensitivity/tables/Table_A3_quality_en_zh.html",
+        "sensitivity/tables/Table_A3_quality_en_zh.pdf",
+        "sensitivity/tables/Table_A3_quality_en_zh.svg",
+        "sensitivity/tables/Table_A3_quality_en_zh.png"
+      ],
+      "description": "sensitivity/descriptions/Table_A3_quality_en_zh.txt",
+      "body_rows": 38,
+      "visual_pages": 1
+    },
+    {
+      "id": "sensitivity/Table_B1_sparsity_reference",
+      "kind": "table",
+      "files": [
+        "sensitivity/tables/Table_B1_sparsity_reference.csv",
+        "sensitivity/tables/Table_B1_sparsity_reference.tex",
+        "sensitivity/tables/Table_B1_sparsity_reference.html",
+        "sensitivity/tables/Table_B1_sparsity_reference.pdf",
+        "sensitivity/tables/Table_B1_sparsity_reference.svg",
+        "sensitivity/tables/Table_B1_sparsity_reference.png"
+      ],
+      "description": "sensitivity/descriptions/Table_B1_sparsity_reference.txt",
+      "body_rows": 3,
+      "visual_pages": 1
+    },
+    {
+      "id": "integrated/Table_1_macro",
+      "kind": "table",
+      "files": [
+        "integrated/tables/Table_1_macro.csv",
+        "integrated/tables/Table_1_macro.tex",
+        "integrated/tables/Table_1_macro.html",
+        "integrated/tables/Table_1_macro.pdf",
+        "integrated/tables/Table_1_macro.svg",
+        "integrated/tables/Table_1_macro.png"
+      ],
+      "description": "integrated/descriptions/Table_1_macro.txt",
+      "body_rows": 7,
+      "visual_pages": 1
+    },
+    {
+      "id": "integrated/Table_2_CRAT_resources",
+      "kind": "table",
+      "files": [
+        "integrated/tables/Table_2_CRAT_resources.csv",
+        "integrated/tables/Table_2_CRAT_resources.tex",
+        "integrated/tables/Table_2_CRAT_resources.html",
+        "integrated/tables/Table_2_CRAT_resources.pdf",
+        "integrated/tables/Table_2_CRAT_resources.svg",
+        "integrated/tables/Table_2_CRAT_resources.png"
+      ],
+      "description": "integrated/descriptions/Table_2_CRAT_resources.txt",
+      "body_rows": 8,
+      "visual_pages": 1
+    },
+    {
+      "id": "integrated/Table_3_common_grid_ranges",
+      "kind": "table",
+      "files": [
+        "integrated/tables/Table_3_common_grid_ranges.csv",
+        "integrated/tables/Table_3_common_grid_ranges.tex",
+        "integrated/tables/Table_3_common_grid_ranges.html",
+        "integrated/tables/Table_3_common_grid_ranges.pdf",
+        "integrated/tables/Table_3_common_grid_ranges.svg",
+        "integrated/tables/Table_3_common_grid_ranges.png"
+      ],
+      "description": "integrated/descriptions/Table_3_common_grid_ranges.txt",
+      "body_rows": 8,
+      "visual_pages": 1
+    },
+    {
+      "id": "integrated/Table_4_head_budgets",
+      "kind": "table",
+      "files": [
+        "integrated/tables/Table_4_head_budgets.csv",
+        "integrated/tables/Table_4_head_budgets.tex",
+        "integrated/tables/Table_4_head_budgets.html",
+        "integrated/tables/Table_4_head_budgets.pdf",
+        "integrated/tables/Table_4_head_budgets.svg",
+        "integrated/tables/Table_4_head_budgets.png"
+      ],
+      "description": "integrated/descriptions/Table_4_head_budgets.txt",
+      "body_rows": 12,
+      "visual_pages": 1
+    }
+  ],
+  "layout_notices": []
+}

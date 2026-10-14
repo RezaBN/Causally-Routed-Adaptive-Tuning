@@ -1,0 +1,3 @@
+Table 4. Quality and resource costs across head-selection budgets in the sensitivity experiments.
+
+Entries are reported means; shading identifies the within-sweep reference of 64 heads. NR denotes unreported COMET values. These references are specific to the head-budget sweep and are not interchangeable with main-comparison or coefficient-sweep defaults. Uncertainty estimates are unavailable for EN-FA and EN-ZH.

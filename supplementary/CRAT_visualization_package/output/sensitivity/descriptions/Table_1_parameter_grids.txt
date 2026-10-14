@@ -1,0 +1,3 @@
+Table 1. Tested parameter grids and defaults in the supplied main implementations.
+
+EN-FA and EN-ZH use the same grids. The code-default sparsity coefficient, 0.002, is absent from the exports. Code defaults identify comparison values; they do not establish that all other configuration fields were identical across sweeps.

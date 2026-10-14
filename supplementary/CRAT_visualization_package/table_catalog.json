@@ -1,0 +1,39 @@
+{
+  "comparison": [
+    "Table_1_macro",
+    "Table_2_quality_llama2",
+    "Table_3_quality_mistral",
+    "Table_S1_training_llama2",
+    "Table_S2_training_mistral",
+    "Table_S3_inference_llama2",
+    "Table_S4_inference_mistral",
+    "Table_S5_delta_reconciliation"
+  ],
+  "ablation": [
+    "Table_1_quality",
+    "Table_2_training",
+    "Table_3_inference",
+    "Table_4_evaluation_routing",
+    "Table_A1_quality_references",
+    "Table_A2_delta_sign_reversals",
+    "Table_B1_training_routing"
+  ],
+  "sensitivity": [
+    "Table_1_parameter_grids",
+    "Table_2_quality_ranges",
+    "Table_3_head_budgets",
+    "Table_4_topk_quality_cost",
+    "Table_5_directional_differences",
+    "Table_6_topk_routing",
+    "Table_A1_quality_en_fr",
+    "Table_A2_quality_en_fa",
+    "Table_A3_quality_en_zh",
+    "Table_B1_sparsity_reference"
+  ],
+  "integrated": [
+    "Table_1_macro",
+    "Table_2_CRAT_resources",
+    "Table_3_common_grid_ranges",
+    "Table_4_head_budgets"
+  ]
+}

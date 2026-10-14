@@ -1,0 +1,1 @@
+Figure 2. COMET performance of all adapted methods. Points are six-seed means and bars show ±1 reported SD. The horizontal scale differs across panels. Error bars do not represent uncertainty in a paired method difference.

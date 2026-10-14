@@ -1,0 +1,3 @@
+Table 4. Evaluation mean soft gates and diagnostic threshold counts.
+
+S, I, P, and G identify source, indicator, position, and integration. Active fractions are the reported proportions of soft gates strictly greater than 0.5, in that order. The last column is their sum. It does not measure actual top-k execution. Static_role has missing routing diagnostics for all pairs and is omitted from this table; missing values have not been imputed.

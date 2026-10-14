@@ -1,0 +1,5 @@
+Table A2. Complete EN-FA quality means.
+
+Shading marks the corresponding code-default value when that row is present. Higher scores are better. All entries are primary reported means; COMET uses the equally weighted directional average. Comparisons are within the named sweep. Complete precision and direction-specific scores are preserved in the companion CSVs.
+
+Variability is not reported. Non-top-k COMET rows cover 999 segments; top-k COMET rows cover 1,000. The displayed COMET column consistently uses COMET_mean_mean rather than the slightly different pooled COMET_mean.

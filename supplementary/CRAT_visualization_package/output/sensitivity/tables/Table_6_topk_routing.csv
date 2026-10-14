@@ -1,0 +1,11 @@
+Top k,Selected roles,Retained gate mass (%),Soft count above 0.5,Logged gate statistic
+EN-FR,,,,
+1,Position,32.16,3.0,0.94548
+2,Position and source,61.82,3.0,0.94548
+3,"Position, source, integration",84.92,3.0,0.94548
+4,All four roles,100.00,3.0,0.94548
+EN-FA,,,,
+1,Position,31.26,3.0,0.96282
+2,Position and source,60.62,3.0,0.96282
+3,"Position, source, integration",84.52,3.0,0.96282
+4,All four roles,100.00,3.0,0.96282

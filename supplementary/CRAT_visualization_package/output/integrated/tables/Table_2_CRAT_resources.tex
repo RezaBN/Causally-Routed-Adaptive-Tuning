@@ -1,0 +1,19 @@
+% Requires \usepackage{booktabs}; caption is in the separate .txt file.
+\begingroup
+\fontsize{7}{8.4}\selectfont
+\setlength{\tabcolsep}{3pt}
+\begin{tabular}{lcccccc}
+\toprule
+\textbf{Pair} & \textbf{\shortstack{Trainable\\(M)}} & \textbf{\shortstack{Peak\\(GiB)}} & \textbf{\shortstack{Training\\(min)}} & \textbf{\shortstack{Generation\\tokens/s}} & \textbf{\shortstack{Mean latency\\(s)}} & \textbf{\shortstack{p95 latency\\(s)}} \\
+\midrule
+\multicolumn{7}{l}{\textbf{Llama 2 7B}} \\
+EN-FR $\dagger$ & 206.02 & 37.36 & 18.79 & 54.93 & 1.695 & 3.328 \\
+EN-FA & 256.35 & 38.52 & 27.63 & 50.70 & 1.893 & 7.663 \\
+EN-ZH & 220.70 & 37.59 & 29.74 & 64.57 & 2.814 & 6.381 \\
+\multicolumn{7}{l}{\textbf{Mistral 7B}} \\
+EN-FR & 195.53 & 39.67 & 18.67 & 92.87 & 0.954 & 2.447 \\
+EN-FA & 217.55 & 40.02 & 29.20 & 51.85 & 1.854 & 7.604 \\
+EN-ZH & 241.67 & 41.24 & 19.74 & 102.92 & 1.292 & 3.195 \\
+\bottomrule
+\end{tabular}
+\endgroup

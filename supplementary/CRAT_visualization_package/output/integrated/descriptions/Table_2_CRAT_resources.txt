@@ -1,0 +1,3 @@
+Table 2. CRAT parameter counts and measured costs in the main comparison.
+
+M denotes millions of parameters. Peak memory covers the method run and uses 2³⁰ bytes per GiB. Generation throughput is measured in batches; latency comes from a separate single-example benchmark. Entries are reported means, including means of run-level p95 values where aggregated. † CRAT uses half the baseline updates and training tokens in Llama 2 EN-FR.

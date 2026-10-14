@@ -1,0 +1,7 @@
+Table S1. Llama 2 7B trainable parameters, peak memory, and reported training cost.
+
+M denotes millions of parameters. Trainable percentage uses each method's registered total parameter count. Resource entries are reported means; available resource SDs are retained in the companion CSV. Base training entries are zero because no adaptation is performed.
+
+* The source field is named peak_vram_GB; the supplied implementation uses 1,073,741,824 bytes per GiB. It records the peak over the method run, not an isolated inference-memory measurement. Numerical values are unchanged.
+
+† EN-FR CRAT has half the updates and training tokens of every adapted baseline. Other Llama 2 pairs have 312 updates. The effective batch size field is 128 for all rows.

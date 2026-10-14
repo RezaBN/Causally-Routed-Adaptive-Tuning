@@ -1,0 +1,9 @@
+Validated with Python 3.12.14, NumPy 2.3.5, pandas 2.2.3 and Matplotlib 3.10.8.
+
+A complete default run produced 15 figures and 29 visual tables, each as PDF, SVG and 600-dpi PNG. All 44 descriptions were written separately. The 29 tables also have CSV, HTML and LaTeX exports.
+
+Thirty normalized/derived CSV tables match the previously verified analyses within floating-point export precision. All 27 original CSV files are unchanged. All declared output files are nonempty; PDFs parse correctly and contain embedded fonts; PNGs pass file-integrity checks. Final text sizes range from 6 to 8 pt. Default layout checks have no clipped-text notices. Representative rendered pages and contact sheets were visually inspected.
+
+The validation environment did not have Times New Roman. The program explicitly reported and used DejaVu Serif. The default request remains Times New Roman; use --strict-font to require it locally.
+
+Font and size overrides, custom colors, per-figure dimensions, output selection, pagination and relevant error paths were exercised. See validation.json for the concise check record.

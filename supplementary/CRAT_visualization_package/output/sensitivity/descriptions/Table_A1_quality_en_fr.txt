@@ -1,0 +1,5 @@
+Table A1. Complete EN-FR quality means and reported standard deviations.
+
+Shading marks the corresponding code-default value when that row is present. Higher scores are better. All entries are primary reported means; COMET uses the equally weighted directional average. Comparisons are within the named sweep. Complete precision and direction-specific scores are preserved in the companion CSVs.
+
+The ± quantities are reported standard deviations. The SD/SEM arithmetic implies two aggregated observations, whose identities are not specified; no six-seed assumption is made. The figures use ±1 SD, not the supplied nominal 95% confidence intervals.

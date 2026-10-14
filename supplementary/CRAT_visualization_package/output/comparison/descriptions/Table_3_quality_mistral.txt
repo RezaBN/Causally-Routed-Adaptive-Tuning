@@ -1,0 +1,3 @@
+Table 3. Mistral 7B translation quality on OPUS100. Values are mean ± reported SD over six seeds.
+
+Higher is better. Bold marks the highest unrounded mean within each pair and metric; shaded rows identify CRAT. Rounded scores can appear tied even when the unrounded ranking differs. SD is not a confidence interval.

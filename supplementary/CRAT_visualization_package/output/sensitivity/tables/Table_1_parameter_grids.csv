@@ -1,0 +1,9 @@
+Parameter,Code default,EN-FR values,EN-FA and EN-ZH values
+KL coefficient,0.1,"0.05, 0.1, 0.2","0.05, 0.1, 0.2, 0.5"
+Causal coefficient,0.1,"0.05, 0.1, 0.2","0.05, 0.1, 0.2, 0.5"
+Morphology coefficient,0.1,"0.05, 0.1, 0.2","0.05, 0.1, 0.2, 0.5"
+Sparsity coefficient,0.002,"0.001, 0.005, 0.01","0.001, 0.005, 0.01, 0.2"
+KL temperature,2,"2, 4, 8","1, 2, 4, 8"
+Integration rank,16,"8, 16, 32","8, 16, 32"
+Heads per direction,64,"32, 64, 96","32, 64, 96"
+Evaluation top k,2,"1, 2, 3, 4","1, 2, 3, 4"

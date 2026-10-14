@@ -1,0 +1,3 @@
+Table 4. Quality and inference measurements across evaluation top-k settings.
+
+Shading identifies top k equal to 2. Generation throughput uses batched evaluation, whereas latency comes from the separate single-example benchmark in the supplied implementation. p95 is the reported 95th percentile, potentially aggregated over runs; no pooled latency distribution is supplied. The top-k rows contain no training measurements.

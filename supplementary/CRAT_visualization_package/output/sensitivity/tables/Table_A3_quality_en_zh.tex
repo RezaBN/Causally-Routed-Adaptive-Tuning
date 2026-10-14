@@ -1,0 +1,49 @@
+% Requires \usepackage{booktabs}; caption is in the separate .txt file.
+\begingroup
+\fontsize{7}{8.4}\selectfont
+\setlength{\tabcolsep}{3pt}
+\begin{tabular}{lccc}
+\toprule
+\textbf{Value} & \textbf{BLEU} & \textbf{chrF} & \textbf{COMET} \\
+\midrule
+\multicolumn{4}{l}{\textbf{KL coefficient}} \\
+0.05 & 24.421 & 44.240 & NR \\
+0.1 & 24.365 & 44.071 & NR \\
+0.2 & 25.871 & 44.090 & NR \\
+0.5 & 25.631 & 43.573 & NR \\
+\multicolumn{4}{l}{\textbf{Causal coefficient}} \\
+0.05 & 24.335 & 44.070 & NR \\
+0.1 & 24.364 & 44.079 & NR \\
+0.2 & 24.182 & 44.105 & NR \\
+0.5 & 24.350 & 44.126 & NR \\
+\multicolumn{4}{l}{\textbf{Morphology coefficient}} \\
+0.05 & 24.491 & 44.124 & NR \\
+0.1 & 24.363 & 44.131 & NR \\
+0.2 & 24.447 & 44.275 & NR \\
+0.5 & 24.419 & 44.137 & NR \\
+\multicolumn{4}{l}{\textbf{Sparsity coefficient}} \\
+0.001 & 24.474 & 44.144 & NR \\
+0.005 & 24.594 & 44.198 & NR \\
+0.01 & 24.477 & 44.242 & NR \\
+0.2 & 24.434 & 43.973 & NR \\
+\multicolumn{4}{l}{\textbf{KL temperature}} \\
+1 & 24.300 & 43.925 & NR \\
+2 & 24.310 & 44.024 & NR \\
+4 & 24.230 & 44.104 & NR \\
+8 & 24.258 & 44.114 & NR \\
+\multicolumn{4}{l}{\textbf{Integration rank}} \\
+8 & 24.340 & 44.059 & NR \\
+16 & 24.353 & 44.075 & NR \\
+32 & 24.413 & 44.099 & NR \\
+\multicolumn{4}{l}{\textbf{Heads per direction}} \\
+32 & 25.759 & 43.842 & NR \\
+64 & 24.525 & 44.441 & NR \\
+96 & 24.200 & 44.493 & NR \\
+\multicolumn{4}{l}{\textbf{Evaluation top k}} \\
+1 & 26.390 & 44.010 & 0.80552 \\
+2 & 24.532 & 44.155 & 0.80711 \\
+3 & 24.242 & 44.037 & 0.80550 \\
+4 & 24.804 & 44.032 & 0.80552 \\
+\bottomrule
+\end{tabular}
+\endgroup

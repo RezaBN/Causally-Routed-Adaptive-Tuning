@@ -1,0 +1,3 @@
+Table A2. Quality comparisons whose sign changes after recomputation.
+
+Here both deltas use ablated mean minus full-model mean, matching the source delta-column convention. Positive values favor the ablation. Figure 1 instead shows score decreases, using the opposite sign.

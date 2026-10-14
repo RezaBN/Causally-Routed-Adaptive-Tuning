@@ -1,0 +1,1 @@
+Figure 2. BLEU and chrF versus trainable parameter count under head-budget variation. Labels identify heads per direction. EN-FR bars show ±1 reported SD; no variability estimates are available for EN-FA or EN-ZH. Axis ranges vary by panel. Lines connect ordered tested budgets and do not imply that intermediate settings were evaluated.

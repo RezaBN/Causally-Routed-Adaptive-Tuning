@@ -1,0 +1,3 @@
+Table 3. Quality and resource cost under different head-selection budgets.
+
+M denotes millions of trainable parameters. Shading identifies the within-sweep reference of 64 heads. NR means not reported. Resource entries are reported means; EN-FR quality variability is retained in Appendix A and Figure 2. Peak measurements in this table include the training-containing workflow.

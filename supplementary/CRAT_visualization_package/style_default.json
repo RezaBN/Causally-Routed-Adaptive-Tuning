@@ -1,0 +1,28 @@
+{
+  "font_family": "Times New Roman",
+  "font_size": 7.0,
+  "tick_font_size": 6.0,
+  "legend_font_size": 6.5,
+  "annotation_font_size": 6.5,
+  "panel_font_size": 8.0,
+  "table_font_size": 7.0,
+  "figure_width": 7.0,
+  "figure_height": null,
+  "figure_sizes": {},
+  "table_width": 7.0,
+  "table_sizes": {},
+  "dpi": 600,
+  "formats": [
+    "pdf",
+    "svg",
+    "png"
+  ],
+  "palette": "colorblind",
+  "colors": {},
+  "font_files": [],
+  "strict_font": false,
+  "svg_text": false,
+  "table_rows_per_page": 40,
+  "line_width": 0.8,
+  "marker_size": 3.5
+}

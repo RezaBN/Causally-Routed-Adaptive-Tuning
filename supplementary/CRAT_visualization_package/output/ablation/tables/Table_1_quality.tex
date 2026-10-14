@@ -1,0 +1,35 @@
+% Requires \usepackage{booktabs}; caption is in the separate .txt file.
+\begingroup
+\fontsize{7}{8.4}\selectfont
+\setlength{\tabcolsep}{3pt}
+\begin{tabular}{lccc}
+\toprule
+\textbf{Variant} & \textbf{BLEU} & \textbf{chrF} & \textbf{COMET} \\
+\midrule
+\multicolumn{4}{l}{\textbf{EN-FR}} \\
+CRAT\_full & \textbf{31.358 $\pm$ 0.096} & \textbf{55.763 $\pm$ 0.108} & \textbf{0.80679 $\pm$ 0.00098} \\
+no\_kl & 30.841 $\pm$ 0.433 & 55.248 $\pm$ 0.281 & 0.80163 $\pm$ 0.00134 \\
+no\_causal & 31.129 $\pm$ 0.417 & 55.202 $\pm$ 0.306 & 0.80420 $\pm$ 0.00081 \\
+no\_morph & 31.100 $\pm$ 0.250 & 55.264 $\pm$ 0.303 & 0.80444 $\pm$ 0.00108 \\
+no\_sparse & 31.142 $\pm$ 0.272 & 55.244 $\pm$ 0.407 & 0.80397 $\pm$ 0.00087 \\
+no\_integration & 31.209 $\pm$ 0.445 & 55.262 $\pm$ 0.285 & 0.80403 $\pm$ 0.00139 \\
+static\_role & 30.642 $\pm$ 0.152 & 54.900 $\pm$ 0.233 & 0.80180 $\pm$ 0.00086 \\
+\multicolumn{4}{l}{\textbf{EN-FA}} \\
+CRAT\_full & \textbf{8.685 $\pm$ 0.127} & \textbf{27.176 $\pm$ 0.143} & \textbf{0.67259 $\pm$ 0.00541} \\
+no\_kl & 7.884 $\pm$ 0.241 & 25.924 $\pm$ 0.389 & 0.65346 $\pm$ 0.00224 \\
+no\_causal & 8.187 $\pm$ 0.408 & 26.136 $\pm$ 0.559 & 0.65097 $\pm$ 0.00083 \\
+no\_morph & 8.359 $\pm$ 0.300 & 26.014 $\pm$ 0.543 & 0.65139 $\pm$ 0.00217 \\
+no\_sparse & 8.494 $\pm$ 0.527 & 26.143 $\pm$ 0.755 & 0.65247 $\pm$ 0.00087 \\
+no\_integration & 7.980 $\pm$ 0.372 & 25.674 $\pm$ 0.582 & 0.64881 $\pm$ 0.00291 \\
+static\_role & 7.813 $\pm$ 0.279 & 25.802 $\pm$ 0.378 & 0.66076 $\pm$ 0.00078 \\
+\multicolumn{4}{l}{\textbf{EN-ZH}} \\
+CRAT\_full & \textbf{26.984 $\pm$ 0.247} & \textbf{43.746 $\pm$ 0.014} & \textbf{0.80757 $\pm$ 0.00203} \\
+no\_kl & 24.272 $\pm$ 0.875 & 43.189 $\pm$ 0.234 & 0.80174 $\pm$ 0.00253 \\
+no\_causal & 24.185 $\pm$ 1.133 & 43.377 $\pm$ 0.093 & 0.80317 $\pm$ 0.00298 \\
+no\_morph & 23.843 $\pm$ 1.442 & 43.074 $\pm$ 0.116 & 0.80122 $\pm$ 0.00123 \\
+no\_sparse & 24.268 $\pm$ 1.408 & 43.397 $\pm$ 0.168 & 0.80204 $\pm$ 0.00288 \\
+no\_integration & 24.243 $\pm$ 0.840 & 43.301 $\pm$ 0.081 & 0.80211 $\pm$ 0.00278 \\
+static\_role & 24.034 $\pm$ 1.440 & 43.168 $\pm$ 0.135 & 0.80150 $\pm$ 0.00270 \\
+\bottomrule
+\end{tabular}
+\endgroup

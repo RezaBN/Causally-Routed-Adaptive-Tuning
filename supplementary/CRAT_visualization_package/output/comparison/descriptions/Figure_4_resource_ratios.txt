@@ -1,0 +1,1 @@
+Figure 4. CRAT-to-baseline ratios of reported means. Lower values favor CRAT for all four costs. Colors encode direction, not statistical significance. Training time in the dagger-marked setting reflects half as many CRAT updates and tokens.

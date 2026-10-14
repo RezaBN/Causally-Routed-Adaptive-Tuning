@@ -1,0 +1,3 @@
+Table 1. Translation quality for all ablations. Values are reported mean ± SD.
+
+Higher is better. Bold values identify the highest displayed mean within each pair and metric. SD is the reported standard deviation, not a confidence interval. The full-model reference discrepancy in Appendix A applies to all comparisons with CRAT_full; the ablation seed count and model identifier are not encoded in these CSVs.

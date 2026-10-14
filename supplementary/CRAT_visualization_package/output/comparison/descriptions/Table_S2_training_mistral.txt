@@ -1,0 +1,7 @@
+Table S2. Mistral 7B trainable parameters, peak memory, and reported training cost.
+
+M denotes millions of parameters. Trainable percentage uses each method's registered total parameter count. Resource entries are reported means; available resource SDs are retained in the companion CSV. Base training entries are zero because no adaptation is performed.
+
+* The source field is named peak_vram_GB; the supplied implementation uses 1,073,741,824 bytes per GiB. It records the peak over the method run, not an isolated inference-memory measurement. Numerical values are unchanged.
+
+All adapted EN-FR and EN-ZH rows have 316 updates; EN-FA rows have 312. The effective batch size field is 128 for all rows. The Mistral EN-FR export additionally reports resource SDs.

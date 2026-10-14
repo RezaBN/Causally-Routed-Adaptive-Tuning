@@ -1,0 +1,3 @@
+Table 2. Maximum minus minimum mean quality over each complete reported grid.
+
+A smaller range means less variation in the reported means on that grid. Grid widths and counts differ across pairs for several parameters. Figure 1 therefore repeats the comparison using only parameter values shared by all three pairs.

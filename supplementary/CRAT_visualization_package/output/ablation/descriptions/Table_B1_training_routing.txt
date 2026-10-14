@@ -1,0 +1,3 @@
+Table B1. Training mean soft gates and the logged gate statistic.
+
+The final column preserves the numeric values of train_router_entropy, with a neutral label because the implementation does not compute categorical or full Bernoulli entropy. Static_role diagnostics are missing in every pair. Training means aggregate recorded training snapshots rather than only the selected final checkpoint.

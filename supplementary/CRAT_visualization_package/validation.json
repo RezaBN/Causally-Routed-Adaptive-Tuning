@@ -1,0 +1,31 @@
+{
+  "outputs": {
+    "pdf": 44,
+    "svg": 44,
+    "png": 44,
+    "descriptions": 44
+  },
+  "figure_count": 15,
+  "table_count": 29,
+  "font_size_points_min": 6.0,
+  "font_size_points_max": 8.0,
+  "requested_font": "Times New Roman",
+  "validation_font": "DejaVu Serif",
+  "numeric_regression_tables": 30,
+  "original_csv_count": 27,
+  "all_original_bytes_unchanged": true,
+  "all_declared_exports_nonempty": true,
+  "layout_notices": 0,
+  "caption_text_embedded_in_visuals": false,
+  "styling_tests": [
+    "custom font with strict selection",
+    "font size overrides",
+    "custom categorical colors",
+    "CRAT color override",
+    "per-ID JSON dimensions",
+    "output selection",
+    "table pagination",
+    "missing-font error",
+    "unmatched-selection error"
+  ]
+}

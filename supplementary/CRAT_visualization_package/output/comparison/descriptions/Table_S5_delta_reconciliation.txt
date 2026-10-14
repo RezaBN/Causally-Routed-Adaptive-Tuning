@@ -1,0 +1,3 @@
+Table S5. Reconciliation of the Mistral EN-FA delta_chrF_vs_CRAT column.
+
+Both delta columns in this reconciliation use baseline chrF minus CRAT chrF. A negative value therefore favors CRAT. The primary chrF means were retained. For example, 27.09303414 minus 27.17611266 equals -0.08307852 for Targeted SFT; the supplied +0.077451539 has the wrong sign. All six non-CRAT chrF differences in this file fail this reconciliation. Other supplied additive quality deltas reconcile within 0.000001.

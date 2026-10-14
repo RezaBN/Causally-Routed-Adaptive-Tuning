@@ -1,0 +1,3 @@
+Table A1. Displayed and implied CRAT_full quality references.
+
+Implied reference is the mean across the six reconstructed reference values. It is presented only to diagnose the mismatch. No replacement of the displayed primary means has been made.

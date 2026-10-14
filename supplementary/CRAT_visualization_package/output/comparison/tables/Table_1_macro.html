@@ -1,0 +1,71 @@
+<!doctype html><meta charset="utf-8"><style>
+table{border-collapse:collapse;font-family:"DejaVu Serif",serif;font-size:7pt;}
+th,td{padding:5px 7px;border:1px solid #d9d9d9;text-align:center;}td:first-child{text-align:left;}
+th{background:#E7EDF2;}
+.band{background:#F0F1F2;text-align:left;font-weight:bold;}
+.ref{background:#EDF5F1;}
+</style><table><thead><tr>
+<th>Method</th>
+<th>BLEU</th>
+<th>chrF</th>
+<th>COMET</th>
+<th>Mean<br>rank</th>
+<th>First<br>places</th>
+</tr></thead><tbody>
+<tr>
+<td>Base</td>
+<td>15.570</td>
+<td>35.980</td>
+<td>0.70086</td>
+<td>6.72</td>
+<td>0</td>
+</tr>
+<tr>
+<td>Full SFT</td>
+<td>18.319</td>
+<td>38.320</td>
+<td>0.72732</td>
+<td>5.11</td>
+<td>3</td>
+</tr>
+<tr>
+<td>Targeted SFT</td>
+<td>19.978</td>
+<td>40.194</td>
+<td>0.74638</td>
+<td>4.22</td>
+<td>0</td>
+</tr>
+<tr>
+<td>LoRA</td>
+<td>20.419</td>
+<td>39.906</td>
+<td>0.74430</td>
+<td>3.78</td>
+<td>2</td>
+</tr>
+<tr>
+<td>rsLoRA</td>
+<td>20.753</td>
+<td>40.554</td>
+<td>0.75125</td>
+<td>2.67</td>
+<td>3</td>
+</tr>
+<tr>
+<td>DoRA</td>
+<td>20.234</td>
+<td>40.030</td>
+<td>0.74486</td>
+<td>4.00</td>
+<td>1</td>
+</tr>
+<tr class="ref">
+<td>CRAT</td>
+<td><b>20.922</b></td>
+<td><b>40.693</b></td>
+<td><b>0.75285</b></td>
+<td><b>1.50</b></td>
+<td><b>9</b></td>
+</tr>
+</tbody></table>

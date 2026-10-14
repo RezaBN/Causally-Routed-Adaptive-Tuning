@@ -1,0 +1,3 @@
+Table 6. Selected roles and retained soft-gate mass for EN-FR and EN-FA.
+
+Selected-role rates are exactly 0 or 1 at the exported precision, and their sum equals top k. Retained mass refers to soft-gate magnitudes, not categorical probabilities or fractions of model FLOPs. The last column preserves topk_router_entropy without asserting categorical entropy. Equivalent top-k selection and mass fields are absent for EN-ZH.

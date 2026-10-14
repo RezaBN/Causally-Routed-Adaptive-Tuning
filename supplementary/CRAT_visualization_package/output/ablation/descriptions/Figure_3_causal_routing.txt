@@ -1,0 +1,1 @@
+Figure 3. Mean soft gates for CRAT_full and no_causal during training and evaluation. The dashed evaluation line marks the diagnostic threshold of 0.5. These are independent sigmoid gates recorded before evaluation top-k masking. No categorical normalization, gate variance, or executed-role frequency is implied.

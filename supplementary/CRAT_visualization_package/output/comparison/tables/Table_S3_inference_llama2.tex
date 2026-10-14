@@ -1,0 +1,35 @@
+% Requires \usepackage{booktabs}; caption is in the separate .txt file.
+\begingroup
+\fontsize{7}{8.4}\selectfont
+\setlength{\tabcolsep}{3pt}
+\begin{tabular}{lccccccc}
+\toprule
+\textbf{Method} & \textbf{\shortstack{Gen.\\(s)}} & \textbf{\shortstack{Generated\\tokens}} & \textbf{\shortstack{Batch\\tokens/s}} & \textbf{\shortstack{Mean\\(s)}} & \textbf{\shortstack{p50\\(s)}} & \textbf{\shortstack{p95\\(s)}} & \textbf{\shortstack{Single\\tokens/s}} \\
+\midrule
+\multicolumn{8}{l}{\textbf{EN-FR}} \\
+Base & 592.8 & 123,909 & 209.0 & 2.342 & 1.856 & 3.739 & 31.6 \\
+Full SFT & 478.3 & 26,513 & 55.4 & 1.319 & 0.622 & 2.597 & 18.5 \\
+Targeted SFT & 452.2 & 26,833 & 59.3 & 1.558 & 0.687 & 2.955 & 15.6 \\
+LoRA & 548.9 & 26,691 & 48.6 & 1.852 & 0.936 & 3.431 & 12.9 \\
+rsLoRA & 552.1 & 26,716 & 48.4 & 1.856 & 0.964 & 3.394 & 13.0 \\
+DoRA & 1,528.7 & 26,650 & 17.4 & 4.853 & 2.816 & 12.639 & 4.9 \\
+CRAT & 494.6 & 27,167 & 54.9 & 1.695 & 0.849 & 3.328 & 14.6 \\
+\multicolumn{8}{l}{\textbf{EN-FA}} \\
+Base & 644.2 & 126,715 & 196.7 & 2.837 & 2.628 & 5.093 & 41.7 \\
+Full SFT & 493.4 & 28,016 & 56.8 & 1.439 & 0.696 & 5.430 & 18.2 \\
+Targeted SFT & 548.2 & 29,595 & 54.0 & 1.668 & 0.781 & 8.105 & 15.8 \\
+LoRA & 680.9 & 30,745 & 45.2 & 2.082 & 1.001 & 9.558 & 13.0 \\
+rsLoRA & 659.7 & 29,019 & 44.0 & 1.996 & 0.986 & 7.157 & 12.8 \\
+DoRA & 1,790.0 & 30,469 & 17.0 & 5.548 & 2.906 & 18.170 & 4.9 \\
+CRAT & 626.3 & 31,751 & 50.7 & 1.893 & 0.913 & 7.663 & 14.8 \\
+\multicolumn{8}{l}{\textbf{EN-ZH}} \\
+Base & 606.2 & 127,284 & 210.0 & 3.526 & 2.658 & 10.687 & 35.2 \\
+Full SFT & 583.4 & 36,618 & 62.8 & 2.265 & 0.926 & 7.780 & 17.1 \\
+Targeted SFT & 523.2 & 36,565 & 69.9 & 2.601 & 1.230 & 6.708 & 15.9 \\
+LoRA & 662.7 & 36,573 & 55.2 & 3.201 & 1.667 & 8.047 & 12.9 \\
+rsLoRA & 666.4 & 36,655 & 55.0 & 2.911 & 1.665 & 5.406 & 13.9 \\
+DoRA & 1,930.1 & 36,623 & 19.0 & 8.237 & 5.410 & 20.141 & 5.0 \\
+CRAT & 566.5 & 36,578 & 64.6 & 2.814 & 1.412 & 6.381 & 14.8 \\
+\bottomrule
+\end{tabular}
+\endgroup

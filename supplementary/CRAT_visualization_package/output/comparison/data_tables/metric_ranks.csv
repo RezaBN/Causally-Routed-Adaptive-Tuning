@@ -1,0 +1,127 @@
+model,pair,method,metric,rank
+Llama 2,EN-FR,Base,BLEU,7
+Llama 2,EN-FR,Full SFT,BLEU,6
+Llama 2,EN-FR,Targeted SFT,BLEU,5
+Llama 2,EN-FR,LoRA,BLEU,1
+Llama 2,EN-FR,rsLoRA,BLEU,4
+Llama 2,EN-FR,DoRA,BLEU,3
+Llama 2,EN-FR,CRAT,BLEU,2
+Llama 2,EN-FR,Base,chrF,6
+Llama 2,EN-FR,Full SFT,chrF,7
+Llama 2,EN-FR,Targeted SFT,chrF,5
+Llama 2,EN-FR,LoRA,chrF,3
+Llama 2,EN-FR,rsLoRA,chrF,2
+Llama 2,EN-FR,DoRA,chrF,4
+Llama 2,EN-FR,CRAT,chrF,1
+Llama 2,EN-FR,Base,COMET,6
+Llama 2,EN-FR,Full SFT,COMET,7
+Llama 2,EN-FR,Targeted SFT,COMET,5
+Llama 2,EN-FR,LoRA,COMET,2
+Llama 2,EN-FR,rsLoRA,COMET,4
+Llama 2,EN-FR,DoRA,COMET,3
+Llama 2,EN-FR,CRAT,COMET,1
+Llama 2,EN-FA,Base,BLEU,7
+Llama 2,EN-FA,Full SFT,BLEU,1
+Llama 2,EN-FA,Targeted SFT,BLEU,4
+Llama 2,EN-FA,LoRA,BLEU,6
+Llama 2,EN-FA,rsLoRA,BLEU,3
+Llama 2,EN-FA,DoRA,BLEU,5
+Llama 2,EN-FA,CRAT,BLEU,2
+Llama 2,EN-FA,Base,chrF,7
+Llama 2,EN-FA,Full SFT,chrF,1
+Llama 2,EN-FA,Targeted SFT,chrF,4
+Llama 2,EN-FA,LoRA,chrF,6
+Llama 2,EN-FA,rsLoRA,chrF,3
+Llama 2,EN-FA,DoRA,chrF,5
+Llama 2,EN-FA,CRAT,chrF,2
+Llama 2,EN-FA,Base,COMET,7
+Llama 2,EN-FA,Full SFT,COMET,1
+Llama 2,EN-FA,Targeted SFT,COMET,4
+Llama 2,EN-FA,LoRA,COMET,6
+Llama 2,EN-FA,rsLoRA,COMET,3
+Llama 2,EN-FA,DoRA,COMET,5
+Llama 2,EN-FA,CRAT,COMET,2
+Llama 2,EN-ZH,Base,BLEU,7
+Llama 2,EN-ZH,Full SFT,BLEU,3
+Llama 2,EN-ZH,Targeted SFT,BLEU,5
+Llama 2,EN-ZH,LoRA,BLEU,4
+Llama 2,EN-ZH,rsLoRA,BLEU,2
+Llama 2,EN-ZH,DoRA,BLEU,6
+Llama 2,EN-ZH,CRAT,BLEU,1
+Llama 2,EN-ZH,Base,chrF,7
+Llama 2,EN-ZH,Full SFT,chrF,3
+Llama 2,EN-ZH,Targeted SFT,chrF,4
+Llama 2,EN-ZH,LoRA,chrF,6
+Llama 2,EN-ZH,rsLoRA,chrF,1
+Llama 2,EN-ZH,DoRA,chrF,5
+Llama 2,EN-ZH,CRAT,chrF,2
+Llama 2,EN-ZH,Base,COMET,7
+Llama 2,EN-ZH,Full SFT,COMET,6
+Llama 2,EN-ZH,Targeted SFT,COMET,3
+Llama 2,EN-ZH,LoRA,COMET,5
+Llama 2,EN-ZH,rsLoRA,COMET,2
+Llama 2,EN-ZH,DoRA,COMET,4
+Llama 2,EN-ZH,CRAT,COMET,1
+Mistral,EN-FR,Base,BLEU,6
+Mistral,EN-FR,Full SFT,BLEU,7
+Mistral,EN-FR,Targeted SFT,BLEU,5
+Mistral,EN-FR,LoRA,BLEU,3
+Mistral,EN-FR,rsLoRA,BLEU,4
+Mistral,EN-FR,DoRA,BLEU,2
+Mistral,EN-FR,CRAT,BLEU,1
+Mistral,EN-FR,Base,chrF,6
+Mistral,EN-FR,Full SFT,chrF,7
+Mistral,EN-FR,Targeted SFT,chrF,5
+Mistral,EN-FR,LoRA,chrF,3
+Mistral,EN-FR,rsLoRA,chrF,4
+Mistral,EN-FR,DoRA,chrF,1
+Mistral,EN-FR,CRAT,chrF,2
+Mistral,EN-FR,Base,COMET,6
+Mistral,EN-FR,Full SFT,COMET,7
+Mistral,EN-FR,Targeted SFT,COMET,5
+Mistral,EN-FR,LoRA,COMET,1
+Mistral,EN-FR,rsLoRA,COMET,4
+Mistral,EN-FR,DoRA,COMET,3
+Mistral,EN-FR,CRAT,COMET,2
+Mistral,EN-FA,Base,BLEU,7
+Mistral,EN-FA,Full SFT,BLEU,6
+Mistral,EN-FA,Targeted SFT,BLEU,3
+Mistral,EN-FA,LoRA,BLEU,4
+Mistral,EN-FA,rsLoRA,BLEU,2
+Mistral,EN-FA,DoRA,BLEU,5
+Mistral,EN-FA,CRAT,BLEU,1
+Mistral,EN-FA,Base,chrF,7
+Mistral,EN-FA,Full SFT,chrF,6
+Mistral,EN-FA,Targeted SFT,chrF,2
+Mistral,EN-FA,LoRA,chrF,5
+Mistral,EN-FA,rsLoRA,chrF,3
+Mistral,EN-FA,DoRA,chrF,4
+Mistral,EN-FA,CRAT,chrF,1
+Mistral,EN-FA,Base,COMET,7
+Mistral,EN-FA,Full SFT,COMET,6
+Mistral,EN-FA,Targeted SFT,COMET,5
+Mistral,EN-FA,LoRA,COMET,3
+Mistral,EN-FA,rsLoRA,COMET,1
+Mistral,EN-FA,DoRA,COMET,4
+Mistral,EN-FA,CRAT,COMET,2
+Mistral,EN-ZH,Base,BLEU,7
+Mistral,EN-ZH,Full SFT,BLEU,6
+Mistral,EN-ZH,Targeted SFT,BLEU,5
+Mistral,EN-ZH,LoRA,BLEU,3
+Mistral,EN-ZH,rsLoRA,BLEU,1
+Mistral,EN-ZH,DoRA,BLEU,4
+Mistral,EN-ZH,CRAT,BLEU,2
+Mistral,EN-ZH,Base,chrF,7
+Mistral,EN-ZH,Full SFT,chrF,6
+Mistral,EN-ZH,Targeted SFT,chrF,5
+Mistral,EN-ZH,LoRA,chrF,3
+Mistral,EN-ZH,rsLoRA,chrF,2
+Mistral,EN-ZH,DoRA,chrF,4
+Mistral,EN-ZH,CRAT,chrF,1
+Mistral,EN-ZH,Base,COMET,7
+Mistral,EN-ZH,Full SFT,COMET,6
+Mistral,EN-ZH,Targeted SFT,COMET,2
+Mistral,EN-ZH,LoRA,COMET,4
+Mistral,EN-ZH,rsLoRA,COMET,3
+Mistral,EN-ZH,DoRA,COMET,5
+Mistral,EN-ZH,CRAT,COMET,1
